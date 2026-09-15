@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{5df7fd3f-c6ad-f111-aaab-7ced8d759cbe}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{4b3e7bcb-feee-42ad-8c97-0709c3c8e957}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{7aa2281f-97a4-4969-aee8-f2ba8eed7f08}">
+                  <labels>
+                    <label description="Details" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="542FBFBE-0E4C-496C-8012-555DE6581923" labelid="{104709f2-d638-4fdb-ae92-1b5bc2e1d9c5}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6b3983d1-e4e7-4682-b141-36781d9ab95c}" locklevel="0" colspan="1" rowspan="1" labelid="{32baafad-4ef8-4744-a4db-33db1e52e27a}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="voy_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="voy_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{022353f5-4c9d-490f-9247-ccf8bee2d3d5}" locklevel="0" colspan="1" rowspan="1" labelid="{110fbd00-f66e-4550-8f64-7f7a03b90a1a}">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="voy_description" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="voy_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d4bb4f8c-3a36-476f-b458-ca76029a423d}" locklevel="0" colspan="1" rowspan="1" labelid="{14796e25-9e7a-4c94-a014-ebe6e467991f}">
+                        <labels>
+                          <label description="Amount" languagecode="1033" />
+                        </labels>
+                        <control id="voy_amount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="voy_amount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a13100d6-9700-4107-ac84-6eb641b7782a}" locklevel="0" colspan="1" rowspan="1" labelid="{2fe94746-d5af-4f77-bad0-1294a6821e0b}">
+                        <labels>
+                          <label description="Price per Unit" languagecode="1033" />
+                        </labels>
+                        <control id="voy_priceperunit" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="voy_priceperunit" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{630d33e1-48f0-43ec-a112-39d096ad8625}" locklevel="0" colspan="1" rowspan="1" labelid="{db120de5-4d7c-49a1-b41f-fc9b64487643}">
+                        <labels>
+                          <label description="Discount Percentage" languagecode="1033" />
+                        </labels>
+                        <control id="voy_discountpercentage" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="voy_discountpercentage" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_1_section_5" id="1f87558d-e271-4150-bc8f-4fcbe7e91653" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false" labelid="{6a37b30d-6a46-496a-ac03-64ddd5da3c1c}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_1_section_6" id="646c4499-4067-42d7-8827-f106e46b557f" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false" labelid="{d11d2951-c88d-4ed2-b500-fe2c7c5cd2d4}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_1_section_7" id="d5ba856d-3192-4978-b281-2b2ef4514d77" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false" labelid="{92a66475-4960-43e3-b6d3-854b77d4be07}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" visible="false" labelid="{6bc4f333-f3fb-48e7-a200-96738eedbc6a}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="266FE48D-4D04-4E9A-8C5A-7DEF9A2F059B" labelid="{1afff744-86af-449c-9783-ff7a5137e6b6}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" visible="false" labelid="{f6166045-1a04-4081-9569-d85838cd4683}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="07C04A4E-A482-45CC-BAB7-7FCA3CD02938" labelid="{94207422-97e3-42b7-b551-71c26002c5df}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Quote Line Item Quick Create" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

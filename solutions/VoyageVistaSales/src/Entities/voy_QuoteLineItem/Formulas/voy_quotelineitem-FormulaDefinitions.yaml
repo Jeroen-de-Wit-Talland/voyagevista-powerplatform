@@ -1,0 +1,2 @@
+voy_discountamount: =(voy_priceperunit * voy_amount) / 100 * voy_discountpercentage
+voy_total: =voy_priceperunit * voy_amount - voy_discountamount

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{1502076c-b2af-4c90-97c1-34c62d9cbaec}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="voy_name" select="1" icon="1" preview="1">
+        <row name="result" id="voy_quotelineitemid">
+          <cell name="voy_name" width="300" />
+          <cell name="createdon" width="125" />
+          <cell name="voy_description" width="106" />
+          <cell name="voy_amount" width="100" />
+          <cell name="voy_priceperunit" width="119" />
+          <cell name="voy_total" width="100" />
+          <cell name="voy_discountpercentage" width="156" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="voy_quotelineitem">
+          <attribute name="voy_quotelineitemid" />
+          <attribute name="voy_name" />
+          <attribute name="createdon" />
+          <order attribute="voy_name" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+          </filter>
+          <attribute name="voy_description" />
+          <attribute name="voy_amount" />
+          <attribute name="voy_priceperunit" />
+          <attribute name="voy_total" />
+          <attribute name="voy_discountpercentage" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Quote Line Items" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

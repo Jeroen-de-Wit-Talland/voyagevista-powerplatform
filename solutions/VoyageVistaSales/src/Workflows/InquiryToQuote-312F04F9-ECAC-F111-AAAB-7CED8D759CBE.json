@@ -1,0 +1,126 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "voy_sharedcommondataserviceforapps_2041f"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_StatusCode_in_Inquiry_changes": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "voy_travelinquiry",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "statuscode",
+              "subscriptionRequest/runas": 2
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "66ed20dc-2ba8-4548-b589-fc141c764c12"
+          }
+        }
+      },
+      "actions": {
+        "Condition": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@triggerOutputs()?['body/_voy_customerid_value@Microsoft.Dynamics.CRM.lookuplogicalname']",
+                  "accounts"
+                ]
+              },
+              {
+                "equals": [
+                  "@triggerOutputs()?['body/statuscode']",
+                  "Converted to Quote"
+                ]
+              }
+            ]
+          },
+          "actions": {
+            "Add_a_new_row": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "entityName": "voy_quotes",
+                  "item/voy_TravelInquiryId@odata.bind": "/voy_travelinquiries(@{triggerOutputs()?['body/voy_travelinquiryid']})",
+                  "item/voy_Customer_account@odata.bind": "/accounts/(@{triggerOutputs()?['body/_voy_customerid_value']})",
+                  "item/voy_destination": "@triggerOutputs()?['body/voy_destination']",
+                  "item/voy_discountpercentage": 0,
+                  "item/voy_numberoftravelers": "@triggerOutputs()?['body/voy_numberoftravelers']"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "connectionName": "shared_commondataserviceforapps"
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "bc162b7e-7219-496b-a9de-a27d2dc5ab06"
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "Add_a_new_row_2": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "voy_quotes",
+                    "item/voy_TravelInquiryId@odata.bind": "/voy_travelinquiries(@{triggerOutputs()?['body/voy_travelinquiryid']})",
+                    "item/voy_Customer_contact@odata.bind": "/contacts(@{triggerOutputs()?['body/_voy_customerid_value']})",
+                    "item/voy_destination": "@triggerOutputs()?['body/voy_destination']",
+                    "item/voy_discountpercentage": 0,
+                    "item/voy_numberoftravelers": "@triggerOutputs()?['body/voy_numberoftravelers']"
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "CreateRecord",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "6f891979-0e99-461a-a9b7-ec1857396e71"
+                }
+              }
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "2dac256f-04fe-4937-97f2-cfb5096602ac"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

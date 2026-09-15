@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_voy_quote" />
+  <EntityRelationship Name="business_unit_voy_quotelineitem" />
+  <EntityRelationship Name="business_unit_voy_travelinquiry" />
+  <EntityRelationship Name="business_unit_voy_travelproduct" />
+  <EntityRelationship Name="lk_voy_quote_createdby" />
+  <EntityRelationship Name="lk_voy_quote_modifiedby" />
+  <EntityRelationship Name="lk_voy_quotelineitem_createdby" />
+  <EntityRelationship Name="lk_voy_quotelineitem_modifiedby" />
+  <EntityRelationship Name="lk_voy_travelinquiry_createdby" />
+  <EntityRelationship Name="lk_voy_travelinquiry_modifiedby" />
+  <EntityRelationship Name="lk_voy_travelproduct_createdby" />
+  <EntityRelationship Name="lk_voy_travelproduct_modifiedby" />
+  <EntityRelationship Name="owner_voy_quote" />
+  <EntityRelationship Name="owner_voy_quotelineitem" />
+  <EntityRelationship Name="owner_voy_travelinquiry" />
+  <EntityRelationship Name="owner_voy_travelproduct" />
+  <EntityRelationship Name="team_voy_quote" />
+  <EntityRelationship Name="team_voy_quotelineitem" />
+  <EntityRelationship Name="team_voy_travelinquiry" />
+  <EntityRelationship Name="team_voy_travelproduct" />
+  <EntityRelationship Name="TransactionCurrency_voy_Quote" />
+  <EntityRelationship Name="TransactionCurrency_voy_TravelInquiry" />
+  <EntityRelationship Name="user_voy_quote" />
+  <EntityRelationship Name="user_voy_quotelineitem" />
+  <EntityRelationship Name="user_voy_travelinquiry" />
+  <EntityRelationship Name="user_voy_travelproduct" />
+  <EntityRelationship Name="voy_account_voy_quote_accountid" />
+  <EntityRelationship Name="voy_account_voy_travelinquiry_accountid" />
+  <EntityRelationship Name="voy_contact_voy_quote_contactid" />
+  <EntityRelationship Name="voy_contact_voy_travelinquiry_contactid" />
+  <EntityRelationship Name="voy_quote_CurrencyId_transactioncurrency" />
+  <EntityRelationship Name="voy_quote_TravelInquiryId_voy_travelinquiry" />
+  <EntityRelationship Name="voy_Quote_voy_QuoteId_voy_QuoteLineItem" />
+</EntityRelationships>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{d3f4e3d4-6f3a-4a98-867c-1fd5f4068bba}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{42398F33-2692-4DFE-A732-F8463496380F}" IsUserDefined="1" name="tab_general">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{A91830FE-46D7-47D7-B89B-E24B487DF644}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5DC68945-692A-481C-B633-8FE9DC5E3A1A}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="voy_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="voy_Name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6dfad987-096a-43fa-a77e-46b023469875}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="voy_description" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="voy_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{66ce41cd-bc67-49ea-bb4e-7e3701545601}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Amount" languagecode="1033" />
+                        </labels>
+                        <control id="voy_amount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="voy_amount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5d56efeb-942d-41b7-9d18-6348a1b91606}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Price per Unit" languagecode="1033" />
+                        </labels>
+                        <control id="voy_priceperunit" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="voy_priceperunit" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{31a405f1-972a-4437-ade4-dfbe567936f9}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Discount Percentage" languagecode="1033" />
+                        </labels>
+                        <control id="voy_discountpercentage" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="voy_discountpercentage" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a7f9a507-c57a-437b-a76a-6e3bc4b6342f}" locklevel="0" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Total" languagecode="1033" />
+                        </labels>
+                        <control id="voy_total" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="voy_total" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{6f6400cf-ae98-4925-bf68-9dfcaf7132da}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{b959c03d-6f3d-4fe2-a982-e91e4b24fd28}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b24c5094-637e-4e83-aa94-8e8db67b2083}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bbac9075-208c-4c99-96e3-4f0d4ff52db3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{28AB5B67-804C-404F-9B79-1474A0F15AB8}" colspan="1" rowspan="1">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{2399c74b-f9e9-46b0-9bd7-a70c5618c128}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{946431a6-9ce6-4a08-a696-b5a0f8007dbf}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{086e774f-4138-4897-83d0-b43666911da7}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c7dbf3b5-f7fe-42e0-8daf-eeabb58a6b41}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
