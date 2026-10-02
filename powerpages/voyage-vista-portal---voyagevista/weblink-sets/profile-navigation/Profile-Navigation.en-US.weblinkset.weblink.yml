@@ -1,0 +1,22 @@
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 2
+  adx_displaypagechildlinks: false
+  adx_name: My Inquiries
+  adx_openinnewwindow: false
+  adx_pageid: 7c93d9b7-75bd-f111-a05c-7ced8d759cbe
+  adx_publishingstateid: cd455d7d-f6bf-4090-9ead-f8991dfe20e5
+  adx_robotsfollowlink: true
+  adx_weblinkid: 38dea1d0-75bd-f111-a05c-7ced8d759cbe
+  adx_weblinksetid: ff3117d8-382b-4e4d-8b2f-32a729b6e700
+- adx_disablepagevalidation: false
+  adx_displayimageonly: false
+  adx_displayorder: 1
+  adx_displaypagechildlinks: false
+  adx_name: Profile
+  adx_openinnewwindow: false
+  adx_pageid: 6f063bfd-8372-4e22-9f99-e7e9f96e0be0
+  adx_publishingstateid: cd455d7d-f6bf-4090-9ead-f8991dfe20e5
+  adx_robotsfollowlink: true
+  adx_weblinkid: e74365f1-5c72-419e-9f21-bf3044126efb
+  adx_weblinksetid: ff3117d8-382b-4e4d-8b2f-32a729b6e700

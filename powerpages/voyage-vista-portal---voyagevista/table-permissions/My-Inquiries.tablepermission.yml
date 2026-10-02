@@ -1,0 +1,16 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: true
+adx_contactrelationship: voy_contact_voy_travelinquiry_contactid
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: voy_travelinquiry
+adx_entityname: My Inquiries
+adx_entitypermission_webrole:
+- 5f761e0e-1bf8-4f4e-9843-428da2e6e6d7
+adx_entitypermissionid: 34cd4c26-fca3-4d3d-9746-3139dd449c16
+adx_parententitypermission: 
+adx_parentrelationship: 
+adx_read: true
+adx_scope: 756150001
+adx_write: false
