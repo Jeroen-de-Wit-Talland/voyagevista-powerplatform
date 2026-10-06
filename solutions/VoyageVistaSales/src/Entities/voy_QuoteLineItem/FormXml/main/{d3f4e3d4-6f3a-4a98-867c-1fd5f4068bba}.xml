@@ -60,6 +60,14 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{a98e0067-c44f-4f29-9e10-da17bea586b8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Discount Amount" languagecode="1033" />
+                        </labels>
+                        <control id="voy_discountamount" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="voy_discountamount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{a7f9a507-c57a-437b-a76a-6e3bc4b6342f}" locklevel="0" rowspan="1" colspan="1">
                         <labels>
                           <label description="Total" languagecode="1033" />

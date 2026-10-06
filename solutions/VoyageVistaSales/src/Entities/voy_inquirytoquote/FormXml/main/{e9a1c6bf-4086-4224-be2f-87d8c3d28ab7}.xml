@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e9a1c6bf-4086-4224-be2f-87d8c3d28ab7}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{69ed193a-94c6-42a0-96b8-dce9cc90ba50}" name="StageStep4" locklevel="0" expanded="true" visible="false" labelid="{a6410e70-df5e-4090-aa52-015383642264}">
+          <labels>
+            <label description="Qualify Inquiry" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{0a69ef28-e1e7-368b-a33c-2f3dabef2379}" name="StageStep4_section1" labelid="{bffdf095-5d2f-45f1-b3f8-955378493ba2}">
+                  <labels>
+                    <label description="Qualify Inquiry" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{617f2aa6-a495-406f-bd28-dc16a3bafdc1}" showlabel="true" visible="true" labelid="{c70bbbd6-0945-4885-98a1-0e8f9ebad65d}">
+                        <labels>
+                          <label description="Destination" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_travelinquiry_voy_inquirytoquote:voy_destination" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="voy_destination" relationship="bpf_voy_travelinquiry_voy_inquirytoquote" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{51679d08-e7df-486e-81fd-e8d00075fcff}" showlabel="true" visible="true" labelid="{9d068381-eefe-4f4e-952b-58ad348686fa}">
+                        <labels>
+                          <label description="Number of travelers" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_travelinquiry_voy_inquirytoquote:voy_numberoftravelers" classid="{c6d124ca-7eda-4a60-aea9-7fb8d318b68f}" datafieldname="voy_numberoftravelers" disabled="false" relationship="bpf_voy_travelinquiry_voy_inquirytoquote" isrequired="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fbd2bed4-f0fc-4ce3-a9b3-fa949bc793fd}" showlabel="true" visible="true" labelid="{c712ab32-eb9a-4404-ac2f-ba49d1aea3ff}">
+                        <labels>
+                          <label description="Customer" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_travelinquiry_voy_inquirytoquote:voy_customerid" classid="{270bd3db-d9af-4782-9025-509e298dec0a}" datafieldname="voy_customerid" relationship="bpf_voy_travelinquiry_voy_inquirytoquote" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d531cd17-9d42-4b8a-a72e-c6a2dddfeebc}" showlabel="true" visible="true" labelid="{a5e60bd9-3b1a-4ba0-bc93-dd875f885813}">
+                        <labels>
+                          <label description="Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_travelinquiry_voy_inquirytoquote:voy_startdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="voy_startdate" relationship="bpf_voy_travelinquiry_voy_inquirytoquote" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{435b316b-5832-49f5-aaf8-4edd91998f20}" showlabel="true" visible="true" labelid="{aab6d1c6-5914-4907-9413-63b699c266ca}">
+                        <labels>
+                          <label description="End Date" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_travelinquiry_voy_inquirytoquote:voy_enddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="voy_enddate" relationship="bpf_voy_travelinquiry_voy_inquirytoquote" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3eefcb56-05ab-4cb4-982a-7741ac60e045}" showlabel="true" visible="true" labelid="{578d82f1-bb80-4504-afa1-87748740a31b}">
+                        <labels>
+                          <label description="Convert to Quote" languagecode="1033" />
+                        </labels>
+                        <control id="Step_17:312f04f9-ecac-f111-aaab-7ced8d759cbe_flowstep" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" datafieldname="Step_17" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{c130c087-59a4-4176-acf7-eb3bf3b3236e}" name="StageStep19" locklevel="0" expanded="true" visible="false" labelid="{caeca2e5-c704-4997-83a6-54453a512073}">
+          <labels>
+            <label description="Develop Quote" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{031397c2-311f-c9ac-b132-566aeed95932}" name="StageStep19_section1" labelid="{f3021d71-2f4d-4d74-9206-233b02e0894c}">
+                  <labels>
+                    <label description="Develop Quote" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9ae80b56-a6e8-40c2-9291-c4c90f14cff0}" showlabel="true" visible="true" labelid="{2a4e2194-b376-4767-beb1-d6809e84f587}">
+                        <labels>
+                          <label description="Total" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_quote_voy_inquirytoquote:voy_total" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="voy_total" relationship="bpf_voy_quote_voy_inquirytoquote" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b4e48073-edde-471e-b07c-017a05a5436d}" showlabel="true" visible="true" labelid="{6ab1274f-4e23-43a9-a513-3a10825521f1}">
+                        <labels>
+                          <label description="Valid Until" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_quote_voy_inquirytoquote:voy_validuntil" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="voy_validuntil" relationship="bpf_voy_quote_voy_inquirytoquote" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9688ed5d-fe8a-436a-98be-d1b125150b7d}" showlabel="true" visible="true" labelid="{5247b592-157b-4382-9a92-f813202d1d83}">
+                        <labels>
+                          <label description="Convert Quote to PDF" languagecode="1033" />
+                        </labels>
+                        <control id="Step_26:0a6f721f-dfbb-f111-aaaf-7ced8d759cbe_flowstep" classid="{00ad73da-bd4d-49c6-88a8-2f4f4cad4a20}" datafieldname="Step_26" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{48baeda0-8b24-4e42-a53a-4a4e8a457009}" name="StageStep28" locklevel="0" expanded="true" visible="false" labelid="{250a0d72-fcb7-46f1-99dd-494e9b68c3e5}">
+          <labels>
+            <label description="Propose Quote" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{32badfd6-3538-9a0a-075e-579eb17a9d2d}" name="StageStep28_section1" labelid="{9c964ea6-c516-489c-bf58-79667547ee1e}">
+                  <labels>
+                    <label description="Propose Quote" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4526f060-e349-4166-b1da-5525588ca4c2}" showlabel="true" visible="true" labelid="{aca593d6-ce0a-4016-8d6b-b105ef04fd61}">
+                        <labels>
+                          <label description="Status Reason" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_voy_quote_voy_inquirytoquote:statuscode" classid="{5d68b988-0661-4db2-bc3e-17598ad3be6c}" datafieldname="statuscode" relationship="bpf_voy_quote_voy_inquirytoquote" isrequired="false" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

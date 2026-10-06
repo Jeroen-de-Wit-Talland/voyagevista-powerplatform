@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DataverseUnitTest" Version="3.4.0.55" />
+    <PackageReference Include="MSTest" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VoyageVistaSales.Plugins\VoyageVistaSales.Plugins.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Replay harness needs Microsoft.Xrm.Sdk directly; on net8.0 it comes from the
+         netstandard2.0 client package (Dataverse PowerTools #210/#269) -->
+    <PackageReference Include="Microsoft.PowerPlatform.Dataverse.Client" Version="1.2.*" />
+  </ItemGroup>
+</Project>

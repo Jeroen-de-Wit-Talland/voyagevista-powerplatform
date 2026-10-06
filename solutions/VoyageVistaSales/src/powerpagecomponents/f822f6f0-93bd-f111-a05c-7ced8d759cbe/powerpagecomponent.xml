@@ -1,0 +1,47 @@
+<powerpagecomponent powerpagecomponentid="f822f6f0-93bd-f111-a05c-7ced8d759cbe">
+  <content>{
+  "recordsourcerelationshipname": "voy_contact_voy_travelinquiry_contactid",
+  "tabname": "tab_general",
+  "entitysourcetype": 756150003,
+  "formname": "Information",
+  "entityname": "voy_travelinquiry",
+  "referenceentityshowreadonlyform": false,
+  "referencequerystringisprimarykey": true,
+  "populatereferenceentitylookupfield": false,
+  "setentityreference": false,
+  "geolocation_displaymap": false,
+  "geolocation_enabled": false,
+  "attachfilerestrictaccept": false,
+  "attachfilerequired": false,
+  "attachfileallowmultiple": false,
+  "attachfile": false,
+  "portaluserlookupattributeisactivityparty": false,
+  "associatecurrentportaluser": false,
+  "redirecturlappendentityidquerystring": false,
+  "appendquerystring": false,
+  "hideformonsuccess": true,
+  "onsuccess": 756150000,
+  "validationsummarylinksenabled": true,
+  "forceallfieldsrequired": false,
+  "recommendedfieldsrequired": false,
+  "showunsupportedfields": false,
+  "showownerfields": false,
+  "tooltipenabled": false,
+  "renderwebresourcesinline": false,
+  "autogeneratesteps": false,
+  "showcaptchaforauthenticatedusers": false,
+  "captcharequired": false,
+  "recordsourceallowcreateonnull": false,
+  "entitypermissionsenabled": true,
+  "mode": 100000002,
+  "geolocation_maptype": 756150000
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>My Inquiry - Detail</name>
+  <powerpagecomponenttype>15</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9410a590-ed44-4b0f-b41a-68188e57ed9a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

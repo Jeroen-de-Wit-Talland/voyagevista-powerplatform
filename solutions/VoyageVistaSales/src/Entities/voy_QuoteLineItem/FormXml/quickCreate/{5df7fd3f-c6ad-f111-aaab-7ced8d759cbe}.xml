@@ -66,6 +66,18 @@
                         <control id="voy_discountpercentage" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="voy_discountpercentage" disabled="false" />
                       </cell>
                     </row>
+                    <row>
+                      <cell id="{3e25f941-f52f-4370-8cdd-05ced28b18ae}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Quote" languagecode="1033" />
+                        </labels>
+                        <control id="voy_quoteid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="voy_quoteid" disabled="true">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
                   </rows>
                 </section>
                 <section name="tab_1_section_5" id="1f87558d-e271-4150-bc8f-4fcbe7e91653" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false" labelid="{6a37b30d-6a46-496a-ac03-64ddd5da3c1c}">

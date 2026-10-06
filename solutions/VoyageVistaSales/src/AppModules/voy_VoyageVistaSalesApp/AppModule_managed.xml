@@ -12,6 +12,7 @@
   <AppModuleComponents>
     <AppModuleComponent type="1" schemaName="account" />
     <AppModuleComponent type="1" schemaName="contact" />
+    <AppModuleComponent type="1" schemaName="voy_inquirytoquote" />
     <AppModuleComponent type="1" schemaName="voy_quote" />
     <AppModuleComponent type="1" schemaName="voy_quotelineitem" />
     <AppModuleComponent type="1" schemaName="voy_travelinquiry" />

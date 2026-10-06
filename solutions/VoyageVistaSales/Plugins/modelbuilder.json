@@ -1,0 +1,27 @@
+{
+  "namespace": "VoyageVistaSales.Plugins.Models",
+  "serviceContextName": "XrmSvc",
+  "outputDirectory": "Models/",
+  "emitEntityEtc": false,
+  "emitFieldsClasses": false,
+  "emitVirtualAttributes": false,
+  "entityNamesFilter": [
+    "account",
+    "contact",
+    "voy_quote",
+    "voy_quotelineitem",
+    "voy_travelinquiry",
+    "voy_travelproduct"
+  ],
+  "entityTypesFolder": "Entities",
+  "generateGlobalOptionSets": true,
+  "generateSdkMessages": true,
+  "logLevel": "Information",
+  "messageNamesFilter": [
+    "voy_CalculateQuoteTotal"
+  ],
+  "messagesTypesFolder": "Messages",
+  "optionSetsTypesFolder": "OptionSets",
+  "suppressGeneratedCodeAttribute": true,
+  "suppressINotifyPattern": false
+}

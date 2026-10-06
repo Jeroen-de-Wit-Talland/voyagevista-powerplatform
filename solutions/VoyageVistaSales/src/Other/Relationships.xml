@@ -1,9 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="bpf_voy_quote_voy_inquirytoquote" />
+  <EntityRelationship Name="bpf_voy_travelinquiry_voy_inquirytoquote" />
   <EntityRelationship Name="business_unit_voy_quote" />
   <EntityRelationship Name="business_unit_voy_quotelineitem" />
   <EntityRelationship Name="business_unit_voy_travelinquiry" />
   <EntityRelationship Name="business_unit_voy_travelproduct" />
+  <EntityRelationship Name="lk_voy_inquirytoquote_activestageid" />
+  <EntityRelationship Name="lk_voy_inquirytoquote_createdby" />
+  <EntityRelationship Name="lk_voy_inquirytoquote_modifiedby" />
+  <EntityRelationship Name="lk_voy_inquirytoquote_processid" />
   <EntityRelationship Name="lk_voy_quote_createdby" />
   <EntityRelationship Name="lk_voy_quote_modifiedby" />
   <EntityRelationship Name="lk_voy_quotelineitem_createdby" />
@@ -12,6 +18,7 @@
   <EntityRelationship Name="lk_voy_travelinquiry_modifiedby" />
   <EntityRelationship Name="lk_voy_travelproduct_createdby" />
   <EntityRelationship Name="lk_voy_travelproduct_modifiedby" />
+  <EntityRelationship Name="organization_voy_inquirytoquote" />
   <EntityRelationship Name="owner_voy_quote" />
   <EntityRelationship Name="owner_voy_quotelineitem" />
   <EntityRelationship Name="owner_voy_travelinquiry" />

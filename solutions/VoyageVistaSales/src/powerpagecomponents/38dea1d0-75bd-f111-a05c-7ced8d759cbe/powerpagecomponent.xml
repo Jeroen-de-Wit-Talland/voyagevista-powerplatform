@@ -1,0 +1,21 @@
+<powerpagecomponent powerpagecomponentid="38dea1d0-75bd-f111-a05c-7ced8d759cbe">
+  <content>{
+  "displayimageonly": false,
+  "displaypagechildlinks": false,
+  "disablepagevalidation": false,
+  "openinnewwindow": false,
+  "robotsfollowlink": true,
+  "pageid": "7c93d9b7-75bd-f111-a05c-7ced8d759cbe",
+  "publishingstateid": "cd455d7d-f6bf-4090-9ead-f8991dfe20e5",
+  "weblinksetid": "ff3117d8-382b-4e4d-8b2f-32a729b6e700",
+  "displayorder": 2
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>My Inquiries</name>
+  <powerpagecomponenttype>5</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9410a590-ed44-4b0f-b41a-68188e57ed9a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

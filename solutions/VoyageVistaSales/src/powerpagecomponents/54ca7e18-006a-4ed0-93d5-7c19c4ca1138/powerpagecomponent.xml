@@ -1,0 +1,27 @@
+<powerpagecomponent powerpagecomponentid="54ca7e18-006a-4ed0-93d5-7c19c4ca1138">
+  <content>{"copy":"&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\r\n  &lt;div class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;\r\n    &lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; padding: 16px; margin: 60px 0px;\"&gt;\r\n      &lt;h2 style=\"color: var(--portalThemeColor9);\"&gt;&lt;b&gt;Subpage 2 &lt;/b&gt;&lt;/h2&gt;\r\n      &lt;p&gt;This page can be customized by adding new sections and components.&lt;/p&gt;\r\n    &lt;/div&gt;\r\n  &lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\r\n  &lt;div class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\r\n    &lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;&lt;/div&gt;\r\n  &lt;/div&gt;\r\n&lt;/div&gt;","displayorder":2,"enablerating":false,"enabletracking":false,"excludefromsearch":false,"feedbackpolicy":756150000,"hiddenfromsitemap":false,"isroot":false,"pagetemplateid":"d1203c4f-7f0d-4f55-b65d-7b93b83d804c","parentpageid":"690d6f85-dc77-4aac-bdba-2ffd265ba665","partialurl":"Subpage-two","publishingstateid":"cd455d7d-f6bf-4090-9ead-f8991dfe20e5","rootwebpageid":"58a59ab4-ece4-4a6a-a7b5-bac015a59b3d","sharedpageconfiguration":true,"summary":"&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;","title":"Subpage two"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Subpage two</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9410a590-ed44-4b0f-b41a-68188e57ed9a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>1ea4c580-c5dc-4dc9-995f-c120acd2e0db</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Subpage two&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="display: flex; flex-wrap: wrap;"&gt;
+    &lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; padding: 16px; margin: 60px 0px;"&gt;
+      &lt;h2 style="color: var(--portalThemeColor9);"&gt;&lt;b&gt;Subpage 2 &lt;/b&gt;&lt;/h2&gt;
+      &lt;p&gt;This page can be customized by adding new sections and components.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;Subpage two</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

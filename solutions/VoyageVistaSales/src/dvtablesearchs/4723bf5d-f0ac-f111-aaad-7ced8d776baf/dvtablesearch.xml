@@ -1,0 +1,11 @@
+<dvtablesearch dvtablesearchid="4723bf5d-f0ac-f111-aaad-7ced8d776baf">
+  <appmoduleuniquename>voy_VoyageVistaSalesApp</appmoduleuniquename>
+  <iscustomizable>1</iscustomizable>
+  <m365appmoduleid>
+    <uniquename>voy_VoyageVistaSalesApp</uniquename>
+  </m365appmoduleid>
+  <name>M365_Primary_model_voy_VoyageVistaSalesApp</name>
+  <searchtype>0</searchtype>
+  <statecode>1</statecode>
+  <statuscode>2</statuscode>
+</dvtablesearch>

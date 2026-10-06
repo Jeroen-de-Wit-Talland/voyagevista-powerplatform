@@ -1,0 +1,12 @@
+<powerpagesites>
+  <powerpagesite powerpagesiteid="9410a590-ed44-4b0f-b41a-68188e57ed9a">
+    <content>{"defaultlanguage":"1ea4c580-c5dc-4dc9-995f-c120acd2e0db","footerwebtemplateid":"ce63a20e-157c-47d2-b876-ebc0ebdc644d","headerwebtemplateid":"997079b6-fbe3-4398-b78a-90e86751f925","statecode":0,"statuscode":1,"website_language":1033,"defaultbotconsumerid":"014e9f37-9abc-f111-aaaf-7ced8d759cbe"}</content>
+    <datamodelversion>2.0</datamodelversion>
+    <enhancedauthorization>0</enhancedauthorization>
+    <iscustomizable>1</iscustomizable>
+    <name>Voyage Vista Portal - voyagevista</name>
+    <primarydomainname>voyagevista.powerappsportals.com</primarydomainname>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </powerpagesite>
+</powerpagesites>

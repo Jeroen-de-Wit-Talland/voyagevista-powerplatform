@@ -2,125 +2,352 @@
   "properties": {
     "connectionReferences": {
       "shared_commondataserviceforapps": {
-        "api": {
-          "name": "shared_commondataserviceforapps"
-        },
+        "runtimeSource": "embedded",
         "connection": {
           "connectionReferenceLogicalName": "voy_sharedcommondataserviceforapps_2041f"
         },
-        "runtimeSource": "embedded"
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
       }
     },
     "definition": {
       "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
       "contentVersion": "1.0.0.0",
       "parameters": {
-        "$authentication": {
-          "defaultValue": {},
-          "type": "SecureObject"
-        },
         "$connections": {
           "defaultValue": {},
           "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
         }
       },
       "triggers": {
-        "When_StatusCode_in_Inquiry_changes": {
-          "type": "OpenApiConnectionWebhook",
+        "manual": {
+          "splitOn": "@triggerBody()['rows']",
+          "metadata": {
+            "operationMetadataId": "fc689023-b335-4879-8366-741617d25514"
+          },
+          "type": "Request",
+          "kind": "ApiConnection",
           "inputs": {
-            "parameters": {
-              "subscriptionRequest/message": 3,
-              "subscriptionRequest/entityname": "voy_travelinquiry",
-              "subscriptionRequest/scope": 4,
-              "subscriptionRequest/filteringattributes": "statuscode",
-              "subscriptionRequest/runas": 2
+            "schema": {
+              "type": "object",
+              "properties": {
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "entity": {
+                        "type": "object",
+                        "properties": {
+                          "entity": {
+                            "type": "object",
+                            "properties": {
+                              "BPFFlowStageEntityRecordId": {
+                                "title": "BPF Flow Stage Table Row Id",
+                                "type": "string"
+                              },
+                              "FlowsWorkflowLogId": {
+                                "title": "Flows Workflow Log Id",
+                                "type": "string"
+                              },
+                              "BPFInstanceId": {
+                                "title": "BPF Instance Id",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "entity"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "entity"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "rows"
+              ]
             },
             "host": {
-              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
-              "operationId": "SubscribeWebhookTrigger",
-              "connectionName": "shared_commondataserviceforapps"
-            }
-          },
-          "metadata": {
-            "operationMetadataId": "66ed20dc-2ba8-4548-b589-fc141c764c12"
+              "connection": {
+                "name": "@parameters('$connections')['shared_commondataserviceforapps']['connectionId']"
+              }
+            },
+            "operationId": "FlowStepRun",
+            "parameters": {}
           }
         }
       },
       "actions": {
-        "Condition": {
-          "type": "If",
-          "expression": {
-            "and": [
-              {
-                "equals": [
-                  "@triggerOutputs()?['body/_voy_customerid_value@Microsoft.Dynamics.CRM.lookuplogicalname']",
-                  "accounts"
-                ]
-              },
-              {
-                "equals": [
-                  "@triggerOutputs()?['body/statuscode']",
-                  "Converted to Quote"
-                ]
-              }
-            ]
-          },
+        "If_Inquiry_Customer_Type_==_Accounts,_create_new_Quote": {
           "actions": {
-            "Add_a_new_row": {
-              "type": "OpenApiConnection",
-              "inputs": {
-                "parameters": {
-                  "entityName": "voy_quotes",
-                  "item/voy_TravelInquiryId@odata.bind": "/voy_travelinquiries(@{triggerOutputs()?['body/voy_travelinquiryid']})",
-                  "item/voy_Customer_account@odata.bind": "/accounts/(@{triggerOutputs()?['body/_voy_customerid_value']})",
-                  "item/voy_destination": "@triggerOutputs()?['body/voy_destination']",
-                  "item/voy_discountpercentage": 0,
-                  "item/voy_numberoftravelers": "@triggerOutputs()?['body/voy_numberoftravelers']"
-                },
-                "host": {
-                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
-                  "operationId": "CreateRecord",
-                  "connectionName": "shared_commondataserviceforapps"
-                }
-              },
+            "Create_Quote_For_Account": {
+              "runAfter": {},
               "metadata": {
                 "operationMetadataId": "bc162b7e-7219-496b-a9de-a27d2dc5ab06"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "voy_quotes",
+                  "item/voy_TravelInquiryId@odata.bind": "/voy_travelinquiries(@{outputs('Get_related_Travel_Inquiry')?['body/voy_travelinquiryid']})",
+                  "item/voy_Customer_account@odata.bind": "/accounts/(@{outputs('Get_related_Travel_Inquiry')?['body/_voy_customerid_value']})",
+                  "item/voy_destination": "@outputs('Get_related_Travel_Inquiry')?['body/voy_destination']",
+                  "item/voy_discountpercentage": 0,
+                  "item/voy_numberoftravelers": "@outputs('Get_related_Travel_Inquiry')?['body/voy_numberoftravelers']"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
               }
             }
+          },
+          "runAfter": {
+            "Get_related_Travel_Inquiry": [
+              "Succeeded"
+            ]
           },
           "else": {
             "actions": {
-              "Add_a_new_row_2": {
-                "type": "OpenApiConnection",
-                "inputs": {
-                  "parameters": {
-                    "entityName": "voy_quotes",
-                    "item/voy_TravelInquiryId@odata.bind": "/voy_travelinquiries(@{triggerOutputs()?['body/voy_travelinquiryid']})",
-                    "item/voy_Customer_contact@odata.bind": "/contacts(@{triggerOutputs()?['body/_voy_customerid_value']})",
-                    "item/voy_destination": "@triggerOutputs()?['body/voy_destination']",
-                    "item/voy_discountpercentage": 0,
-                    "item/voy_numberoftravelers": "@triggerOutputs()?['body/voy_numberoftravelers']"
-                  },
-                  "host": {
-                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
-                    "operationId": "CreateRecord",
-                    "connectionName": "shared_commondataserviceforapps"
-                  }
-                },
+              "Create_Quote_for_Contact": {
+                "runAfter": {},
                 "metadata": {
                   "operationMetadataId": "6f891979-0e99-461a-a9b7-ec1857396e71"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "CreateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "voy_quotes",
+                    "item/voy_TravelInquiryId@odata.bind": "/voy_travelinquiries(@{outputs('Get_related_Travel_Inquiry')?['body/voy_travelinquiryid']})",
+                    "item/voy_Customer_contact@odata.bind": "/contacts(@{outputs('Get_related_Travel_Inquiry')?['body/_voy_customerid_value']})",
+                    "item/voy_destination": "@outputs('Get_related_Travel_Inquiry')?['body/voy_destination']",
+                    "item/voy_discountpercentage": 0,
+                    "item/voy_numberoftravelers": "@outputs('Get_related_Travel_Inquiry')?['body/voy_numberoftravelers']"
+                  },
+                  "authentication": {
+                    "type": "Raw",
+                    "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                  }
                 }
               }
             }
           },
-          "runAfter": {},
+          "expression": {
+            "equals": [
+              "@outputs('Get_related_Travel_Inquiry')?['body/_voy_customerid_value@Microsoft.Dynamics.CRM.lookuplogicalname']",
+              "account"
+            ]
+          },
           "metadata": {
             "operationMetadataId": "2dac256f-04fe-4937-97f2-cfb5096602ac"
+          },
+          "type": "If"
+        },
+        "Get_related_Travel_Inquiry": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "0d4fad02-08e4-438a-8c29-a049024edb6c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "voy_travelinquiries",
+              "recordId": "@triggerBody()?['entity']?['entity']?['BPFFlowStageEntityRecordId']"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Update_Process_Step_to_completed": {
+          "runAfter": {
+            "Update_Travel_Inquiry_StatusCode_to_Converted_to_Quote": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6620bcfc-4d3e-4cf6-aef7-937c0b5decb6"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "workflowlogs",
+              "recordId": "@triggerBody()?['entity']?['entity']?['FlowsWorkflowLogId']",
+              "item/status": 2,
+              "item/completedon": "@utcNow()"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Update_Travel_Inquiry_StatusCode_to_Converted_to_Quote": {
+          "runAfter": {
+            "CreateQuoteIdVariable": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bbf1adc2-930f-4a26-a90b-564e9b802b9d"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "voy_travelinquiries",
+              "recordId": "@outputs('Get_related_Travel_Inquiry')?['body/voy_travelinquiryid']",
+              "item/statuscode": 629350003
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Update_Process_Stage_to_Develop_Quote": {
+          "runAfter": {
+            "GetDevelopQuoteStageId": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1d53673c-8043-4bb8-b5d7-3e45ff179979"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "voy_inquirytoquotes",
+              "recordId": "@first(outputs('GetBPF')?['body/value'])?['businessprocessflowinstanceid']",
+              "item/activestageid@odata.bind": "processstages(@{first(outputs('GetDevelopQuoteStageId')?['body/value'])?['processstageid']})",
+              "item/traversedpath": "@concat(first(outputs('GetBPF')?['body/value'])?['traversedpath'],',', first(outputs('GetDevelopQuoteStageId')?['body/value'])?['processstageid']\r\n)",
+              "item/bpf_voy_quoteid@odata.bind": "voy_quotes(@{variables('CreatedQuoteId')})"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "GetDevelopQuoteStageId": {
+          "runAfter": {
+            "GetBPF": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6318d007-38d0-4533-9e5e-28aa1f03d90a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "processstages",
+              "$select": "processstageid",
+              "$filter": "_processid_value eq @{first(outputs('GetBPF')?['body/value'])?['_processid_value']} and stagename eq 'Develop Quote'",
+              "$top": 1
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "CreateQuoteIdVariable": {
+          "runAfter": {
+            "If_Inquiry_Customer_Type_==_Accounts,_create_new_Quote": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a34489c3-a68d-42cc-9eda-4579c6bc9444"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "CreatedQuoteId",
+                "type": "string",
+                "value": "@{coalesce(\r\n  outputs('Create_Quote_For_Account')?['body/voy_quoteid'],\r\n  outputs('Create_Quote_for_Contact')?['body/voy_quoteid']\r\n)\r\n\r\n}"
+              }
+            ]
+          }
+        },
+        "GetBPF": {
+          "runAfter": {
+            "Update_Process_Step_to_completed": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "36dbc24e-649c-4b69-81b5-872e9aaf2d06"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "voy_inquirytoquotes",
+              "$select": "businessprocessflowinstanceid, _processid_value,traversedpath",
+              "$filter": "_bpf_voy_travelinquiryid_value eq @{outputs('Get_related_Travel_Inquiry')?['body/voy_travelinquiryid']}",
+              "$top": 1
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
           }
         }
       }
     },
-    "templateName": null
+    "templateName": ""
   },
   "schemaVersion": "1.0.0.0"
 }

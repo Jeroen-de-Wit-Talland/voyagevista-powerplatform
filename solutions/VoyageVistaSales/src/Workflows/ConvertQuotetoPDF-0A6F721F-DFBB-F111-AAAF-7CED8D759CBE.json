@@ -1,0 +1,420 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "voy_sharedcommondataserviceforapps_2041f"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_wordonlinebusiness": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedwordonlinebusiness_a60a1"
+        },
+        "api": {
+          "name": "shared_wordonlinebusiness"
+        }
+      },
+      "shared_onedriveforbusiness": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedonedriveforbusiness_2dc44"
+        },
+        "api": {
+          "name": "shared_onedriveforbusiness"
+        }
+      },
+      "shared_sharepointonline": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedsharepointonline_09964"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "splitOn": "@triggerBody()['rows']",
+          "metadata": {
+            "operationMetadataId": "0c38731a-2044-4057-a882-e2cb0a861d7c"
+          },
+          "type": "Request",
+          "kind": "ApiConnection",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "entity": {
+                        "type": "object",
+                        "properties": {
+                          "entity": {
+                            "type": "object",
+                            "properties": {
+                              "BPFFlowStageEntityRecordId": {
+                                "title": "BPF Flow Stage Table Row Id",
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "entity"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "entity"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "rows"
+              ]
+            },
+            "host": {
+              "connection": {
+                "name": "@parameters('$connections')['shared_commondataserviceforapps']['connectionId']"
+              }
+            },
+            "operationId": "FlowStepRun",
+            "parameters": {}
+          }
+        }
+      },
+      "actions": {
+        "GetQuoteWithLineItems": {
+          "runAfter": {
+            "GetQuote": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1605833f-7c32-4818-9cd0-373656015f4e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "voy_quotelineitems",
+              "$filter": "_voy_quoteid_value eq @{triggerBody()?['entity']?['entity']?['BPFFlowStageEntityRecordId']}"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "GetQuote": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "30da9d61-af3b-4595-9f16-792f7a0bc8f9"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "voy_quotes",
+              "recordId": "@triggerBody()?['entity']?['entity']?['BPFFlowStageEntityRecordId']",
+              "$expand": "voy_Customer_account($select=emailaddress1,name,telephone1,address1_line1),voy_Customer_contact($select=emailaddress1,fullname,telephone1,address1_line1)"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Select": {
+          "runAfter": {
+            "GetQuoteWithLineItems": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4cb039d7-cef0-4389-acfc-cf9ef0cdeb01"
+          },
+          "type": "Select",
+          "inputs": {
+            "from": "@outputs('GetQuoteWithLineItems')?['body/value']",
+            "select": {
+              "QliName": "@item()?['voy_name']",
+              "QliDescription": "@item()?['voy_description']",
+              "QliAmount": "@item()?['voy_amount']",
+              "QliPricePerUnit": "@item()?['voy_priceperunit']",
+              "QliTotal": "@item()?['voy_total']"
+            }
+          }
+        },
+        "PopulateDocxQuoteTemplate": {
+          "runAfter": {
+            "Select": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "01KWVEJXSCKMUPDZQI4JD2KXXSUYJFSH4L": "/Quote Template.docx",
+            "operationMetadataId": "0094d2db-6199-464a-be8c-1c6e2b1995f6"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_wordonlinebusiness",
+              "operationId": "CreateFileItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness"
+            },
+            "parameters": {
+              "source": "sites/tallandcollege.sharepoint.com,4e1ca2fd-cab9-40c1-9765-2338008793db,d213240a-fe99-4802-a0d2-ea8b0a69f43f",
+              "drive": "b!_aIcTrnKwUCXZSM4AIeT2wokE9KZ_gJIoNLqiwpp9D9BaN-VZT8qTqlQfxWA0Jz8",
+              "file": "01KWVEJXSCKMUPDZQI4JD2KXXSUYJFSH4L",
+              "dynamicFileSchema/458309144": "@coalesce(outputs('GetQuote')?['body/voy_Customer_account/address1_line1'], outputs('GetQuote')?['body/voy_Customer_contact/address1_line1'], '')",
+              "dynamicFileSchema/1644080454": "@outputs('GetQuote')?['body/voy_total']",
+              "dynamicFileSchema/-947389412": "@outputs('GetQuote')?['body/voy_quotenumber']",
+              "dynamicFileSchema/-662320746": "@coalesce(outputs('GetQuote')?['body/voy_Customer_account/name'], outputs('GetQuote')?['body/voy_Customer_contact/fullname'], '')",
+              "dynamicFileSchema/-2075190413": "@coalesce(outputs('GetQuote')?['body/voy_Customer_account/emailaddress1'], outputs('GetQuote')?['body/voy_Customer_contact/emailaddress1'], '')",
+              "dynamicFileSchema/-1684821700": "@coalesce(outputs('GetQuote')?['body/voy_Customer_account/telephone1'], outputs('GetQuote')?['body/voy_Customer_contact/telephone1'], '')",
+              "dynamicFileSchema/-2062170776": "@body('Select')"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "GetDocumentLocationForQuote": {
+          "runAfter": {
+            "Select": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5177dca3-7def-4e26-9e08-7a1befbdd76b"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "sharepointdocumentlocations",
+              "$select": "relativeurl,absoluteurl",
+              "$filter": "_regardingobjectid_value eq @{outputs('GetQuote')?['body/voy_quoteid']}",
+              "$top": 1
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "CreateWordDocx": {
+          "runAfter": {
+            "PopulateDocxQuoteTemplate": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a9ef6af8-f934-4f7c-b157-ef8b26c565b3"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_onedriveforbusiness",
+              "operationId": "CreateFile",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+            },
+            "parameters": {
+              "folderPath": "/",
+              "name": "@{outputs('GetQuote')?['body/voy_quoteidentifier']}_@{utcNow('dd-MM-yyyy-HH-mm-ss')}.docx",
+              "body": "@body('PopulateDocxQuoteTemplate')"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "ConvertDocxToPDF": {
+          "runAfter": {
+            "CreateWordDocx": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "25955151-673b-419a-a9ae-9bebbd01903f"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_onedriveforbusiness",
+              "operationId": "ConvertFileByPath",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+            },
+            "parameters": {
+              "path": "@outputs('CreateWordDocx')?['body/Path']",
+              "type": "PDF"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "CreateSharePointFile": {
+          "runAfter": {
+            "ConvertDocxToPDF": [
+              "Succeeded"
+            ],
+            "GetFolderName": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1eaaf680-8b24-4f83-a426-e2b395b999b0"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline",
+              "operationId": "CreateFile",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "https://tallandcollege.sharepoint.com/sites/HC-HC-ICT-HAP",
+              "folderPath": "voy_quote/@{outputs('GetRelativeUrl')}",
+              "name": "@{outputs('GetQuote')?['body/voy_quoteidentifier']}_@{utcNow('dd-MM-yyyy-HH-mm-ss')}.pdf",
+              "body": "@body('ConvertDocxToPDF')"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "GetRelativeUrl": {
+          "runAfter": {
+            "GetDocumentLocationForQuote": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "efccf11a-5cab-41d3-b805-cde60d65e5ce"
+          },
+          "type": "Compose",
+          "inputs": "@first(outputs('GetDocumentLocationForQuote')?['body/value'])?['relativeurl']\r\n"
+        },
+        "GetFolderName": {
+          "runAfter": {
+            "GetRelativeUrl": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d51f1370-3db5-4320-9b6a-23c34d615ec7"
+          },
+          "type": "Compose",
+          "inputs": "@concat(outputs('GetQuote')?['body/voy_quoteidentifier'], '_', replace(outputs('GetQuote')?['body/voy_quoteidentifier'], '-', ''))\r\n"
+        },
+        "DeleteOnedriveFile": {
+          "runAfter": {
+            "CreateSharePointFile": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f190c649-85dc-4400-9ae7-6b7f8ffdff1b"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_onedriveforbusiness",
+              "operationId": "DeleteFile",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+            },
+            "parameters": {
+              "id": "@outputs('CreateWordDocx')?['body/Id']"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Update_Process_Step_to_completed": {
+          "runAfter": {
+            "DeleteOnedriveFile": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6620bcfc-4d3e-4cf6-aef7-937c0b5decb6"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateOnlyRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "workflowlogs",
+              "recordId": "@triggerBody()?['entity']?['entity']?['FlowsWorkflowLogId']",
+              "item/status": 2,
+              "item/completedon": "@utcNow()"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

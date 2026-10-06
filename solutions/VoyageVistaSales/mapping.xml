@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paths in "to" are relative to the packed src folder; "map" must use backslashes; code in source control replaces the exported copies in src. -->
+<Mapping>
+  <FileToFile map="WebResources\voy_library.js" to="../WebResources/bin/voy_library.js" />
+  <FileToFile map="pluginpackages\voy_VoyageVistaSales_Plugins\package\voy_VoyageVistaSales_Plugins.nupkg" to="../Plugins/out/voy_VoyageVistaSales_Plugins.nupkg" />
+</Mapping>

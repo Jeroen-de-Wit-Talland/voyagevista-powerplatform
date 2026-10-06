@@ -1,0 +1,19 @@
+<customapi uniquename="voy_CalculateQuote">
+  <allowedcustomprocessingsteptype>2</allowedcustomprocessingsteptype>
+  <bindingtype>1</bindingtype>
+  <boundentitylogicalname>voy_quote</boundentitylogicalname>
+  <description default="Calculate Quote">
+    <label description="Calculate Quote" languagecode="1033" />
+  </description>
+  <displayname default="Calculate Quote">
+    <label description="Calculate Quote" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>CalculateQuote</name>
+  <plugintypeid>
+    <plugintypeexportkey>ABE2BE77FB8ECEDA07F7F9C410AC5E99B6F600F1DC9097ACB74A60B8719007FD</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

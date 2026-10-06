@@ -36,6 +36,38 @@
                       </cell>
                     </row>
                     <row>
+                      <cell id="{caa699d2-1301-42de-9762-4406eac3ee11}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="voy_customer" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="voy_customer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7b93f45d-77e0-453d-ae80-91ff1dc589e7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="voy_destination" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="voy_destination" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cf4a04e7-a43f-4c6f-825a-ec638f022265}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="voy_vat" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="voy_vat" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e2d4ebf1-81b5-40e2-83bc-324d3444be38}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="voy_discountpercentage" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="voy_discountpercentage" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
                       <cell id="{3030aaf2-8323-45c7-b7bb-29070871d93f}" locklevel="0" colspan="1" rowspan="1">
                         <labels>
                           <label description="" languagecode="1033" />
@@ -68,40 +100,101 @@
                   <rows>
                     <row />
                     <row>
-                      <cell locklevel="0" id="{d66341fb-8d0f-4fc0-a954-187c5ed683e5}" colspan="1" rowspan="6">
+                      <cell locklevel="0" id="{b9060c92-17ca-40a4-a1e2-e2a5ebdcb1ea}" colspan="1" rowspan="6" showlabel="false">
                         <labels>
-                          <label description="Quote Line Items" languagecode="1033" />
+                          <label description="QLI" languagecode="1033" />
                         </labels>
-                        <control indicationOfSubgrid="true" id="pagc_quote_lineitems" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{f43698d2-bb76-43dd-aaf2-f1d2feebf6f5}">
+                        <control indicationOfSubgrid="true" id="pgc_quote_lineitems" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{ed8bea92-6f67-4b3c-93f7-73f7188e96f4}">
                           <parameters>
                             <TargetEntityType>voy_quotelineitem</TargetEntityType>
                             <ViewId>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91}</ViewId>
                             <EnableViewPicker>false</EnableViewPicker>
                             <IsUserView>false</IsUserView>
                             <RecordsPerPage>4</RecordsPerPage>
-                            <ViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91},{1502076C-B2AF-4C90-97C1-34C62D9CBAEC}</ViewIds>
+                            <RelationshipName>voy_Quote_voy_QuoteId_voy_QuoteLineItem</RelationshipName>
+                            <ViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91}</ViewIds>
+                            <ChartGridMode>Grid</ChartGridMode>
                           </parameters>
                         </control>
                       </cell>
                     </row>
                     <row>
-                      <cell locklevel="0" id="{ec4a2c25-305c-436e-94ff-b8e20ed21439}" colspan="1" rowspan="6" showlabel="false">
+                      <cell locklevel="0" id="{d6395867-ab2d-4368-a06c-aa9d8899f6f3}" rowspan="4" colspan="1" auto="false" showlabel="false">
                         <labels>
-                          <label description="Line Items" languagecode="1033" />
+                          <label description="" languagecode="1033" />
                         </labels>
-                        <control indicationOfSubgrid="true" id="pgc_quote_lineitems" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{62e16ebd-0dd2-4e57-922d-9546b5eeff6d}">
+                        <control indicationOfSubgrid="true" id="sg_voy_quotelineitems" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
                           <parameters>
-                            <TargetEntityType>voy_quotelineitem</TargetEntityType>
-                            <ViewId>{d7542b0b-f2d6-428f-bba2-f367d20afd91}</ViewId>
-                            <EnableViewPicker>false</EnableViewPicker>
-                            <IsUserView>false</IsUserView>
                             <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>voy_Quote_voy_QuoteId_voy_QuoteLineItem</RelationshipName>
+                            <TargetEntityType>voy_quotelineitem</TargetEntityType>
+                            <ViewId>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91}</ViewId>
+                            <ViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91}</ViewIds>
                           </parameters>
                         </control>
                       </cell>
                     </row>
                     <row />
                     <row />
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{45696af8-cbc7-4568-985d-d630a49c4bde}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="New SG control 1790784803670" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>voy_quote_SharePointDocuments</RelationshipName>
+                            <TargetEntityType>sharepointdocument</TargetEntityType>
+                            <ViewId>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewId>
+                            <ViewIds>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="tab_general_section_documents" id="ab07c7b5-56f5-42b9-baf3-eb7c34662353" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Documents" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{ce962b5e-5ae7-411b-9887-08722fc227f8}" rowspan="4" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="sg_sharepointdocuments" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <RelationshipName>voy_quote_SharePointDocuments</RelationshipName>
+                            <TargetEntityType>sharepointdocument</TargetEntityType>
+                            <ViewId>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewId>
+                            <ViewIds>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
                     <row />
                     <row />
                     <row />
@@ -129,6 +222,28 @@
               <labels>
                 <label description="" languagecode="1033" />
               </labels>
+            </cell>
+            <cell id="{a4b80e9c-fa9b-4082-8115-baeb4e0d62d2}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+              <control id="header_voy_validuntil" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="voy_validuntil" disabled="false" />
+            </cell>
+            <cell locklevel="0" id="{dd59b87e-651a-4cc2-8fc0-c5611267df50}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell locklevel="0" id="{7890fb19-8e47-4a1d-a1c5-514b97e10b47}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bc471c47-3896-41dc-97d0-1ea31f8e6723}" locklevel="0" colspan="1" rowspan="1">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+              <control id="header_statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
             </cell>
           </row>
         </rows>
@@ -158,7 +273,7 @@
         <Everyone />
       </DisplayConditions>
       <controlDescriptions>
-        <controlDescription forControl="{62e16ebd-0dd2-4e57-922d-9546b5eeff6d}">
+        <controlDescription forControl="{ed8bea92-6f67-4b3c-93f7-73f7188e96f4}">
           <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
             <parameters />
           </customControl>
@@ -172,141 +287,10 @@
                 <TargetEntityType>voy_quotelineitem</TargetEntityType>
                 <IsUserView>false</IsUserView>
                 <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName />
-                <FilteredViewIds />
+                <RelationshipName>voy_Quote_voy_QuoteId_voy_QuoteLineItem</RelationshipName>
+                <FilteredViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91}</FilteredViewIds>
               </data-set>
               <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
-              <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
-              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">yes</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">yes</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">yes</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">auto</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">yes</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowColumnNamesForListView type="Enum" static="true">no</ShowColumnNamesForListView>
-              <EnableBandedRowsForListView type="Enum" static="true">no</EnableBandedRowsForListView>
-              <NumberOfListColumns type="Whole.None" static="true">3</NumberOfListColumns>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <ContextualLookupColumnFilters type="Enum" static="true">yes</ContextualLookupColumnFilters>
-              <LookupFilterBeginsWith type="Enum" static="true">no</LookupFilterBeginsWith>
-              <UseFirstColumnForLookupEdits type="Enum" static="true">no</UseFirstColumnForLookupEdits>
-              <DateTimeFormat type="Enum" static="true">none</DateTimeFormat>
-              <DateOnlyFormat type="Enum" static="true">none</DateOnlyFormat>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
-            </parameters>
-          </customControl>
-          <customControl formFactor="2" name="Microsoft.PowerApps.PowerAppsOneGrid">
-            <parameters>
-              <data-set name="Items">
-                <ViewId>{d7542b0b-f2d6-428f-bba2-f367d20afd91}</ViewId>
-                <TargetEntityType>voy_quotelineitem</TargetEntityType>
-                <IsUserView>false</IsUserView>
-                <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName />
-                <FilteredViewIds />
-              </data-set>
-              <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
-              <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
-              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">yes</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">yes</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">yes</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">auto</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">yes</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowColumnNamesForListView type="Enum" static="true">no</ShowColumnNamesForListView>
-              <EnableBandedRowsForListView type="Enum" static="true">no</EnableBandedRowsForListView>
-              <NumberOfListColumns type="Whole.None" static="true">3</NumberOfListColumns>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <ContextualLookupColumnFilters type="Enum" static="true">yes</ContextualLookupColumnFilters>
-              <LookupFilterBeginsWith type="Enum" static="true">no</LookupFilterBeginsWith>
-              <UseFirstColumnForLookupEdits type="Enum" static="true">no</UseFirstColumnForLookupEdits>
-              <DateTimeFormat type="Enum" static="true">none</DateTimeFormat>
-              <DateOnlyFormat type="Enum" static="true">none</DateOnlyFormat>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
-            </parameters>
-          </customControl>
-          <customControl formFactor="1" name="Microsoft.PowerApps.PowerAppsOneGrid">
-            <parameters>
-              <data-set name="Items">
-                <ViewId>{d7542b0b-f2d6-428f-bba2-f367d20afd91}</ViewId>
-                <TargetEntityType>voy_quotelineitem</TargetEntityType>
-                <IsUserView>false</IsUserView>
-                <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName />
-                <FilteredViewIds />
-              </data-set>
-              <EnableEditing type="Enum" static="true">yes</EnableEditing>
-              <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
-              <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
-              <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
-              <EnableSorting type="Enum" static="true">yes</EnableSorting>
-              <EnableGrouping type="Enum" static="true">yes</EnableGrouping>
-              <EnableAggregation type="Enum" static="true">yes</EnableAggregation>
-              <EnableColumnMoving type="Enum" static="true">yes</EnableColumnMoving>
-              <EnableMultipleSelection type="Enum" static="true">yes</EnableMultipleSelection>
-              <EnableRangeSelection type="Enum" static="true">yes</EnableRangeSelection>
-              <EnableJumpBar type="Enum" static="true">auto</EnableJumpBar>
-              <EnablePagination type="Enum" static="true">no</EnablePagination>
-              <EnableDropdownColor type="Enum" static="true">yes</EnableDropdownColor>
-              <EnableStatusIcons type="Enum" static="true">yes</EnableStatusIcons>
-              <EnableTypeIcons type="Enum" static="true">no</EnableTypeIcons>
-              <NavigationTypesAllowed type="Enum" static="true">all</NavigationTypesAllowed>
-              <ReflowBehavior type="Enum" static="true">Reflow</ReflowBehavior>
-              <ShowAvatar type="Enum" static="true">yes</ShowAvatar>
-              <ShowColumnNamesForListView type="Enum" static="true">no</ShowColumnNamesForListView>
-              <EnableBandedRowsForListView type="Enum" static="true">no</EnableBandedRowsForListView>
-              <NumberOfListColumns type="Whole.None" static="true">3</NumberOfListColumns>
-              <ShowFooter type="Enum" static="true">yes</ShowFooter>
-              <ShowColumnHeaders type="Enum" static="true">yes</ShowColumnHeaders>
-              <ContextualLookupColumnFilters type="Enum" static="true">yes</ContextualLookupColumnFilters>
-              <LookupFilterBeginsWith type="Enum" static="true">no</LookupFilterBeginsWith>
-              <UseFirstColumnForLookupEdits type="Enum" static="true">no</UseFirstColumnForLookupEdits>
-              <DateTimeFormat type="Enum" static="true">none</DateTimeFormat>
-              <DateOnlyFormat type="Enum" static="true">none</DateOnlyFormat>
-              <EnableStatusColumn type="Enum" static="true">yes</EnableStatusColumn>
-            </parameters>
-          </customControl>
-        </controlDescription>
-        <controlDescription forControl="{f43698d2-bb76-43dd-aaf2-f1d2feebf6f5}">
-          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
-            <parameters />
-          </customControl>
-          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
-            <parameters />
-          </customControl>
-          <customControl formFactor="0" name="Microsoft.PowerApps.PowerAppsOneGrid">
-            <parameters>
-              <data-set name="Items">
-                <ViewId>{d7542b0b-f2d6-428f-bba2-f367d20afd91}</ViewId>
-                <TargetEntityType>voy_quotelineitem</TargetEntityType>
-                <IsUserView>false</IsUserView>
-                <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName />
-                <FilteredViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91},{1502076C-B2AF-4C90-97C1-34C62D9CBAEC}</FilteredViewIds>
-              </data-set>
-              <EnableEditing type="Enum" static="true">no</EnableEditing>
               <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
               <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
               <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
@@ -344,10 +328,10 @@
                 <TargetEntityType>voy_quotelineitem</TargetEntityType>
                 <IsUserView>false</IsUserView>
                 <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName />
-                <FilteredViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91},{1502076C-B2AF-4C90-97C1-34C62D9CBAEC}</FilteredViewIds>
+                <RelationshipName>voy_Quote_voy_QuoteId_voy_QuoteLineItem</RelationshipName>
+                <FilteredViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91}</FilteredViewIds>
               </data-set>
-              <EnableEditing type="Enum" static="true">no</EnableEditing>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
               <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
               <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
               <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
@@ -385,10 +369,10 @@
                 <TargetEntityType>voy_quotelineitem</TargetEntityType>
                 <IsUserView>false</IsUserView>
                 <EnableViewPicker>false</EnableViewPicker>
-                <RelationshipName />
-                <FilteredViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91},{1502076C-B2AF-4C90-97C1-34C62D9CBAEC}</FilteredViewIds>
+                <RelationshipName>voy_Quote_voy_QuoteId_voy_QuoteLineItem</RelationshipName>
+                <FilteredViewIds>{D7542B0B-F2D6-428F-BBA2-F367D20AFD91}</FilteredViewIds>
               </data-set>
-              <EnableEditing type="Enum" static="true">no</EnableEditing>
+              <EnableEditing type="Enum" static="true">yes</EnableEditing>
               <DisableChildItemsEditing type="Enum" static="true">no</DisableChildItemsEditing>
               <HeadlessRendering type="Enum" static="true">no</HeadlessRendering>
               <EnableFiltering type="Enum" static="true">yes</EnableFiltering>
@@ -421,6 +405,9 @@
           </customControl>
         </controlDescription>
       </controlDescriptions>
+      <formLibraries>
+        <Library name="voy_library.js" libraryUniqueId="{a1451b86-e255-4a1e-a8aa-bf86c5eda203}" />
+      </formLibraries>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>
