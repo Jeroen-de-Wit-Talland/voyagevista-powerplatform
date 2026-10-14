@@ -1,0 +1,30 @@
+<powerpagecomponent powerpagecomponentid="34cd4c26-fca3-4d3d-9746-3139dd449c16">
+  <content>{
+  "entityname": "My Inquiries",
+  "entitylogicalname": "voy_travelinquiry",
+  "scope": 756150001,
+  "append": true,
+  "appendto": true,
+  "delete": false,
+  "read": true,
+  "create": true,
+  "write": false,
+  "parentrelationship": null,
+  "parententitypermission": null,
+  "contactrelationship": "voy_contact_voy_travelinquiry_contactid",
+  "accountrelationship": null,
+  "childTablePermissions": [],
+  "adx_entitypermission_webrole": [
+    "5f761e0e-1bf8-4f4e-9843-428da2e6e6d7"
+  ],
+  "permissionfetchxml": null
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>My Inquiries</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9410a590-ed44-4b0f-b41a-68188e57ed9a</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

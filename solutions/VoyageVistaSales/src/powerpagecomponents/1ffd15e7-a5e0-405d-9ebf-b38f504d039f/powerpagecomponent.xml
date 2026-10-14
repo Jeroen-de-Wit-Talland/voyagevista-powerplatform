@@ -1,0 +1,19 @@
+<powerpagecomponent powerpagecomponentid="1ffd15e7-a5e0-405d-9ebf-b38f504d039f">
+  <content>{
+  "filecontent": null,
+  "display_name": "Site name",
+  "type": 756150000,
+  "value": "Voyage Vista"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Site name</name>
+  <powerpagecomponenttype>7</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9410a590-ed44-4b0f-b41a-68188e57ed9a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>1ea4c580-c5dc-4dc9-995f-c120acd2e0db</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

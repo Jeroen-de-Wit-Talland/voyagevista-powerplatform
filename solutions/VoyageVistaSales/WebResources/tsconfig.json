@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "lib": ["es2020", "dom"],
     "outDir": "webresources",
     "rootDir": "webresources_src",
@@ -15,6 +15,6 @@
     "sourceMap": true,
     "pretty": true,
     "typeRoots": ["./typings", "./node_modules"],
-    "types": ["@types/jest"]
+    "types": ["@types/jest", "@types/xrm"]
   }
 }

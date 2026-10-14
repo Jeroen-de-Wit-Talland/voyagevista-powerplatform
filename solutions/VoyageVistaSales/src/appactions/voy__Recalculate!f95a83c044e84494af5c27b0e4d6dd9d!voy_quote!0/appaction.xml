@@ -1,0 +1,29 @@
+<appaction uniquename="voy__Recalculate!f95a83c044e84494af5c27b0e4d6dd9d!voy_quote!0">
+  <buttonlabeltext default="Recalculate">
+    <label description="Recalculate" languagecode="1033" />
+  </buttonlabeltext>
+  <context>1</context>
+  <contextentity>
+    <logicalname>voy_quote</logicalname>
+  </contextentity>
+  <contextvalue>voy_quote</contextvalue>
+  <fonticon>$clientsvg:Calculator</fonticon>
+  <hidden>0</hidden>
+  <iscustomizable>1</iscustomizable>
+  <isdisabled>0</isdisabled>
+  <isgrouptitlehidden>0</isgrouptitlehidden>
+  <location>0</location>
+  <name>Recalculate!f95a83c044e84494af5c27b0e4d6dd9d</name>
+  <onclickeventjavascriptfunctionname>voy.voy_quote_CommandBar.ExecuteCalculate</onclickeventjavascriptfunctionname>
+  <onclickeventjavascriptparameters>[{"type":5}]</onclickeventjavascriptparameters>
+  <onclickeventjavascriptwebresourceid>
+    <webresourceid>38dd2a2f-f6b7-f111-aaae-7ced8d759cbe</webresourceid>
+  </onclickeventjavascriptwebresourceid>
+  <onclickeventtype>2</onclickeventtype>
+  <origin>0</origin>
+  <sequence>100100046.0000000000</sequence>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <type>0</type>
+  <visibilitytype>0</visibilitytype>
+</appaction>

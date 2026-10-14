@@ -28,6 +28,10 @@ const perFileEntries = () =>
       .map((f) => [f.replace(/\.ts$/, ""), "./webresources_src/" + f]),
   );
 
+// The lib folder is git-ignored (generated locally), so CI builds without it.
+const xrmQueryPath = Path.resolve(__dirname, "webresources_src/lib/dg.xrmquery.web.min.js");
+const hasXrmQuery = Fs.existsSync(xrmQueryPath);
+
 module.exports = {
   entry: perFile ? perFileEntries() : "./webresources_src/library.ts",
   module: {
@@ -42,13 +46,17 @@ module.exports = {
         use: { loader: "ts-loader", options: { configFile: Path.resolve(__dirname, "tsconfig.build.json") } },
         exclude: /node_modules/,
       },
-      {
-        test: require.resolve("./webresources_src/lib/dg.xrmquery.web.min"),
-        loader: "exports-loader",
-        options: {
-          exports: ["XrmQuery", "Filter", "XQW"],
-        },
-      },
+      ...(hasXrmQuery
+        ? [
+            {
+              test: xrmQueryPath,
+              loader: "exports-loader",
+              options: {
+                exports: ["XrmQuery", "Filter", "XQW"],
+              },
+            },
+          ]
+        : []),
     ],
   },
   resolve: {
@@ -66,11 +74,13 @@ module.exports = {
         library: ["voy"], //used to call functions on forms eg: LIBRARYPREFIX.Class.Function
         libraryTarget: "var",
       },
-  plugins: [
-    new Webpack.ProvidePlugin({
-      XrmQuery: [Path.resolve(__dirname, "./webresources_src/lib/dg.xrmquery.web.min"), "XrmQuery"],
-      Filter: [Path.resolve(__dirname, "./webresources_src/lib/dg.xrmquery.web.min"), "Filter"],
-      XQW: [Path.resolve(__dirname, "./webresources_src/lib/dg.xrmquery.web.min"), "XQW"],
-    }),
-  ],
+  plugins: hasXrmQuery
+    ? [
+        new Webpack.ProvidePlugin({
+          XrmQuery: [xrmQueryPath, "XrmQuery"],
+          Filter: [xrmQueryPath, "Filter"],
+          XQW: [xrmQueryPath, "XQW"],
+        }),
+      ]
+    : [],
 };

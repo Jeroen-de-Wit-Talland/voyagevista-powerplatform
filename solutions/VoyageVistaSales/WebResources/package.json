@@ -1,9 +1,14 @@
 {
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest --passWithNoTests"
+  },
   "dependencies": {
     "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
+    "@types/xrm": "^9.0.97",
     "@typescript-eslint/eslint-plugin": "^8.70.0",
     "@typescript-eslint/parser": "^8.70.0",
     "eslint": "^10.11.0",

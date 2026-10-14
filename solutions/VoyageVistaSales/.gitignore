@@ -7,4 +7,7 @@
 # MSBuild Binary and Structured Log
 *.binlog
 
+# packed solution zips
+/artifacts
+
 node_modules

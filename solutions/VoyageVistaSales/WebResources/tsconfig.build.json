@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": [],
+    "types": ["@types/xrm"],
     "module": "esnext",
     "moduleResolution": "bundler"
   },

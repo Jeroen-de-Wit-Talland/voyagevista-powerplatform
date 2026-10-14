@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.26091.131" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26091.131" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26091.00131">
+<ImportExportXml version="9.2.26094.133" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.26094.133" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.26094.00133">
   <SolutionManifest>
     <UniqueName>VoyageVistaSales</UniqueName>
     <LocalizedNames>
@@ -82,24 +82,61 @@
     <RootComponents>
       <RootComponent type="1" schemaName="account" behavior="1" />
       <RootComponent type="1" schemaName="contact" behavior="1" />
+      <RootComponent type="1" schemaName="knowledgearticle" behavior="1" />
+      <RootComponent type="1" schemaName="msdyn_kbattachment" behavior="1" />
+      <RootComponent type="1" schemaName="voy_inquirytoquote" behavior="0" />
       <RootComponent type="1" schemaName="voy_quote" behavior="0" />
       <RootComponent type="1" schemaName="voy_quotelineitem" behavior="0" />
       <RootComponent type="1" schemaName="voy_travelinquiry" behavior="0" />
       <RootComponent type="1" schemaName="voy_travelproduct" behavior="0" />
+      <RootComponent type="29" id="{0a6f721f-dfbb-f111-aaaf-7ced8d759cbe}" behavior="0" />
       <RootComponent type="29" id="{312f04f9-ecac-f111-aaab-7ced8d759cbe}" behavior="0" />
+      <RootComponent type="29" id="{4c182cdb-65b6-f111-aaae-7ced8d759cbe}" behavior="0" />
+      <RootComponent type="61" schemaName="voy_library.js" behavior="0" />
       <RootComponent type="62" schemaName="voy_VoyageVistaSalesApp" behavior="0" />
       <RootComponent type="80" schemaName="voy_VoyageVistaSalesApp" behavior="0" />
+      <RootComponent type="91" id="{4a977901-f4b7-f111-aaae-7ced8d759cbe}" schemaName="VoyageVistaSales.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
+        <Required type="1" schemaName="msdyn_kbattachment" displayName="Knowledge Article Attachment" solution="msdynce_KnowledgeManagementFeatures (9.0.26085.3002)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26085.3002">msdynce_KnowledgeManagementAnchor (9.0.26085.3002)</package>
+        </Required>
+        <Dependent type="1" schemaName="msdyn_kbattachment" displayName="Knowledge Article Attachment" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_contentstore" displayName="File storage content reference" parentSchemaName="knowledgearticle" parentDisplayName="Knowledge Article" solution="msdynce_KnowledgeManagementPatch (9.0.26085.3002)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26085.3002">msdynce_KnowledgeManagementAnchor (9.0.26085.3002)</package>
+        </Required>
+        <Dependent type="26" schemaName="Voyage Vista Portal bot Answers" displayName="Voyage Vista Portal bot Answers" parentSchemaName="knowledgearticle" parentDisplayName="Knowledge Article" id="{93d48ab0-cd2d-4ebb-9e16-de9647871950}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_contentstore" displayName="File storage content reference" parentSchemaName="knowledgearticle" parentDisplayName="Knowledge Article" solution="msdynce_KnowledgeManagementPatch (9.0.26085.3002)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26085.3002">msdynce_KnowledgeManagementAnchor (9.0.26085.3002)</package>
+        </Required>
+        <Dependent type="DVFileSearchAttribute" displayName="ppages_692a95dc-64ab-4206-9185-1d7fdc7bd87a.msdyn_contentstore" id.uniquename="ppages_692a95dc-64ab-4206-9185-1d7fdc7bd87a.msdyn_contentstore" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_fileattachment" displayName="File Attachment" parentSchemaName="msdyn_kbattachment" parentDisplayName="Knowledge Article Attachment" solution="msdynce_KnowledgeManagementFeatures (9.0.26085.3002)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26085.3002">msdynce_KnowledgeManagementAnchor (9.0.26085.3002)</package>
+        </Required>
+        <Dependent type="26" schemaName="Voyage Vista Portal bot Answers" displayName="Voyage Vista Portal bot Answers" parentSchemaName="msdyn_kbattachment" parentDisplayName="Knowledge Article Attachment" id="{29a4293e-4eeb-44d9-8185-bc1d9ab8e79c}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="msdyn_fileattachment" displayName="File Attachment" parentSchemaName="msdyn_kbattachment" parentDisplayName="Knowledge Article Attachment" solution="msdynce_KnowledgeManagementFeatures (9.0.26085.3002)">
+          <package appName="msdynce_KnowledgeManagement" version="9.0.26085.3002">msdynce_KnowledgeManagementAnchor (9.0.26085.3002)</package>
+        </Required>
+        <Dependent type="DVFileSearchAttribute" displayName="ppages_56b857a7-014c-44f0-941a-afd79f29497e.msdyn_fileattachment" id.uniquename="ppages_56b857a7-014c-44f0-941a-afd79f29497e.msdyn_fileattachment" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="60" displayName="contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{707fc57b-c5e6-471b-a180-e37ed28a38e2}">
-          <package appName="msdynce_AppCommon" version="9.0.26083.10001">msdynce_AppCommonAnchor (9.0.26083.10001)</package>
+          <package appName="msdynce_AppCommon" version="9.0.26091.10001">msdynce_AppCommonAnchor (9.0.26091.10001)</package>
         </Required>
         <Dependent type="60" displayName="Information" parentDisplayName="Travel Inquiry" id="{44e4f671-77ef-4f33-b047-ee2c4c8d7bd3}" />
       </MissingDependency>
       <MissingDependency>
         <Required type="60" displayName="account card" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{b028db32-3619-48a5-ac51-cf3f947b0ef3}">
-          <package appName="msdynce_AppCommon" version="9.0.26083.10001">msdynce_AppCommonAnchor (9.0.26083.10001)</package>
+          <package appName="msdynce_AppCommon" version="9.0.26091.10001">msdynce_AppCommonAnchor (9.0.26091.10001)</package>
         </Required>
         <Dependent type="60" displayName="Information" parentDisplayName="Travel Inquiry" id="{44e4f671-77ef-4f33-b047-ee2c4c8d7bd3}" />
       </MissingDependency>
@@ -110,22 +147,28 @@
         <Dependent type="80" schemaName="voy_VoyageVistaSalesApp" displayName="Voyage Vista Sales App" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2609.1007)">
-          <package appName="Base Custom Controls" version="9.0.2609.1007">BaseCustomControlsCore (9.0.2609.1007)</package>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2609.4004)">
+          <package appName="Base Custom Controls" version="9.0.2609.4004">BaseCustomControlsCore (9.0.2609.4004)</package>
         </Required>
         <Dependent type="60" displayName="Information" parentDisplayName="Travel Inquiry" id="{44e4f671-77ef-4f33-b047-ee2c4c8d7bd3}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2609.1007)">
-          <package appName="Base Custom Controls" version="9.0.2609.1007">BaseCustomControlsCore (9.0.2609.1007)</package>
+        <Required type="66" schemaName="Microsoft.PowerApps.PowerAppsOneGrid" displayName="Microsoft.PowerApps.PowerAppsOneGrid" solution="BaseCustomControlsCore (9.0.2609.4004)">
+          <package appName="Base Custom Controls" version="9.0.2609.4004">BaseCustomControlsCore (9.0.2609.4004)</package>
         </Required>
         <Dependent type="60" displayName="Information" parentDisplayName="Quote" id="{ef8a180b-d564-483c-98b1-17dc874caf7b}" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.20)" id.uniquename="AppChannel">
-          <package appName="PowerAppsAppFramework Package" version="1.0.0.25">PowerAppsAppFramework_Anchor (1.0.0.25)</package>
+        <Required type="SettingDefinition" displayName="AppChannel" solution="msdyn_AppFrameworkInfraExtensions (1.0.0.27)" id.uniquename="AppChannel">
+          <package appName="PowerAppsAppFramework Package" version="1.0.0.27">PowerAppsAppFramework_Anchor (1.0.0.27)</package>
         </Required>
         <Dependent type="AppSetting" displayName="parentappmoduleid.uniquename=voy_VoyageVistaSalesApp,settingdefinitionid.uniquename=AppChannel" id.parentappmoduleid.uniquename="voy_VoyageVistaSalesApp" id.settingdefinitionid.uniquename="AppChannel" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="appcopilotenabled" solution="msdyn_AppCopilotAppInfraSettings (9.2.2026084.260813071)" id.uniquename="appcopilotenabled">
+          <package appName="PowerAppsAppCopilotApp Package" version="9.2.0.5">msdyn_M365CopilotAppInfraSettings (9.2.0.5)</package>
+        </Required>
+        <Dependent type="OrganizationSetting" displayName="appcopilotenabled" id.settingdefinitionid.uniquename="appcopilotenabled" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

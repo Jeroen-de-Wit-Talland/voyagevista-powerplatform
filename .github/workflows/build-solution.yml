@@ -1,0 +1,118 @@
+name: build-solution
+
+on:
+  push:
+    branches: [master]
+    paths: ["solutions/**", ".github/workflows/build-solution.yml"]
+  pull_request:
+    paths: ["solutions/**", ".github/workflows/build-solution.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  SOLUTION_DIR: solutions/VoyageVistaSales
+  SOLUTION_NAME: VoyageVistaSales
+
+jobs:
+  webresources:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ${{ env.SOLUTION_DIR }}/WebResources/package-lock.json
+
+      - name: Build and test web resources
+        working-directory: ${{ env.SOLUTION_DIR }}/WebResources
+        run: |
+          npm ci
+          npm test
+          npm run build
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: webresources
+          path: ${{ env.SOLUTION_DIR }}/WebResources/bin/voy_library.js
+          if-no-files-found: error
+
+  plugins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Test plug-ins
+        working-directory: ${{ env.SOLUTION_DIR }}/Plugins
+        run: dotnet test VoyageVistaSales.Plugins.Tests/VoyageVistaSales.Plugins.Tests.csproj --logger "trx;LogFileName=plugin-tests.trx" --results-directory ../out/test-results
+
+      - name: Build plug-in package
+        working-directory: ${{ env.SOLUTION_DIR }}/Plugins
+        run: |
+          dotnet build VoyageVistaSales.Plugins/VoyageVistaSales.Plugins.csproj -c Release -p:DvptDeployBuild=true
+          mkdir -p out
+          cp VoyageVistaSales.Plugins/bin/Release/*.nupkg out/voy_VoyageVistaSales_Plugins.nupkg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plugin-package
+          path: ${{ env.SOLUTION_DIR }}/Plugins/out/voy_VoyageVistaSales_Plugins.nupkg
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: plugin-test-results
+          path: ${{ env.SOLUTION_DIR }}/Plugins/out/test-results
+          if-no-files-found: ignore
+
+  pack:
+    needs: [webresources, plugins]
+    runs-on: ubuntu-latest
+    env:
+      # Bump major.minor.patch by hand; the 4th part is the run number.
+      SOLUTION_VERSION: ${{ format('1.0.0.{0}', github.run_number) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: webresources
+          path: ${{ env.SOLUTION_DIR }}/WebResources/bin
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: plugin-package
+          path: ${{ env.SOLUTION_DIR }}/Plugins/out
+
+      - name: Install pac CLI
+        run: dotnet tool install --global Microsoft.PowerApps.CLI.Tool
+
+      - name: Set solution version
+        working-directory: ${{ env.SOLUTION_DIR }}
+        run: sed -i "0,/<Version>[^<]*<\/Version>/s//<Version>${SOLUTION_VERSION}<\/Version>/" src/Other/Solution.xml
+
+      - name: Pack solution
+        working-directory: ${{ env.SOLUTION_DIR }}
+        run: |
+          mkdir -p artifacts
+          for type in Unmanaged Managed; do
+            pac solution pack --zipfile "artifacts/${SOLUTION_NAME}_${SOLUTION_VERSION}_${type}.zip" --folder src --map mapping.xml --packagetype "$type"
+          done
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: solution-${{ env.SOLUTION_VERSION }}
+          path: ${{ env.SOLUTION_DIR }}/artifacts/*.zip
+          if-no-files-found: error

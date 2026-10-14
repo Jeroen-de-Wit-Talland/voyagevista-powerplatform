@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{4c182cdb-65b6-f111-aaae-7ced8d759cbe}" Name="Inquiry to Quote" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/InquirytoQuote-4C182CDB-65B6-F111-AAAE-7CED8D759CBE.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <RunAs>1</RunAs>
+  <UniqueName>voy_inquirytoquote</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>1</ProcessTriggerScope>
+  <ModernFlowType>0</ModernFlowType>
+  <PrimaryEntity>voy_TravelInquiry</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Inquiry to Quote" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{69ed193a-94c6-42a0-96b8-dce9cc90ba50}">
+      <label languagecode="1033" description="Qualify Inquiry" />
+    </steplabels>
+    <steplabels id="{617f2aa6-a495-406f-bd28-dc16a3bafdc1}">
+      <label languagecode="1033" description="Destination" />
+    </steplabels>
+    <steplabels id="{51679d08-e7df-486e-81fd-e8d00075fcff}">
+      <label languagecode="1033" description="Number of travelers" />
+    </steplabels>
+    <steplabels id="{fbd2bed4-f0fc-4ce3-a9b3-fa949bc793fd}">
+      <label languagecode="1033" description="Customer" />
+    </steplabels>
+    <steplabels id="{d531cd17-9d42-4b8a-a72e-c6a2dddfeebc}">
+      <label languagecode="1033" description="Start Date" />
+    </steplabels>
+    <steplabels id="{435b316b-5832-49f5-aaf8-4edd91998f20}">
+      <label languagecode="1033" description="End Date" />
+    </steplabels>
+    <steplabels id="{3eefcb56-05ab-4cb4-982a-7741ac60e045}">
+      <label languagecode="1033" description="Convert to Quote" />
+    </steplabels>
+    <steplabels id="{c130c087-59a4-4176-acf7-eb3bf3b3236e}">
+      <label languagecode="1033" description="Develop Quote" />
+    </steplabels>
+    <steplabels id="{9ae80b56-a6e8-40c2-9291-c4c90f14cff0}">
+      <label languagecode="1033" description="Total" />
+    </steplabels>
+    <steplabels id="{b4e48073-edde-471e-b07c-017a05a5436d}">
+      <label languagecode="1033" description="Valid Until" />
+    </steplabels>
+    <steplabels id="{9688ed5d-fe8a-436a-98be-d1b125150b7d}">
+      <label languagecode="1033" description="Convert Quote to PDF" />
+    </steplabels>
+    <steplabels id="{48baeda0-8b24-4e42-a53a-4a4e8a457009}">
+      <label languagecode="1033" description="Propose Quote" />
+    </steplabels>
+    <steplabels id="{4526f060-e349-4166-b1da-5525588ca4c2}">
+      <label languagecode="1033" description="Status Reason" />
+    </steplabels>
+  </labels>
+</Workflow>

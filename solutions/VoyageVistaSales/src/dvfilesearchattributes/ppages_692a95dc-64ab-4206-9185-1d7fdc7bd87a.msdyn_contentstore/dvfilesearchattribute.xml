@@ -1,0 +1,16 @@
+<dvfilesearchattribute uniquename="ppages_692a95dc-64ab-4206-9185-1d7fdc7bd87a.msdyn_contentstore">
+  <attribute>
+    <entityid.logicalname>knowledgearticle</entityid.logicalname>
+    <logicalname>msdyn_contentstore</logicalname>
+  </attribute>
+  <dvfilesearchentity>
+    <dvfilesearchentityid>1920f0fb-5263-4928-80c9-1e99bc7c727a</dvfilesearchentityid>
+  </dvfilesearchentity>
+  <iscustomizable>1</iscustomizable>
+  <isfilterable>0</isfilterable>
+  <issearchable>1</issearchable>
+  <isvectorizable>0</isvectorizable>
+  <name>692a95dc-64ab-4206-9185-1d7fdc7bd87a.msdyn_contentstore</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</dvfilesearchattribute>

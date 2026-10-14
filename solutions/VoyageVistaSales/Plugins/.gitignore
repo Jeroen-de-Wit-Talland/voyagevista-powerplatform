@@ -4,6 +4,9 @@
 /**/bin
 /**/obj
 
+# packed plug-in package used by mapping.xml
+/out
+
 # vs intermediate directory
 /.vs
 

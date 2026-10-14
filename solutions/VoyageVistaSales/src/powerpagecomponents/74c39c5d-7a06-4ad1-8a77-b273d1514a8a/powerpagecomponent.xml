@@ -1,0 +1,19 @@
+<powerpagecomponent powerpagecomponentid="74c39c5d-7a06-4ad1-8a77-b273d1514a8a">
+  <content>{
+  "filecontent": null,
+  "display_name": "Logo alt text",
+  "type": 756150000,
+  "value": "Voyage Vista Logo"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Logo alt text</name>
+  <powerpagecomponenttype>7</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9410a590-ed44-4b0f-b41a-68188e57ed9a</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>1ea4c580-c5dc-4dc9-995f-c120acd2e0db</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

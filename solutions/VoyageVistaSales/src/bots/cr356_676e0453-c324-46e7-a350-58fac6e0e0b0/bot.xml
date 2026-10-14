@@ -1,0 +1,14 @@
+<bot schemaname="cr356_676e0453-c324-46e7-a350-58fac6e0e0b0">
+  <authenticationconfiguration>{
+  "$kind": "BotAuthenticationConfiguration",
+  "connectionName": "58b50ff7-769e-460a-a2ee-b06ea0079723"
+}</authenticationconfiguration>
+  <authenticationmode>4</authenticationmode>
+  <authenticationtrigger>1</authenticationtrigger>
+  <iscustomizable>1</iscustomizable>
+  <language>1033</language>
+  <name>Voyage Vista Portal bot</name>
+  <runtimeprovider>0</runtimeprovider>
+  <template>powerpages-1.0.0</template>
+  <timezoneruleversionnumber>4</timezoneruleversionnumber>
+</bot>

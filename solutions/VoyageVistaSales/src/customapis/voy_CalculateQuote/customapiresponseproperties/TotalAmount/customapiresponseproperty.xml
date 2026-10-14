@@ -1,0 +1,11 @@
+<customapiresponseproperty uniquename="TotalAmount">
+  <description default="TotalAmount">
+    <label description="TotalAmount" languagecode="1033" />
+  </description>
+  <displayname default="TotalAmount">
+    <label description="TotalAmount" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <name>TotalAmount</name>
+  <type>8</type>
+</customapiresponseproperty>
