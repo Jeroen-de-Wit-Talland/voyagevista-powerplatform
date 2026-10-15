@@ -16,26 +16,29 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Identifies where the social profile originated from, such as Twitter, or FaceBook.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum socialprofile_community
+	public enum SocialProfile_Community
 	{
 		
 		/// <summary>
 		/// Facebook item.
 		/// </summary>
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Facebook", 0, null, "Facebook item.")]
 		Facebook = 1,
-		
-		/// <summary>
-		/// Twitter.
-		/// </summary>
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Twitter = 2,
 		
 		/// <summary>
 		/// Other default
 		/// </summary>
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Other", 2, null, "Other default")]
 		Other = 0,
+		
+		/// <summary>
+		/// Twitter.
+		/// </summary>
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Twitter", 1, null, "Twitter.")]
+		Twitter = 2,
 	}
 }
 #pragma warning restore CS1591

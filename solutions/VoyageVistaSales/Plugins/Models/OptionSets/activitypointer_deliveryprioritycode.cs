@@ -16,17 +16,20 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Priority of delivery of the activity to the email server.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum activitypointer_deliveryprioritycode
+	public enum activitypointer_DeliveryPriorityCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("High", 2)]
+		High = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Low", 0)]
 		Low = 0,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Normal", 1)]
 		Normal = 1,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		High = 2,
 	}
 }
 #pragma warning restore CS1591

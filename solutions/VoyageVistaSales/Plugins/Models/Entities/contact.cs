@@ -16,16 +16,19 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Account role of the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_accountrolecode
+	public enum Contact_AccountRoleCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Decision Maker", 0)]
 		DecisionMaker = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Employee", 1)]
 		Employee = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Influencer", 2)]
 		Influencer = 3,
 	}
 	
@@ -33,33 +36,39 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Type of address for address 1, such as billing, shipping, or primary address.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address1_addresstypecode
+	public enum Contact_Address1_AddressTypeCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Bill To", 0)]
 		BillTo = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		ShipTo = 2,
+		[OptionSetMetadataAttribute("Other", 3)]
+		Other = 4,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Primary", 2)]
 		Primary = 3,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Other = 4,
+		[OptionSetMetadataAttribute("Ship To", 1)]
+		ShipTo = 2,
 	}
 	
 	/// <summary>
 	/// Freight terms for address 1.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address1_freighttermscode
+	public enum Contact_Address1_FreightTermsCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		FOB = 1,
+		[OptionSetMetadataAttribute("FOB", 0)]
+		Fob = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("No Charge", 1)]
 		NoCharge = 2,
 	}
 	
@@ -67,28 +76,35 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Method of shipment for address 1.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address1_shippingmethodcode
+	public enum Contact_Address1_ShippingMethodCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Airborne", 0)]
 		Airborne = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		DHL = 2,
+		[OptionSetMetadataAttribute("DHL", 1)]
+		Dhl = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("FedEx", 2)]
 		FedEx = 3,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		UPS = 4,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		PostalMail = 5,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Full Load", 5)]
 		FullLoad = 6,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Postal Mail", 4)]
+		PostalMail = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("UPS", 3)]
+		Ups = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Will Call", 6)]
 		WillCall = 7,
 	}
 	
@@ -96,10 +112,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Type of address for address 2, such as billing, shipping, or primary address.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address2_addresstypecode
+	public enum Contact_Address2_AddressTypeCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -107,10 +124,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Freight terms for address 2.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address2_freighttermscode
+	public enum Contact_Address2_FreightTermsCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -118,10 +136,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Method of shipment for address 2.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address2_shippingmethodcode
+	public enum Contact_Address2_ShippingMethodCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -129,10 +148,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Type of address for address 3, such as billing, shipping, or primary address.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address3_addresstypecode
+	public enum Contact_Address3_AddressTypeCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -140,10 +160,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Freight terms for address 3.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address3_freighttermscode
+	public enum Contact_Address3_FreightTermsCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -151,10 +172,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Method of shipment for address 3.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_address3_shippingmethodcode
+	public enum Contact_Address3_ShippingMethodCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -162,10 +184,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Size of the contact's business.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_customersizecode
+	public enum Contact_CustomerSizeCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -173,10 +196,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Type of business associated with the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_customertypecode
+	public enum Contact_CustomerTypeCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -184,10 +208,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Formal education level that the contact has attained.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_educationcode
+	public enum Contact_EducationCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -195,19 +220,23 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Marital status of the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_familystatuscode
+	public enum Contact_FamilyStatusCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Single = 1,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Married = 2,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Divorced", 2)]
 		Divorced = 3,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Married", 1)]
+		Married = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Single", 0)]
+		Single = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Widowed", 3)]
 		Widowed = 4,
 	}
 	
@@ -215,24 +244,27 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Gender of the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_gendercode
+	public enum Contact_GenderCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Male = 1,
+		[OptionSetMetadataAttribute("Female", 1)]
+		Female = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Female = 2,
+		[OptionSetMetadataAttribute("Male", 0)]
+		Male = 1,
 	}
 	
 	/// <summary>
 	/// Information about whether the contact has children.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_haschildrencode
+	public enum Contact_HasChildrenCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -240,10 +272,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Source of the lead of the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_leadsourcecode
+	public enum Contact_LeadSourceCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -251,19 +284,23 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Payment terms for the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_paymenttermscode
+	public enum Contact_PaymentTermsCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Net30 = 1,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("2% 10, Net 30", 1)]
 		_210Net30 = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Net 30", 0)]
+		Net30 = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Net 45", 2)]
 		Net45 = 3,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Net 60", 3)]
 		Net60 = 4,
 	}
 	
@@ -271,79 +308,95 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Day of the week that the contact prefers for scheduling service activities.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_preferredappointmentdaycode
+	public enum Contact_PreferredAppointmentDayCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Sunday = 0,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Monday = 1,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Tuesday = 2,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Wednesday = 3,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Thursday = 4,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Friday", 5)]
 		Friday = 5,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Monday", 1)]
+		Monday = 1,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Saturday", 6)]
 		Saturday = 6,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Sunday", 0)]
+		Sunday = 0,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Thursday", 4)]
+		Thursday = 4,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Tuesday", 2)]
+		Tuesday = 2,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Wednesday", 3)]
+		Wednesday = 3,
 	}
 	
 	/// <summary>
 	/// Time of day that the contact prefers for scheduling service activities.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_preferredappointmenttimecode
+	public enum Contact_PreferredAppointmentTimeCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Morning = 1,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Afternoon", 1)]
 		Afternoon = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Evening", 2)]
 		Evening = 3,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Morning", 0)]
+		Morning = 1,
 	}
 	
 	/// <summary>
 	/// Preferred contact method for the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_preferredcontactmethodcode
+	public enum Contact_PreferredContactMethodCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Any", 0)]
 		Any = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Email", 1)]
 		Email = 2,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
-		Phone = 3,
-		
-		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Fax", 3)]
 		Fax = 4,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Mail", 4)]
 		Mail = 5,
+		
+		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Phone", 2)]
+		Phone = 3,
 	}
 	
 	/// <summary>
 	/// Method of shipping for the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_shippingmethodcode
+	public enum Contact_ShippingMethodCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -355,9 +408,11 @@ namespace VoyageVistaSales.Plugins.Models
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Active", 0)]
 		Active = 0,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Inactive", 1)]
 		Inactive = 1,
 	}
 	
@@ -365,13 +420,15 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Reason for the status of the contact.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_statuscode
+	public enum Contact_StatusCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Active", 0)]
 		Active = 1,
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Inactive", 1)]
 		Inactive = 2,
 	}
 	
@@ -379,10 +436,11 @@ namespace VoyageVistaSales.Plugins.Models
 	/// Unique identifier of the territory to which the contact is assigned.
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
-	public enum contact_territorycode
+	public enum Contact_TerritoryCode
 	{
 		
 		[System.Runtime.Serialization.EnumMemberAttribute()]
+		[OptionSetMetadataAttribute("Default Value", 0)]
 		DefaultValue = 1,
 	}
 	
@@ -391,16 +449,380 @@ namespace VoyageVistaSales.Plugins.Models
 	/// </summary>
 	[System.Runtime.Serialization.DataContractAttribute()]
 	[Microsoft.Xrm.Sdk.Client.EntityLogicalNameAttribute("contact")]
-	public partial class Contact : Microsoft.Xrm.Sdk.Entity, System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	public partial class Contact : Microsoft.Xrm.Sdk.Entity
 	{
+		
+		/// <summary>
+		/// Available fields, at the time of codegen, for the contact entity
+		/// </summary>
+		public partial class Fields
+		{
+			public const string account_primary_contact = "account_primary_contact";
+			public const string AccountId = "accountid";
+			public const string AccountIdName = "accountidname";
+			public const string AccountIdYomiName = "accountidyominame";
+			public const string AccountRoleCode = "accountrolecode";
+			public const string AccountRoleCodeName = "accountrolecodename";
+			public const string Address1_AddressId = "address1_addressid";
+			public const string Address1_AddressTypeCode = "address1_addresstypecode";
+			public const string Address1_AddressTypeCodeName = "address1_addresstypecodename";
+			public const string Address1_City = "address1_city";
+			public const string Address1_Composite = "address1_composite";
+			public const string Address1_Country = "address1_country";
+			public const string Address1_County = "address1_county";
+			public const string Address1_Fax = "address1_fax";
+			public const string Address1_FreightTermsCode = "address1_freighttermscode";
+			public const string Address1_FreightTermsCodeName = "address1_freighttermscodename";
+			public const string Address1_Latitude = "address1_latitude";
+			public const string Address1_Line1 = "address1_line1";
+			public const string Address1_Line2 = "address1_line2";
+			public const string Address1_Line3 = "address1_line3";
+			public const string Address1_Longitude = "address1_longitude";
+			public const string Address1_Name = "address1_name";
+			public const string Address1_PostalCode = "address1_postalcode";
+			public const string Address1_PostOfficeBox = "address1_postofficebox";
+			public const string Address1_PrimaryContactName = "address1_primarycontactname";
+			public const string Address1_ShippingMethodCode = "address1_shippingmethodcode";
+			public const string Address1_ShippingMethodCodeName = "address1_shippingmethodcodename";
+			public const string Address1_StateOrProvince = "address1_stateorprovince";
+			public const string Address1_Telephone1 = "address1_telephone1";
+			public const string Address1_Telephone2 = "address1_telephone2";
+			public const string Address1_Telephone3 = "address1_telephone3";
+			public const string Address1_UPSZone = "address1_upszone";
+			public const string Address1_UTCOffset = "address1_utcoffset";
+			public const string Address2_AddressId = "address2_addressid";
+			public const string Address2_AddressTypeCode = "address2_addresstypecode";
+			public const string Address2_AddressTypeCodeName = "address2_addresstypecodename";
+			public const string Address2_City = "address2_city";
+			public const string Address2_Composite = "address2_composite";
+			public const string Address2_Country = "address2_country";
+			public const string Address2_County = "address2_county";
+			public const string Address2_Fax = "address2_fax";
+			public const string Address2_FreightTermsCode = "address2_freighttermscode";
+			public const string Address2_FreightTermsCodeName = "address2_freighttermscodename";
+			public const string Address2_Latitude = "address2_latitude";
+			public const string Address2_Line1 = "address2_line1";
+			public const string Address2_Line2 = "address2_line2";
+			public const string Address2_Line3 = "address2_line3";
+			public const string Address2_Longitude = "address2_longitude";
+			public const string Address2_Name = "address2_name";
+			public const string Address2_PostalCode = "address2_postalcode";
+			public const string Address2_PostOfficeBox = "address2_postofficebox";
+			public const string Address2_PrimaryContactName = "address2_primarycontactname";
+			public const string Address2_ShippingMethodCode = "address2_shippingmethodcode";
+			public const string Address2_ShippingMethodCodeName = "address2_shippingmethodcodename";
+			public const string Address2_StateOrProvince = "address2_stateorprovince";
+			public const string Address2_Telephone1 = "address2_telephone1";
+			public const string Address2_Telephone2 = "address2_telephone2";
+			public const string Address2_Telephone3 = "address2_telephone3";
+			public const string Address2_UPSZone = "address2_upszone";
+			public const string Address2_UTCOffset = "address2_utcoffset";
+			public const string Address3_AddressId = "address3_addressid";
+			public const string Address3_AddressTypeCode = "address3_addresstypecode";
+			public const string Address3_AddressTypeCodeName = "address3_addresstypecodename";
+			public const string Address3_City = "address3_city";
+			public const string Address3_Composite = "address3_composite";
+			public const string Address3_Country = "address3_country";
+			public const string Address3_County = "address3_county";
+			public const string Address3_Fax = "address3_fax";
+			public const string Address3_FreightTermsCode = "address3_freighttermscode";
+			public const string Address3_FreightTermsCodeName = "address3_freighttermscodename";
+			public const string Address3_Latitude = "address3_latitude";
+			public const string Address3_Line1 = "address3_line1";
+			public const string Address3_Line2 = "address3_line2";
+			public const string Address3_Line3 = "address3_line3";
+			public const string Address3_Longitude = "address3_longitude";
+			public const string Address3_Name = "address3_name";
+			public const string Address3_PostalCode = "address3_postalcode";
+			public const string Address3_PostOfficeBox = "address3_postofficebox";
+			public const string Address3_PrimaryContactName = "address3_primarycontactname";
+			public const string Address3_ShippingMethodCode = "address3_shippingmethodcode";
+			public const string Address3_ShippingMethodCodeName = "address3_shippingmethodcodename";
+			public const string Address3_StateOrProvince = "address3_stateorprovince";
+			public const string Address3_Telephone1 = "address3_telephone1";
+			public const string Address3_Telephone2 = "address3_telephone2";
+			public const string Address3_Telephone3 = "address3_telephone3";
+			public const string Address3_UPSZone = "address3_upszone";
+			public const string Address3_UTCOffset = "address3_utcoffset";
+			public const string adx_ConfirmRemovePassword = "adx_confirmremovepassword";
+			public const string adx_confirmremovepasswordName = "adx_confirmremovepasswordname";
+			public const string Adx_CreatedByIPAddress = "adx_createdbyipaddress";
+			public const string Adx_CreatedByUsername = "adx_createdbyusername";
+			public const string adx_identity_accessfailedcount = "adx_identity_accessfailedcount";
+			public const string adx_identity_emailaddress1confirmed = "adx_identity_emailaddress1confirmed";
+			public const string adx_identity_emailaddress1confirmedName = "adx_identity_emailaddress1confirmedname";
+			public const string adx_identity_lastsuccessfullogin = "adx_identity_lastsuccessfullogin";
+			public const string adx_identity_locallogindisabled = "adx_identity_locallogindisabled";
+			public const string adx_identity_locallogindisabledName = "adx_identity_locallogindisabledname";
+			public const string adx_identity_lockoutenabled = "adx_identity_lockoutenabled";
+			public const string adx_identity_lockoutenabledName = "adx_identity_lockoutenabledname";
+			public const string adx_identity_lockoutenddate = "adx_identity_lockoutenddate";
+			public const string adx_identity_logonenabled = "adx_identity_logonenabled";
+			public const string adx_identity_logonenabledName = "adx_identity_logonenabledname";
+			public const string adx_identity_mobilephoneconfirmed = "adx_identity_mobilephoneconfirmed";
+			public const string adx_identity_mobilephoneconfirmedName = "adx_identity_mobilephoneconfirmedname";
+			public const string adx_identity_newpassword = "adx_identity_newpassword";
+			public const string adx_identity_passwordhash = "adx_identity_passwordhash";
+			public const string adx_identity_securitystamp = "adx_identity_securitystamp";
+			public const string adx_identity_twofactorenabled = "adx_identity_twofactorenabled";
+			public const string adx_identity_twofactorenabledName = "adx_identity_twofactorenabledname";
+			public const string adx_identity_username = "adx_identity_username";
+			public const string Adx_ModifiedByIPAddress = "adx_modifiedbyipaddress";
+			public const string Adx_ModifiedByUsername = "adx_modifiedbyusername";
+			public const string Adx_OrganizationName = "adx_organizationname";
+			[System.Obsolete("This attribute is deprecated.")]
+			public const string adx_preferredlcid = "adx_preferredlcid";
+			public const string adx_profilealert = "adx_profilealert";
+			public const string adx_profilealertdate = "adx_profilealertdate";
+			public const string adx_profilealertinstructions = "adx_profilealertinstructions";
+			public const string adx_profilealertName = "adx_profilealertname";
+			public const string Adx_ProfileIsAnonymous = "adx_profileisanonymous";
+			public const string adx_profileisanonymousName = "adx_profileisanonymousname";
+			public const string Adx_ProfileLastActivity = "adx_profilelastactivity";
+			public const string adx_profilemodifiedon = "adx_profilemodifiedon";
+			public const string adx_PublicProfileCopy = "adx_publicprofilecopy";
+			public const string Adx_TimeZone = "adx_timezone";
+			public const string Aging30 = "aging30";
+			public const string Aging30_Base = "aging30_base";
+			public const string Aging60 = "aging60";
+			public const string Aging60_Base = "aging60_base";
+			public const string Aging90 = "aging90";
+			public const string Aging90_Base = "aging90_base";
+			public const string Anniversary = "anniversary";
+			public const string AnnualIncome = "annualincome";
+			public const string AnnualIncome_Base = "annualincome_base";
+			public const string AssistantName = "assistantname";
+			public const string AssistantPhone = "assistantphone";
+			public const string BirthDate = "birthdate";
+			public const string business_unit_contacts = "business_unit_contacts";
+			public const string Business2 = "business2";
+			public const string Callback = "callback";
+			public const string ChildrensNames = "childrensnames";
+			public const string Company = "company";
+			public const string contact_activity_parties = "contact_activity_parties";
+			public const string Contact_ActivityPointers = "Contact_ActivityPointers";
+			public const string contact_customer_accounts = "contact_customer_accounts";
+			public const string Referencingcontact_customer_contacts = "contact_customer_contacts";
+			public const string Contact_Email_EmailSender = "Contact_Email_EmailSender";
+			public const string Contact_Emails = "Contact_Emails";
+			public const string Referencingcontact_master_contact = "contact_master_contact";
+			public const string contact_owning_user = "contact_owning_user";
+			public const string ContactId = "contactid";
+			public const string Id = "contactid";
+			public const string CreatedBy = "createdby";
+			public const string CreatedByExternalParty = "createdbyexternalparty";
+			public const string CreatedByExternalPartyName = "createdbyexternalpartyname";
+			public const string CreatedByExternalPartyYomiName = "createdbyexternalpartyyominame";
+			public const string CreatedByName = "createdbyname";
+			public const string CreatedByYomiName = "createdbyyominame";
+			public const string CreatedOn = "createdon";
+			public const string CreatedOnBehalfBy = "createdonbehalfby";
+			public const string CreatedOnBehalfByName = "createdonbehalfbyname";
+			public const string CreatedOnBehalfByYomiName = "createdonbehalfbyyominame";
+			public const string CreditLimit = "creditlimit";
+			public const string CreditLimit_Base = "creditlimit_base";
+			public const string CreditOnHold = "creditonhold";
+			public const string CreditOnHoldName = "creditonholdname";
+			public const string CustomerSizeCode = "customersizecode";
+			public const string CustomerSizeCodeName = "customersizecodename";
+			public const string CustomerTypeCode = "customertypecode";
+			public const string CustomerTypeCodeName = "customertypecodename";
+			public const string Department = "department";
+			public const string Description = "description";
+			public const string DoNotBulkEMail = "donotbulkemail";
+			public const string DoNotBulkEMailName = "donotbulkemailname";
+			public const string DoNotBulkPostalMail = "donotbulkpostalmail";
+			public const string DoNotBulkPostalMailName = "donotbulkpostalmailname";
+			public const string DoNotEMail = "donotemail";
+			public const string DoNotEMailName = "donotemailname";
+			public const string DoNotFax = "donotfax";
+			public const string DoNotFaxName = "donotfaxname";
+			public const string DoNotPhone = "donotphone";
+			public const string DoNotPhoneName = "donotphonename";
+			public const string DoNotPostalMail = "donotpostalmail";
+			public const string DoNotPostalMailName = "donotpostalmailname";
+			public const string DoNotSendMarketingMaterialName = "donotsendmarketingmaterialname";
+			public const string DoNotSendMM = "donotsendmm";
+			public const string EducationCode = "educationcode";
+			public const string EducationCodeName = "educationcodename";
+			public const string EMailAddress1 = "emailaddress1";
+			public const string EMailAddress2 = "emailaddress2";
+			public const string EMailAddress3 = "emailaddress3";
+			public const string EmployeeId = "employeeid";
+			public const string EntityImage = "entityimage";
+			public const string EntityImage_Timestamp = "entityimage_timestamp";
+			public const string EntityImage_URL = "entityimage_url";
+			public const string EntityImageId = "entityimageid";
+			public const string ExchangeRate = "exchangerate";
+			public const string ExternalUserIdentifier = "externaluseridentifier";
+			public const string FamilyStatusCode = "familystatuscode";
+			public const string FamilyStatusCodeName = "familystatuscodename";
+			public const string Fax = "fax";
+			public const string FirstName = "firstname";
+			public const string FollowEmail = "followemail";
+			public const string FollowEmailName = "followemailname";
+			public const string FtpSiteUrl = "ftpsiteurl";
+			public const string FullName = "fullname";
+			public const string GenderCode = "gendercode";
+			public const string GenderCodeName = "gendercodename";
+			public const string GovernmentId = "governmentid";
+			public const string HasChildrenCode = "haschildrencode";
+			public const string HasChildrenCodeName = "haschildrencodename";
+			public const string Home2 = "home2";
+			public const string ImportSequenceNumber = "importsequencenumber";
+			public const string IsBackofficeCustomer = "isbackofficecustomer";
+			public const string IsBackofficeCustomerName = "isbackofficecustomername";
+			public const string IsPrivateName = "isprivatename";
+			public const string JobTitle = "jobtitle";
+			public const string LastName = "lastname";
+			public const string LastOnHoldTime = "lastonholdtime";
+			public const string LastUsedInCampaign = "lastusedincampaign";
+			public const string LeadSourceCode = "leadsourcecode";
+			public const string LeadSourceCodeName = "leadsourcecodename";
+			public const string lk_contact_createdonbehalfby = "lk_contact_createdonbehalfby";
+			public const string lk_contact_modifiedonbehalfby = "lk_contact_modifiedonbehalfby";
+			public const string lk_contactbase_createdby = "lk_contactbase_createdby";
+			public const string lk_contactbase_modifiedby = "lk_contactbase_modifiedby";
+			public const string ManagerName = "managername";
+			public const string ManagerPhone = "managerphone";
+			public const string MarketingOnly = "marketingonly";
+			public const string MarketingOnlyName = "marketingonlyname";
+			public const string MasterContactIdName = "mastercontactidname";
+			public const string MasterContactIdYomiName = "mastercontactidyominame";
+			public const string MasterId = "masterid";
+			public const string Merged = "merged";
+			public const string MergedName = "mergedname";
+			public const string MiddleName = "middlename";
+			public const string MobilePhone = "mobilephone";
+			public const string ModifiedBy = "modifiedby";
+			public const string ModifiedByExternalParty = "modifiedbyexternalparty";
+			public const string ModifiedByExternalPartyName = "modifiedbyexternalpartyname";
+			public const string ModifiedByExternalPartyYomiName = "modifiedbyexternalpartyyominame";
+			public const string ModifiedByName = "modifiedbyname";
+			public const string ModifiedByYomiName = "modifiedbyyominame";
+			public const string ModifiedOn = "modifiedon";
+			public const string ModifiedOnBehalfBy = "modifiedonbehalfby";
+			public const string ModifiedOnBehalfByName = "modifiedonbehalfbyname";
+			public const string ModifiedOnBehalfByYomiName = "modifiedonbehalfbyyominame";
+			public const string msa_contact_managingpartner = "msa_contact_managingpartner";
+			public const string msa_managingpartnerid = "msa_managingpartnerid";
+			public const string msa_managingpartneridName = "msa_managingpartneridname";
+			public const string msa_managingpartneridYomiName = "msa_managingpartneridyominame";
+			public const string msdyn_disablewebtracking = "msdyn_disablewebtracking";
+			public const string msdyn_disablewebtrackingName = "msdyn_disablewebtrackingname";
+			public const string msdyn_isminor = "msdyn_isminor";
+			public const string msdyn_isminorName = "msdyn_isminorname";
+			public const string msdyn_isminorwithparentalconsent = "msdyn_isminorwithparentalconsent";
+			public const string msdyn_isminorwithparentalconsentName = "msdyn_isminorwithparentalconsentname";
+			public const string msdyn_portaltermsagreementdate = "msdyn_portaltermsagreementdate";
+			public const string mspp_userpreferredlcid = "mspp_userpreferredlcid";
+			public const string mspp_userpreferredlcidName = "mspp_userpreferredlcidname";
+			public const string NickName = "nickname";
+			public const string NumberOfChildren = "numberofchildren";
+			public const string OnHoldTime = "onholdtime";
+			public const string OverriddenCreatedOn = "overriddencreatedon";
+			public const string OwnerId = "ownerid";
+			public const string OwnerIdName = "owneridname";
+			public const string OwnerIdYomiName = "owneridyominame";
+			public const string OwningBusinessUnit = "owningbusinessunit";
+			public const string OwningBusinessUnitName = "owningbusinessunitname";
+			public const string OwningTeam = "owningteam";
+			public const string OwningUser = "owninguser";
+			public const string Pager = "pager";
+			public const string ParentContactId = "parentcontactid";
+			public const string ParentContactIdName = "parentcontactidname";
+			public const string ParentContactIdYomiName = "parentcontactidyominame";
+			public const string ParentCustomerId = "parentcustomerid";
+			public const string ParentCustomerIdName = "parentcustomeridname";
+			public const string ParentCustomerIdYomiName = "parentcustomeridyominame";
+			public const string ParticipatesInWorkflow = "participatesinworkflow";
+			public const string ParticipatesInWorkflowName = "participatesinworkflowname";
+			public const string PaymentTermsCode = "paymenttermscode";
+			public const string PaymentTermsCodeName = "paymenttermscodename";
+			public const string PreferredAppointmentDayCode = "preferredappointmentdaycode";
+			public const string PreferredAppointmentDayCodeName = "preferredappointmentdaycodename";
+			public const string PreferredAppointmentTimeCode = "preferredappointmenttimecode";
+			public const string PreferredAppointmentTimeCodeName = "preferredappointmenttimecodename";
+			public const string PreferredContactMethodCode = "preferredcontactmethodcode";
+			public const string PreferredContactMethodCodeName = "preferredcontactmethodcodename";
+			public const string PreferredSystemUserId = "preferredsystemuserid";
+			public const string PreferredSystemUserIdName = "preferredsystemuseridname";
+			public const string PreferredSystemUserIdYomiName = "preferredsystemuseridyominame";
+			public const string ProcessId = "processid";
+			public const string Referencedcontact_customer_contacts = "Referencedcontact_customer_contacts";
+			public const string Referencedcontact_master_contact = "Referencedcontact_master_contact";
+			public const string Salutation = "salutation";
+			public const string ShippingMethodCode = "shippingmethodcode";
+			public const string ShippingMethodCodeName = "shippingmethodcodename";
+			public const string SLAId = "slaid";
+			public const string SLAInvokedId = "slainvokedid";
+			public const string SLAInvokedIdName = "slainvokedidname";
+			public const string SLAName = "slaname";
+			public const string SpousesName = "spousesname";
+			[System.Obsolete("This attribute is deprecated.")]
+			public const string StageId = "stageid";
+			public const string StateCode = "statecode";
+			public const string StateCodeName = "statecodename";
+			public const string StatusCode = "statuscode";
+			public const string StatusCodeName = "statuscodename";
+			public const string SubscriptionId = "subscriptionid";
+			public const string Suffix = "suffix";
+			public const string system_user_contacts = "system_user_contacts";
+			public const string Telephone1 = "telephone1";
+			public const string Telephone2 = "telephone2";
+			public const string Telephone3 = "telephone3";
+			public const string TerritoryCode = "territorycode";
+			public const string TerritoryCodeName = "territorycodename";
+			public const string TimeSpentByMeOnEmailAndMeetings = "timespentbymeonemailandmeetings";
+			public const string TimeZoneRuleVersionNumber = "timezoneruleversionnumber";
+			public const string transactioncurrency_contact = "transactioncurrency_contact";
+			public const string TransactionCurrencyId = "transactioncurrencyid";
+			public const string TransactionCurrencyIdName = "transactioncurrencyidname";
+			[System.Obsolete("This attribute is deprecated.")]
+			public const string TraversedPath = "traversedpath";
+			public const string UTCConversionTimeZoneCode = "utcconversiontimezonecode";
+			public const string VersionNumber = "versionnumber";
+			public const string voy_contact_voy_quote_contactid = "voy_contact_voy_quote_contactid";
+			public const string voy_contact_voy_travelinquiry_contactid = "voy_contact_voy_travelinquiry_contactid";
+			public const string WebSiteUrl = "websiteurl";
+			public const string YomiFirstName = "yomifirstname";
+			public const string YomiFullName = "yomifullname";
+			public const string YomiLastName = "yomilastname";
+			public const string YomiMiddleName = "yomimiddlename";
+		}
+		
+		[System.Diagnostics.DebuggerNonUserCode()]
+		public Contact(System.Guid id) : 
+				base(EntityLogicalName, id)
+		{
+		}
+		
+		[System.Diagnostics.DebuggerNonUserCode()]
+		public Contact(string keyName, object keyValue) : 
+				base(EntityLogicalName, keyName, keyValue)
+		{
+		}
+		
+		[System.Diagnostics.DebuggerNonUserCode()]
+		public Contact(Microsoft.Xrm.Sdk.KeyAttributeCollection keyAttributes) : 
+				base(EntityLogicalName, keyAttributes)
+		{
+		}
 		
 		/// <summary>
 		/// Default Constructor.
 		/// </summary>
+		[System.Diagnostics.DebuggerNonUserCode()]
 		public Contact() : 
 				base(EntityLogicalName)
 		{
 		}
+		
+		public const string PrimaryIdAttribute = "contactid";
+		
+		public const string PrimaryNameAttribute = "fullname";
+		
+		public const string EntitySchemaName = "Contact";
 		
 		public const string EntityLogicalName = "contact";
 		
@@ -408,35 +830,50 @@ namespace VoyageVistaSales.Plugins.Models
 		
 		public const string EntitySetName = "contacts";
 		
-		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-		
-		public event System.ComponentModel.PropertyChangingEventHandler PropertyChanging;
-		
-		private void OnPropertyChanged(string propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void OnPropertyChanging(string propertyName)
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, new System.ComponentModel.PropertyChangingEventArgs(propertyName));
-			}
-		}
-		
 		/// <summary>
 		/// Unique identifier of the account with which the contact is associated.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("accountid")]
 		public Microsoft.Xrm.Sdk.EntityReference AccountId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("accountid");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("accountidname")]
+		public string AccountIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("accountid"))
+				{
+					return this.FormattedValues["accountid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("accountidyominame")]
+		public string AccountIdYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("accountid"))
+				{
+					return this.FormattedValues["accountid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -444,17 +881,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the contact's role within the company or sales process, such as decision maker, employee, or influencer.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("accountrolecode")]
-		public virtual contact_accountrolecode? AccountRoleCode
+		public virtual Contact_AccountRoleCode? AccountRoleCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_accountrolecode?)(EntityOptionSetEnum.GetEnum(this, "accountrolecode")));
+				return ((Contact_AccountRoleCode?)(EntityOptionSetEnum.GetEnum(this, "accountrolecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("AccountRoleCode");
 				this.SetAttributeValue("accountrolecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("AccountRoleCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("accountrolecodename")]
+		public string AccountRoleCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("accountrolecode"))
+				{
+					return this.FormattedValues["accountrolecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -464,15 +918,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_addressid")]
 		public System.Nullable<System.Guid> Address1_AddressId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("address1_addressid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_AddressId");
 				this.SetAttributeValue("address1_addressid", value);
-				this.OnPropertyChanged("Address1_AddressId");
 			}
 		}
 		
@@ -480,17 +934,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the primary address type.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_addresstypecode")]
-		public virtual contact_address1_addresstypecode? Address1_AddressTypeCode
+		public virtual Contact_Address1_AddressTypeCode? Address1_AddressTypeCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address1_addresstypecode?)(EntityOptionSetEnum.GetEnum(this, "address1_addresstypecode")));
+				return ((Contact_Address1_AddressTypeCode?)(EntityOptionSetEnum.GetEnum(this, "address1_addresstypecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_AddressTypeCode");
 				this.SetAttributeValue("address1_addresstypecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address1_AddressTypeCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_addresstypecodename")]
+		public string Address1_AddressTypeCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address1_addresstypecode"))
+				{
+					return this.FormattedValues["address1_addresstypecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -500,15 +971,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_city")]
 		public string Address1_City
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_city");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_City");
 				this.SetAttributeValue("address1_city", value);
-				this.OnPropertyChanged("Address1_City");
 			}
 		}
 		
@@ -518,6 +989,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_composite")]
 		public string Address1_Composite
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_composite");
@@ -530,15 +1002,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_country")]
 		public string Address1_Country
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_country");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Country");
 				this.SetAttributeValue("address1_country", value);
-				this.OnPropertyChanged("Address1_Country");
 			}
 		}
 		
@@ -548,15 +1020,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_county")]
 		public string Address1_County
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_county");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_County");
 				this.SetAttributeValue("address1_county", value);
-				this.OnPropertyChanged("Address1_County");
 			}
 		}
 		
@@ -566,15 +1038,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_fax")]
 		public string Address1_Fax
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_fax");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Fax");
 				this.SetAttributeValue("address1_fax", value);
-				this.OnPropertyChanged("Address1_Fax");
 			}
 		}
 		
@@ -582,17 +1054,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the freight terms for the primary address to make sure shipping orders are processed correctly.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_freighttermscode")]
-		public virtual contact_address1_freighttermscode? Address1_FreightTermsCode
+		public virtual Contact_Address1_FreightTermsCode? Address1_FreightTermsCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address1_freighttermscode?)(EntityOptionSetEnum.GetEnum(this, "address1_freighttermscode")));
+				return ((Contact_Address1_FreightTermsCode?)(EntityOptionSetEnum.GetEnum(this, "address1_freighttermscode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_FreightTermsCode");
 				this.SetAttributeValue("address1_freighttermscode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address1_FreightTermsCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_freighttermscodename")]
+		public string Address1_FreightTermsCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address1_freighttermscode"))
+				{
+					return this.FormattedValues["address1_freighttermscode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -602,15 +1091,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_latitude")]
 		public System.Nullable<double> Address1_Latitude
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<double>>("address1_latitude");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Latitude");
 				this.SetAttributeValue("address1_latitude", value);
-				this.OnPropertyChanged("Address1_Latitude");
 			}
 		}
 		
@@ -620,15 +1109,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_line1")]
 		public string Address1_Line1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_line1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Line1");
 				this.SetAttributeValue("address1_line1", value);
-				this.OnPropertyChanged("Address1_Line1");
 			}
 		}
 		
@@ -638,15 +1127,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_line2")]
 		public string Address1_Line2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_line2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Line2");
 				this.SetAttributeValue("address1_line2", value);
-				this.OnPropertyChanged("Address1_Line2");
 			}
 		}
 		
@@ -656,15 +1145,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_line3")]
 		public string Address1_Line3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_line3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Line3");
 				this.SetAttributeValue("address1_line3", value);
-				this.OnPropertyChanged("Address1_Line3");
 			}
 		}
 		
@@ -674,15 +1163,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_longitude")]
 		public System.Nullable<double> Address1_Longitude
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<double>>("address1_longitude");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Longitude");
 				this.SetAttributeValue("address1_longitude", value);
-				this.OnPropertyChanged("Address1_Longitude");
 			}
 		}
 		
@@ -692,15 +1181,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_name")]
 		public string Address1_Name
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_name");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Name");
 				this.SetAttributeValue("address1_name", value);
-				this.OnPropertyChanged("Address1_Name");
 			}
 		}
 		
@@ -710,15 +1199,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_postalcode")]
 		public string Address1_PostalCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_postalcode");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_PostalCode");
 				this.SetAttributeValue("address1_postalcode", value);
-				this.OnPropertyChanged("Address1_PostalCode");
 			}
 		}
 		
@@ -728,15 +1217,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_postofficebox")]
 		public string Address1_PostOfficeBox
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_postofficebox");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_PostOfficeBox");
 				this.SetAttributeValue("address1_postofficebox", value);
-				this.OnPropertyChanged("Address1_PostOfficeBox");
 			}
 		}
 		
@@ -746,15 +1235,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_primarycontactname")]
 		public string Address1_PrimaryContactName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_primarycontactname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_PrimaryContactName");
 				this.SetAttributeValue("address1_primarycontactname", value);
-				this.OnPropertyChanged("Address1_PrimaryContactName");
 			}
 		}
 		
@@ -762,17 +1251,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select a shipping method for deliveries sent to this address.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_shippingmethodcode")]
-		public virtual contact_address1_shippingmethodcode? Address1_ShippingMethodCode
+		public virtual Contact_Address1_ShippingMethodCode? Address1_ShippingMethodCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address1_shippingmethodcode?)(EntityOptionSetEnum.GetEnum(this, "address1_shippingmethodcode")));
+				return ((Contact_Address1_ShippingMethodCode?)(EntityOptionSetEnum.GetEnum(this, "address1_shippingmethodcode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_ShippingMethodCode");
 				this.SetAttributeValue("address1_shippingmethodcode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address1_ShippingMethodCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_shippingmethodcodename")]
+		public string Address1_ShippingMethodCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address1_shippingmethodcode"))
+				{
+					return this.FormattedValues["address1_shippingmethodcode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -782,15 +1288,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_stateorprovince")]
 		public string Address1_StateOrProvince
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_stateorprovince");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_StateOrProvince");
 				this.SetAttributeValue("address1_stateorprovince", value);
-				this.OnPropertyChanged("Address1_StateOrProvince");
 			}
 		}
 		
@@ -800,15 +1306,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_telephone1")]
 		public string Address1_Telephone1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_telephone1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Telephone1");
 				this.SetAttributeValue("address1_telephone1", value);
-				this.OnPropertyChanged("Address1_Telephone1");
 			}
 		}
 		
@@ -818,15 +1324,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_telephone2")]
 		public string Address1_Telephone2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_telephone2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Telephone2");
 				this.SetAttributeValue("address1_telephone2", value);
-				this.OnPropertyChanged("Address1_Telephone2");
 			}
 		}
 		
@@ -836,15 +1342,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_telephone3")]
 		public string Address1_Telephone3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_telephone3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_Telephone3");
 				this.SetAttributeValue("address1_telephone3", value);
-				this.OnPropertyChanged("Address1_Telephone3");
 			}
 		}
 		
@@ -854,15 +1360,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_upszone")]
 		public string Address1_UPSZone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address1_upszone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_UPSZone");
 				this.SetAttributeValue("address1_upszone", value);
-				this.OnPropertyChanged("Address1_UPSZone");
 			}
 		}
 		
@@ -872,15 +1378,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address1_utcoffset")]
 		public System.Nullable<int> Address1_UTCOffset
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("address1_utcoffset");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address1_UTCOffset");
 				this.SetAttributeValue("address1_utcoffset", value);
-				this.OnPropertyChanged("Address1_UTCOffset");
 			}
 		}
 		
@@ -890,15 +1396,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_addressid")]
 		public System.Nullable<System.Guid> Address2_AddressId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("address2_addressid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_AddressId");
 				this.SetAttributeValue("address2_addressid", value);
-				this.OnPropertyChanged("Address2_AddressId");
 			}
 		}
 		
@@ -906,17 +1412,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the secondary address type.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_addresstypecode")]
-		public virtual contact_address2_addresstypecode? Address2_AddressTypeCode
+		public virtual Contact_Address2_AddressTypeCode? Address2_AddressTypeCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address2_addresstypecode?)(EntityOptionSetEnum.GetEnum(this, "address2_addresstypecode")));
+				return ((Contact_Address2_AddressTypeCode?)(EntityOptionSetEnum.GetEnum(this, "address2_addresstypecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_AddressTypeCode");
 				this.SetAttributeValue("address2_addresstypecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address2_AddressTypeCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_addresstypecodename")]
+		public string Address2_AddressTypeCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address2_addresstypecode"))
+				{
+					return this.FormattedValues["address2_addresstypecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -926,15 +1449,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_city")]
 		public string Address2_City
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_city");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_City");
 				this.SetAttributeValue("address2_city", value);
-				this.OnPropertyChanged("Address2_City");
 			}
 		}
 		
@@ -944,6 +1467,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_composite")]
 		public string Address2_Composite
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_composite");
@@ -956,15 +1480,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_country")]
 		public string Address2_Country
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_country");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Country");
 				this.SetAttributeValue("address2_country", value);
-				this.OnPropertyChanged("Address2_Country");
 			}
 		}
 		
@@ -974,15 +1498,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_county")]
 		public string Address2_County
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_county");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_County");
 				this.SetAttributeValue("address2_county", value);
-				this.OnPropertyChanged("Address2_County");
 			}
 		}
 		
@@ -992,15 +1516,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_fax")]
 		public string Address2_Fax
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_fax");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Fax");
 				this.SetAttributeValue("address2_fax", value);
-				this.OnPropertyChanged("Address2_Fax");
 			}
 		}
 		
@@ -1008,17 +1532,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the freight terms for the secondary address to make sure shipping orders are processed correctly.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_freighttermscode")]
-		public virtual contact_address2_freighttermscode? Address2_FreightTermsCode
+		public virtual Contact_Address2_FreightTermsCode? Address2_FreightTermsCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address2_freighttermscode?)(EntityOptionSetEnum.GetEnum(this, "address2_freighttermscode")));
+				return ((Contact_Address2_FreightTermsCode?)(EntityOptionSetEnum.GetEnum(this, "address2_freighttermscode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_FreightTermsCode");
 				this.SetAttributeValue("address2_freighttermscode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address2_FreightTermsCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_freighttermscodename")]
+		public string Address2_FreightTermsCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address2_freighttermscode"))
+				{
+					return this.FormattedValues["address2_freighttermscode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1028,15 +1569,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_latitude")]
 		public System.Nullable<double> Address2_Latitude
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<double>>("address2_latitude");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Latitude");
 				this.SetAttributeValue("address2_latitude", value);
-				this.OnPropertyChanged("Address2_Latitude");
 			}
 		}
 		
@@ -1046,15 +1587,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_line1")]
 		public string Address2_Line1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_line1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Line1");
 				this.SetAttributeValue("address2_line1", value);
-				this.OnPropertyChanged("Address2_Line1");
 			}
 		}
 		
@@ -1064,15 +1605,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_line2")]
 		public string Address2_Line2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_line2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Line2");
 				this.SetAttributeValue("address2_line2", value);
-				this.OnPropertyChanged("Address2_Line2");
 			}
 		}
 		
@@ -1082,15 +1623,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_line3")]
 		public string Address2_Line3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_line3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Line3");
 				this.SetAttributeValue("address2_line3", value);
-				this.OnPropertyChanged("Address2_Line3");
 			}
 		}
 		
@@ -1100,15 +1641,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_longitude")]
 		public System.Nullable<double> Address2_Longitude
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<double>>("address2_longitude");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Longitude");
 				this.SetAttributeValue("address2_longitude", value);
-				this.OnPropertyChanged("Address2_Longitude");
 			}
 		}
 		
@@ -1118,15 +1659,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_name")]
 		public string Address2_Name
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_name");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Name");
 				this.SetAttributeValue("address2_name", value);
-				this.OnPropertyChanged("Address2_Name");
 			}
 		}
 		
@@ -1136,15 +1677,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_postalcode")]
 		public string Address2_PostalCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_postalcode");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_PostalCode");
 				this.SetAttributeValue("address2_postalcode", value);
-				this.OnPropertyChanged("Address2_PostalCode");
 			}
 		}
 		
@@ -1154,15 +1695,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_postofficebox")]
 		public string Address2_PostOfficeBox
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_postofficebox");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_PostOfficeBox");
 				this.SetAttributeValue("address2_postofficebox", value);
-				this.OnPropertyChanged("Address2_PostOfficeBox");
 			}
 		}
 		
@@ -1172,15 +1713,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_primarycontactname")]
 		public string Address2_PrimaryContactName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_primarycontactname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_PrimaryContactName");
 				this.SetAttributeValue("address2_primarycontactname", value);
-				this.OnPropertyChanged("Address2_PrimaryContactName");
 			}
 		}
 		
@@ -1188,17 +1729,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select a shipping method for deliveries sent to this address.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_shippingmethodcode")]
-		public virtual contact_address2_shippingmethodcode? Address2_ShippingMethodCode
+		public virtual Contact_Address2_ShippingMethodCode? Address2_ShippingMethodCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address2_shippingmethodcode?)(EntityOptionSetEnum.GetEnum(this, "address2_shippingmethodcode")));
+				return ((Contact_Address2_ShippingMethodCode?)(EntityOptionSetEnum.GetEnum(this, "address2_shippingmethodcode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_ShippingMethodCode");
 				this.SetAttributeValue("address2_shippingmethodcode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address2_ShippingMethodCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_shippingmethodcodename")]
+		public string Address2_ShippingMethodCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address2_shippingmethodcode"))
+				{
+					return this.FormattedValues["address2_shippingmethodcode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1208,15 +1766,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_stateorprovince")]
 		public string Address2_StateOrProvince
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_stateorprovince");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_StateOrProvince");
 				this.SetAttributeValue("address2_stateorprovince", value);
-				this.OnPropertyChanged("Address2_StateOrProvince");
 			}
 		}
 		
@@ -1226,15 +1784,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_telephone1")]
 		public string Address2_Telephone1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_telephone1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Telephone1");
 				this.SetAttributeValue("address2_telephone1", value);
-				this.OnPropertyChanged("Address2_Telephone1");
 			}
 		}
 		
@@ -1244,15 +1802,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_telephone2")]
 		public string Address2_Telephone2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_telephone2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Telephone2");
 				this.SetAttributeValue("address2_telephone2", value);
-				this.OnPropertyChanged("Address2_Telephone2");
 			}
 		}
 		
@@ -1262,15 +1820,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_telephone3")]
 		public string Address2_Telephone3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_telephone3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_Telephone3");
 				this.SetAttributeValue("address2_telephone3", value);
-				this.OnPropertyChanged("Address2_Telephone3");
 			}
 		}
 		
@@ -1280,15 +1838,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_upszone")]
 		public string Address2_UPSZone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address2_upszone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_UPSZone");
 				this.SetAttributeValue("address2_upszone", value);
-				this.OnPropertyChanged("Address2_UPSZone");
 			}
 		}
 		
@@ -1298,15 +1856,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address2_utcoffset")]
 		public System.Nullable<int> Address2_UTCOffset
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("address2_utcoffset");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address2_UTCOffset");
 				this.SetAttributeValue("address2_utcoffset", value);
-				this.OnPropertyChanged("Address2_UTCOffset");
 			}
 		}
 		
@@ -1316,15 +1874,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_addressid")]
 		public System.Nullable<System.Guid> Address3_AddressId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("address3_addressid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_AddressId");
 				this.SetAttributeValue("address3_addressid", value);
-				this.OnPropertyChanged("Address3_AddressId");
 			}
 		}
 		
@@ -1332,17 +1890,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the third address type.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_addresstypecode")]
-		public virtual contact_address3_addresstypecode? Address3_AddressTypeCode
+		public virtual Contact_Address3_AddressTypeCode? Address3_AddressTypeCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address3_addresstypecode?)(EntityOptionSetEnum.GetEnum(this, "address3_addresstypecode")));
+				return ((Contact_Address3_AddressTypeCode?)(EntityOptionSetEnum.GetEnum(this, "address3_addresstypecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_AddressTypeCode");
 				this.SetAttributeValue("address3_addresstypecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address3_AddressTypeCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_addresstypecodename")]
+		public string Address3_AddressTypeCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address3_addresstypecode"))
+				{
+					return this.FormattedValues["address3_addresstypecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1352,15 +1927,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_city")]
 		public string Address3_City
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_city");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_City");
 				this.SetAttributeValue("address3_city", value);
-				this.OnPropertyChanged("Address3_City");
 			}
 		}
 		
@@ -1370,6 +1945,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_composite")]
 		public string Address3_Composite
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_composite");
@@ -1382,15 +1958,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_country")]
 		public string Address3_Country
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_country");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Country");
 				this.SetAttributeValue("address3_country", value);
-				this.OnPropertyChanged("Address3_Country");
 			}
 		}
 		
@@ -1400,15 +1976,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_county")]
 		public string Address3_County
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_county");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_County");
 				this.SetAttributeValue("address3_county", value);
-				this.OnPropertyChanged("Address3_County");
 			}
 		}
 		
@@ -1418,15 +1994,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_fax")]
 		public string Address3_Fax
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_fax");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Fax");
 				this.SetAttributeValue("address3_fax", value);
-				this.OnPropertyChanged("Address3_Fax");
 			}
 		}
 		
@@ -1434,17 +2010,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the freight terms for the third address to make sure shipping orders are processed correctly.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_freighttermscode")]
-		public virtual contact_address3_freighttermscode? Address3_FreightTermsCode
+		public virtual Contact_Address3_FreightTermsCode? Address3_FreightTermsCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address3_freighttermscode?)(EntityOptionSetEnum.GetEnum(this, "address3_freighttermscode")));
+				return ((Contact_Address3_FreightTermsCode?)(EntityOptionSetEnum.GetEnum(this, "address3_freighttermscode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_FreightTermsCode");
 				this.SetAttributeValue("address3_freighttermscode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address3_FreightTermsCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_freighttermscodename")]
+		public string Address3_FreightTermsCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address3_freighttermscode"))
+				{
+					return this.FormattedValues["address3_freighttermscode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1454,15 +2047,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_latitude")]
 		public System.Nullable<double> Address3_Latitude
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<double>>("address3_latitude");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Latitude");
 				this.SetAttributeValue("address3_latitude", value);
-				this.OnPropertyChanged("Address3_Latitude");
 			}
 		}
 		
@@ -1472,15 +2065,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_line1")]
 		public string Address3_Line1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_line1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Line1");
 				this.SetAttributeValue("address3_line1", value);
-				this.OnPropertyChanged("Address3_Line1");
 			}
 		}
 		
@@ -1490,15 +2083,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_line2")]
 		public string Address3_Line2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_line2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Line2");
 				this.SetAttributeValue("address3_line2", value);
-				this.OnPropertyChanged("Address3_Line2");
 			}
 		}
 		
@@ -1508,15 +2101,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_line3")]
 		public string Address3_Line3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_line3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Line3");
 				this.SetAttributeValue("address3_line3", value);
-				this.OnPropertyChanged("Address3_Line3");
 			}
 		}
 		
@@ -1526,15 +2119,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_longitude")]
 		public System.Nullable<double> Address3_Longitude
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<double>>("address3_longitude");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Longitude");
 				this.SetAttributeValue("address3_longitude", value);
-				this.OnPropertyChanged("Address3_Longitude");
 			}
 		}
 		
@@ -1544,15 +2137,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_name")]
 		public string Address3_Name
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_name");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Name");
 				this.SetAttributeValue("address3_name", value);
-				this.OnPropertyChanged("Address3_Name");
 			}
 		}
 		
@@ -1562,15 +2155,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_postalcode")]
 		public string Address3_PostalCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_postalcode");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_PostalCode");
 				this.SetAttributeValue("address3_postalcode", value);
-				this.OnPropertyChanged("Address3_PostalCode");
 			}
 		}
 		
@@ -1580,15 +2173,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_postofficebox")]
 		public string Address3_PostOfficeBox
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_postofficebox");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_PostOfficeBox");
 				this.SetAttributeValue("address3_postofficebox", value);
-				this.OnPropertyChanged("Address3_PostOfficeBox");
 			}
 		}
 		
@@ -1598,15 +2191,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_primarycontactname")]
 		public string Address3_PrimaryContactName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_primarycontactname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_PrimaryContactName");
 				this.SetAttributeValue("address3_primarycontactname", value);
-				this.OnPropertyChanged("Address3_PrimaryContactName");
 			}
 		}
 		
@@ -1614,17 +2207,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select a shipping method for deliveries sent to this address.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_shippingmethodcode")]
-		public virtual contact_address3_shippingmethodcode? Address3_ShippingMethodCode
+		public virtual Contact_Address3_ShippingMethodCode? Address3_ShippingMethodCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_address3_shippingmethodcode?)(EntityOptionSetEnum.GetEnum(this, "address3_shippingmethodcode")));
+				return ((Contact_Address3_ShippingMethodCode?)(EntityOptionSetEnum.GetEnum(this, "address3_shippingmethodcode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_ShippingMethodCode");
 				this.SetAttributeValue("address3_shippingmethodcode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("Address3_ShippingMethodCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_shippingmethodcodename")]
+		public string Address3_ShippingMethodCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("address3_shippingmethodcode"))
+				{
+					return this.FormattedValues["address3_shippingmethodcode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1634,15 +2244,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_stateorprovince")]
 		public string Address3_StateOrProvince
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_stateorprovince");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_StateOrProvince");
 				this.SetAttributeValue("address3_stateorprovince", value);
-				this.OnPropertyChanged("Address3_StateOrProvince");
 			}
 		}
 		
@@ -1652,15 +2262,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_telephone1")]
 		public string Address3_Telephone1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_telephone1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Telephone1");
 				this.SetAttributeValue("address3_telephone1", value);
-				this.OnPropertyChanged("Address3_Telephone1");
 			}
 		}
 		
@@ -1670,15 +2280,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_telephone2")]
 		public string Address3_Telephone2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_telephone2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Telephone2");
 				this.SetAttributeValue("address3_telephone2", value);
-				this.OnPropertyChanged("Address3_Telephone2");
 			}
 		}
 		
@@ -1688,15 +2298,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_telephone3")]
 		public string Address3_Telephone3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_telephone3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_Telephone3");
 				this.SetAttributeValue("address3_telephone3", value);
-				this.OnPropertyChanged("Address3_Telephone3");
 			}
 		}
 		
@@ -1706,15 +2316,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_upszone")]
 		public string Address3_UPSZone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("address3_upszone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_UPSZone");
 				this.SetAttributeValue("address3_upszone", value);
-				this.OnPropertyChanged("Address3_UPSZone");
 			}
 		}
 		
@@ -1724,60 +2334,77 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("address3_utcoffset")]
 		public System.Nullable<int> Address3_UTCOffset
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("address3_utcoffset");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Address3_UTCOffset");
 				this.SetAttributeValue("address3_utcoffset", value);
-				this.OnPropertyChanged("Address3_UTCOffset");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_confirmremovepassword")]
 		public System.Nullable<bool> adx_ConfirmRemovePassword
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_confirmremovepassword");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_ConfirmRemovePassword");
 				this.SetAttributeValue("adx_confirmremovepassword", value);
-				this.OnPropertyChanged("adx_ConfirmRemovePassword");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_confirmremovepasswordname")]
+		public string adx_confirmremovepasswordName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_confirmremovepassword"))
+				{
+					return this.FormattedValues["adx_confirmremovepassword"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_createdbyipaddress")]
 		public string Adx_CreatedByIPAddress
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_createdbyipaddress");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_CreatedByIPAddress");
 				this.SetAttributeValue("adx_createdbyipaddress", value);
-				this.OnPropertyChanged("Adx_CreatedByIPAddress");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_createdbyusername")]
 		public string Adx_CreatedByUsername
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_createdbyusername");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_CreatedByUsername");
 				this.SetAttributeValue("adx_createdbyusername", value);
-				this.OnPropertyChanged("Adx_CreatedByUsername");
 			}
 		}
 		
@@ -1787,15 +2414,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_accessfailedcount")]
 		public System.Nullable<int> adx_identity_accessfailedcount
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("adx_identity_accessfailedcount");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_accessfailedcount");
 				this.SetAttributeValue("adx_identity_accessfailedcount", value);
-				this.OnPropertyChanged("adx_identity_accessfailedcount");
 			}
 		}
 		
@@ -1805,15 +2432,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_emailaddress1confirmed")]
 		public System.Nullable<bool> adx_identity_emailaddress1confirmed
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_emailaddress1confirmed");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_emailaddress1confirmed");
 				this.SetAttributeValue("adx_identity_emailaddress1confirmed", value);
-				this.OnPropertyChanged("adx_identity_emailaddress1confirmed");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_emailaddress1confirmedname")]
+		public string adx_identity_emailaddress1confirmedName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_identity_emailaddress1confirmed"))
+				{
+					return this.FormattedValues["adx_identity_emailaddress1confirmed"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1823,15 +2467,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_lastsuccessfullogin")]
 		public System.Nullable<System.DateTime> adx_identity_lastsuccessfullogin
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_identity_lastsuccessfullogin");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_lastsuccessfullogin");
 				this.SetAttributeValue("adx_identity_lastsuccessfullogin", value);
-				this.OnPropertyChanged("adx_identity_lastsuccessfullogin");
 			}
 		}
 		
@@ -1841,15 +2485,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_locallogindisabled")]
 		public System.Nullable<bool> adx_identity_locallogindisabled
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_locallogindisabled");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_locallogindisabled");
 				this.SetAttributeValue("adx_identity_locallogindisabled", value);
-				this.OnPropertyChanged("adx_identity_locallogindisabled");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_locallogindisabledname")]
+		public string adx_identity_locallogindisabledName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_identity_locallogindisabled"))
+				{
+					return this.FormattedValues["adx_identity_locallogindisabled"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1859,15 +2520,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_lockoutenabled")]
 		public System.Nullable<bool> adx_identity_lockoutenabled
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_lockoutenabled");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_lockoutenabled");
 				this.SetAttributeValue("adx_identity_lockoutenabled", value);
-				this.OnPropertyChanged("adx_identity_lockoutenabled");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_lockoutenabledname")]
+		public string adx_identity_lockoutenabledName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_identity_lockoutenabled"))
+				{
+					return this.FormattedValues["adx_identity_lockoutenabled"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1877,15 +2555,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_lockoutenddate")]
 		public System.Nullable<System.DateTime> adx_identity_lockoutenddate
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_identity_lockoutenddate");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_lockoutenddate");
 				this.SetAttributeValue("adx_identity_lockoutenddate", value);
-				this.OnPropertyChanged("adx_identity_lockoutenddate");
 			}
 		}
 		
@@ -1895,15 +2573,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_logonenabled")]
 		public System.Nullable<bool> adx_identity_logonenabled
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_logonenabled");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_logonenabled");
 				this.SetAttributeValue("adx_identity_logonenabled", value);
-				this.OnPropertyChanged("adx_identity_logonenabled");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_logonenabledname")]
+		public string adx_identity_logonenabledName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_identity_logonenabled"))
+				{
+					return this.FormattedValues["adx_identity_logonenabled"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1913,45 +2608,62 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_mobilephoneconfirmed")]
 		public System.Nullable<bool> adx_identity_mobilephoneconfirmed
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_mobilephoneconfirmed");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_mobilephoneconfirmed");
 				this.SetAttributeValue("adx_identity_mobilephoneconfirmed", value);
-				this.OnPropertyChanged("adx_identity_mobilephoneconfirmed");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_mobilephoneconfirmedname")]
+		public string adx_identity_mobilephoneconfirmedName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_identity_mobilephoneconfirmed"))
+				{
+					return this.FormattedValues["adx_identity_mobilephoneconfirmed"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_newpassword")]
 		public string adx_identity_newpassword
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_identity_newpassword");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_newpassword");
 				this.SetAttributeValue("adx_identity_newpassword", value);
-				this.OnPropertyChanged("adx_identity_newpassword");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_passwordhash")]
 		public string adx_identity_passwordhash
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_identity_passwordhash");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_passwordhash");
 				this.SetAttributeValue("adx_identity_passwordhash", value);
-				this.OnPropertyChanged("adx_identity_passwordhash");
 			}
 		}
 		
@@ -1961,15 +2673,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_securitystamp")]
 		public string adx_identity_securitystamp
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_identity_securitystamp");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_securitystamp");
 				this.SetAttributeValue("adx_identity_securitystamp", value);
-				this.OnPropertyChanged("adx_identity_securitystamp");
 			}
 		}
 		
@@ -1979,15 +2691,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_twofactorenabled")]
 		public System.Nullable<bool> adx_identity_twofactorenabled
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_identity_twofactorenabled");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_twofactorenabled");
 				this.SetAttributeValue("adx_identity_twofactorenabled", value);
-				this.OnPropertyChanged("adx_identity_twofactorenabled");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_twofactorenabledname")]
+		public string adx_identity_twofactorenabledName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_identity_twofactorenabled"))
+				{
+					return this.FormattedValues["adx_identity_twofactorenabled"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -1997,60 +2726,60 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_identity_username")]
 		public string adx_identity_username
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_identity_username");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_identity_username");
 				this.SetAttributeValue("adx_identity_username", value);
-				this.OnPropertyChanged("adx_identity_username");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_modifiedbyipaddress")]
 		public string Adx_ModifiedByIPAddress
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_modifiedbyipaddress");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_ModifiedByIPAddress");
 				this.SetAttributeValue("adx_modifiedbyipaddress", value);
-				this.OnPropertyChanged("Adx_ModifiedByIPAddress");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_modifiedbyusername")]
 		public string Adx_ModifiedByUsername
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_modifiedbyusername");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_ModifiedByUsername");
 				this.SetAttributeValue("adx_modifiedbyusername", value);
-				this.OnPropertyChanged("Adx_ModifiedByUsername");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_organizationname")]
 		public string Adx_OrganizationName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_organizationname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_OrganizationName");
 				this.SetAttributeValue("adx_organizationname", value);
-				this.OnPropertyChanged("Adx_OrganizationName");
 			}
 		}
 		
@@ -2058,137 +2787,172 @@ namespace VoyageVistaSales.Plugins.Models
 		/// User’s preferred portal LCID
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_preferredlcid")]
+		[System.Obsolete("This attribute is deprecated.")]
 		public System.Nullable<int> adx_preferredlcid
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("adx_preferredlcid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_preferredlcid");
 				this.SetAttributeValue("adx_preferredlcid", value);
-				this.OnPropertyChanged("adx_preferredlcid");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilealert")]
 		public System.Nullable<bool> adx_profilealert
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_profilealert");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_profilealert");
 				this.SetAttributeValue("adx_profilealert", value);
-				this.OnPropertyChanged("adx_profilealert");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilealertdate")]
 		public System.Nullable<System.DateTime> adx_profilealertdate
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_profilealertdate");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_profilealertdate");
 				this.SetAttributeValue("adx_profilealertdate", value);
-				this.OnPropertyChanged("adx_profilealertdate");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilealertinstructions")]
 		public string adx_profilealertinstructions
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_profilealertinstructions");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_profilealertinstructions");
 				this.SetAttributeValue("adx_profilealertinstructions", value);
-				this.OnPropertyChanged("adx_profilealertinstructions");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilealertname")]
+		public string adx_profilealertName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_profilealert"))
+				{
+					return this.FormattedValues["adx_profilealert"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profileisanonymous")]
 		public System.Nullable<bool> Adx_ProfileIsAnonymous
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("adx_profileisanonymous");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_ProfileIsAnonymous");
 				this.SetAttributeValue("adx_profileisanonymous", value);
-				this.OnPropertyChanged("Adx_ProfileIsAnonymous");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profileisanonymousname")]
+		public string adx_profileisanonymousName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("adx_profileisanonymous"))
+				{
+					return this.FormattedValues["adx_profileisanonymous"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilelastactivity")]
 		public System.Nullable<System.DateTime> Adx_ProfileLastActivity
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_profilelastactivity");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_ProfileLastActivity");
 				this.SetAttributeValue("adx_profilelastactivity", value);
-				this.OnPropertyChanged("Adx_ProfileLastActivity");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_profilemodifiedon")]
 		public System.Nullable<System.DateTime> adx_profilemodifiedon
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("adx_profilemodifiedon");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_profilemodifiedon");
 				this.SetAttributeValue("adx_profilemodifiedon", value);
-				this.OnPropertyChanged("adx_profilemodifiedon");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_publicprofilecopy")]
 		public string adx_PublicProfileCopy
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("adx_publicprofilecopy");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("adx_PublicProfileCopy");
 				this.SetAttributeValue("adx_publicprofilecopy", value);
-				this.OnPropertyChanged("adx_PublicProfileCopy");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("adx_timezone")]
 		public System.Nullable<int> Adx_TimeZone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("adx_timezone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Adx_TimeZone");
 				this.SetAttributeValue("adx_timezone", value);
-				this.OnPropertyChanged("Adx_TimeZone");
 			}
 		}
 		
@@ -2198,6 +2962,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aging30")]
 		public Microsoft.Xrm.Sdk.Money Aging30
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("aging30");
@@ -2210,6 +2975,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aging30_base")]
 		public Microsoft.Xrm.Sdk.Money Aging30_Base
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("aging30_base");
@@ -2222,6 +2988,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aging60")]
 		public Microsoft.Xrm.Sdk.Money Aging60
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("aging60");
@@ -2234,6 +3001,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aging60_base")]
 		public Microsoft.Xrm.Sdk.Money Aging60_Base
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("aging60_base");
@@ -2246,6 +3014,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aging90")]
 		public Microsoft.Xrm.Sdk.Money Aging90
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("aging90");
@@ -2258,6 +3027,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("aging90_base")]
 		public Microsoft.Xrm.Sdk.Money Aging90_Base
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("aging90_base");
@@ -2270,15 +3040,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("anniversary")]
 		public System.Nullable<System.DateTime> Anniversary
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("anniversary");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Anniversary");
 				this.SetAttributeValue("anniversary", value);
-				this.OnPropertyChanged("Anniversary");
 			}
 		}
 		
@@ -2288,15 +3058,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("annualincome")]
 		public Microsoft.Xrm.Sdk.Money AnnualIncome
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("annualincome");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("AnnualIncome");
 				this.SetAttributeValue("annualincome", value);
-				this.OnPropertyChanged("AnnualIncome");
 			}
 		}
 		
@@ -2306,6 +3076,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("annualincome_base")]
 		public Microsoft.Xrm.Sdk.Money AnnualIncome_Base
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("annualincome_base");
@@ -2318,15 +3089,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("assistantname")]
 		public string AssistantName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("assistantname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("AssistantName");
 				this.SetAttributeValue("assistantname", value);
-				this.OnPropertyChanged("AssistantName");
 			}
 		}
 		
@@ -2336,15 +3107,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("assistantphone")]
 		public string AssistantPhone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("assistantphone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("AssistantPhone");
 				this.SetAttributeValue("assistantphone", value);
-				this.OnPropertyChanged("AssistantPhone");
 			}
 		}
 		
@@ -2354,15 +3125,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("birthdate")]
 		public System.Nullable<System.DateTime> BirthDate
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("birthdate");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("BirthDate");
 				this.SetAttributeValue("birthdate", value);
-				this.OnPropertyChanged("BirthDate");
 			}
 		}
 		
@@ -2372,15 +3143,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("business2")]
 		public string Business2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("business2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Business2");
 				this.SetAttributeValue("business2", value);
-				this.OnPropertyChanged("Business2");
 			}
 		}
 		
@@ -2390,15 +3161,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("callback")]
 		public string Callback
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("callback");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Callback");
 				this.SetAttributeValue("callback", value);
-				this.OnPropertyChanged("Callback");
 			}
 		}
 		
@@ -2408,15 +3179,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("childrensnames")]
 		public string ChildrensNames
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("childrensnames");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ChildrensNames");
 				this.SetAttributeValue("childrensnames", value);
-				this.OnPropertyChanged("ChildrensNames");
 			}
 		}
 		
@@ -2426,15 +3197,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("company")]
 		public string Company
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("company");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Company");
 				this.SetAttributeValue("company", value);
-				this.OnPropertyChanged("Company");
 			}
 		}
 		
@@ -2444,13 +3215,14 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("contactid")]
 		public System.Nullable<System.Guid> ContactId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("contactid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ContactId");
 				this.SetAttributeValue("contactid", value);
 				if (value.HasValue)
 				{
@@ -2460,17 +3232,18 @@ namespace VoyageVistaSales.Plugins.Models
 				{
 					base.Id = System.Guid.Empty;
 				}
-				this.OnPropertyChanged("ContactId");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("contactid")]
 		public override System.Guid Id
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return base.Id;
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
 				this.ContactId = value;
@@ -2483,6 +3256,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
 		public Microsoft.Xrm.Sdk.EntityReference CreatedBy
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdby");
@@ -2495,9 +3269,78 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdbyexternalparty")]
 		public Microsoft.Xrm.Sdk.EntityReference CreatedByExternalParty
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdbyexternalparty");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdbyexternalpartyname")]
+		public string CreatedByExternalPartyName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("createdbyexternalparty"))
+				{
+					return this.FormattedValues["createdbyexternalparty"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdbyexternalpartyyominame")]
+		public string CreatedByExternalPartyYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("createdbyexternalparty"))
+				{
+					return this.FormattedValues["createdbyexternalparty"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdbyname")]
+		public string CreatedByName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("createdby"))
+				{
+					return this.FormattedValues["createdby"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdbyyominame")]
+		public string CreatedByYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("createdby"))
+				{
+					return this.FormattedValues["createdby"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2507,6 +3350,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdon")]
 		public System.Nullable<System.DateTime> CreatedOn
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("createdon");
@@ -2519,9 +3363,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
 		public Microsoft.Xrm.Sdk.EntityReference CreatedOnBehalfBy
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("createdonbehalfby");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetAttributeValue("createdonbehalfby", value);
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfbyname")]
+		public string CreatedOnBehalfByName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("createdonbehalfby"))
+				{
+					return this.FormattedValues["createdonbehalfby"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfbyyominame")]
+		public string CreatedOnBehalfByYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("createdonbehalfby"))
+				{
+					return this.FormattedValues["createdonbehalfby"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2531,15 +3415,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("creditlimit")]
 		public Microsoft.Xrm.Sdk.Money CreditLimit
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("creditlimit");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("CreditLimit");
 				this.SetAttributeValue("creditlimit", value);
-				this.OnPropertyChanged("CreditLimit");
 			}
 		}
 		
@@ -2549,6 +3433,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("creditlimit_base")]
 		public Microsoft.Xrm.Sdk.Money CreditLimit_Base
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.Money>("creditlimit_base");
@@ -2561,15 +3446,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("creditonhold")]
 		public System.Nullable<bool> CreditOnHold
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("creditonhold");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("CreditOnHold");
 				this.SetAttributeValue("creditonhold", value);
-				this.OnPropertyChanged("CreditOnHold");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("creditonholdname")]
+		public string CreditOnHoldName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("creditonhold"))
+				{
+					return this.FormattedValues["creditonhold"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2577,17 +3479,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the size of the contact's company for segmentation and reporting purposes.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("customersizecode")]
-		public virtual contact_customersizecode? CustomerSizeCode
+		public virtual Contact_CustomerSizeCode? CustomerSizeCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_customersizecode?)(EntityOptionSetEnum.GetEnum(this, "customersizecode")));
+				return ((Contact_CustomerSizeCode?)(EntityOptionSetEnum.GetEnum(this, "customersizecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("CustomerSizeCode");
 				this.SetAttributeValue("customersizecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("CustomerSizeCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("customersizecodename")]
+		public string CustomerSizeCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("customersizecode"))
+				{
+					return this.FormattedValues["customersizecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2595,17 +3514,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the category that best describes the relationship between the contact and your organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("customertypecode")]
-		public virtual contact_customertypecode? CustomerTypeCode
+		public virtual Contact_CustomerTypeCode? CustomerTypeCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_customertypecode?)(EntityOptionSetEnum.GetEnum(this, "customertypecode")));
+				return ((Contact_CustomerTypeCode?)(EntityOptionSetEnum.GetEnum(this, "customertypecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("CustomerTypeCode");
 				this.SetAttributeValue("customertypecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("CustomerTypeCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("customertypecodename")]
+		public string CustomerTypeCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("customertypecode"))
+				{
+					return this.FormattedValues["customertypecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2615,15 +3551,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("department")]
 		public string Department
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("department");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Department");
 				this.SetAttributeValue("department", value);
-				this.OnPropertyChanged("Department");
 			}
 		}
 		
@@ -2633,15 +3569,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("description")]
 		public string Description
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("description");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Description");
 				this.SetAttributeValue("description", value);
-				this.OnPropertyChanged("Description");
 			}
 		}
 		
@@ -2651,15 +3587,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotbulkemail")]
 		public System.Nullable<bool> DoNotBulkEMail
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("donotbulkemail");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("DoNotBulkEMail");
 				this.SetAttributeValue("donotbulkemail", value);
-				this.OnPropertyChanged("DoNotBulkEMail");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotbulkemailname")]
+		public string DoNotBulkEMailName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("donotbulkemail"))
+				{
+					return this.FormattedValues["donotbulkemail"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2669,15 +3622,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotbulkpostalmail")]
 		public System.Nullable<bool> DoNotBulkPostalMail
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("donotbulkpostalmail");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("DoNotBulkPostalMail");
 				this.SetAttributeValue("donotbulkpostalmail", value);
-				this.OnPropertyChanged("DoNotBulkPostalMail");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotbulkpostalmailname")]
+		public string DoNotBulkPostalMailName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("donotbulkpostalmail"))
+				{
+					return this.FormattedValues["donotbulkpostalmail"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2687,15 +3657,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotemail")]
 		public System.Nullable<bool> DoNotEMail
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("donotemail");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("DoNotEMail");
 				this.SetAttributeValue("donotemail", value);
-				this.OnPropertyChanged("DoNotEMail");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotemailname")]
+		public string DoNotEMailName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("donotemail"))
+				{
+					return this.FormattedValues["donotemail"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2705,15 +3692,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotfax")]
 		public System.Nullable<bool> DoNotFax
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("donotfax");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("DoNotFax");
 				this.SetAttributeValue("donotfax", value);
-				this.OnPropertyChanged("DoNotFax");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotfaxname")]
+		public string DoNotFaxName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("donotfax"))
+				{
+					return this.FormattedValues["donotfax"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2723,15 +3727,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotphone")]
 		public System.Nullable<bool> DoNotPhone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("donotphone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("DoNotPhone");
 				this.SetAttributeValue("donotphone", value);
-				this.OnPropertyChanged("DoNotPhone");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotphonename")]
+		public string DoNotPhoneName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("donotphone"))
+				{
+					return this.FormattedValues["donotphone"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2741,15 +3762,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotpostalmail")]
 		public System.Nullable<bool> DoNotPostalMail
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("donotpostalmail");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("DoNotPostalMail");
 				this.SetAttributeValue("donotpostalmail", value);
-				this.OnPropertyChanged("DoNotPostalMail");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotpostalmailname")]
+		public string DoNotPostalMailName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("donotpostalmail"))
+				{
+					return this.FormattedValues["donotpostalmail"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotsendmarketingmaterialname")]
+		public string DoNotSendMarketingMaterialName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("donotsendmm"))
+				{
+					return this.FormattedValues["donotsendmm"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2759,15 +3814,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("donotsendmm")]
 		public System.Nullable<bool> DoNotSendMM
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("donotsendmm");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("DoNotSendMM");
 				this.SetAttributeValue("donotsendmm", value);
-				this.OnPropertyChanged("DoNotSendMM");
 			}
 		}
 		
@@ -2775,17 +3830,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the contact's highest level of education for use in segmentation and analysis.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("educationcode")]
-		public virtual contact_educationcode? EducationCode
+		public virtual Contact_EducationCode? EducationCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_educationcode?)(EntityOptionSetEnum.GetEnum(this, "educationcode")));
+				return ((Contact_EducationCode?)(EntityOptionSetEnum.GetEnum(this, "educationcode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("EducationCode");
 				this.SetAttributeValue("educationcode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("EducationCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("educationcodename")]
+		public string EducationCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("educationcode"))
+				{
+					return this.FormattedValues["educationcode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2795,15 +3867,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("emailaddress1")]
 		public string EMailAddress1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("emailaddress1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("EMailAddress1");
 				this.SetAttributeValue("emailaddress1", value);
-				this.OnPropertyChanged("EMailAddress1");
 			}
 		}
 		
@@ -2813,15 +3885,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("emailaddress2")]
 		public string EMailAddress2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("emailaddress2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("EMailAddress2");
 				this.SetAttributeValue("emailaddress2", value);
-				this.OnPropertyChanged("EMailAddress2");
 			}
 		}
 		
@@ -2831,15 +3903,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("emailaddress3")]
 		public string EMailAddress3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("emailaddress3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("EMailAddress3");
 				this.SetAttributeValue("emailaddress3", value);
-				this.OnPropertyChanged("EMailAddress3");
 			}
 		}
 		
@@ -2849,15 +3921,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("employeeid")]
 		public string EmployeeId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("employeeid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("EmployeeId");
 				this.SetAttributeValue("employeeid", value);
-				this.OnPropertyChanged("EmployeeId");
 			}
 		}
 		
@@ -2867,21 +3939,22 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimage")]
 		public byte[] EntityImage
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<byte[]>("entityimage");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("EntityImage");
 				this.SetAttributeValue("entityimage", value);
-				this.OnPropertyChanged("EntityImage");
 			}
 		}
 		
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimage_timestamp")]
 		public System.Nullable<long> EntityImage_Timestamp
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<long>>("entityimage_timestamp");
@@ -2891,6 +3964,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimage_url")]
 		public string EntityImage_URL
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("entityimage_url");
@@ -2903,6 +3977,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("entityimageid")]
 		public System.Nullable<System.Guid> EntityImageId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("entityimageid");
@@ -2915,6 +3990,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("exchangerate")]
 		public System.Nullable<decimal> ExchangeRate
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<decimal>>("exchangerate");
@@ -2927,15 +4003,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("externaluseridentifier")]
 		public string ExternalUserIdentifier
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("externaluseridentifier");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ExternalUserIdentifier");
 				this.SetAttributeValue("externaluseridentifier", value);
-				this.OnPropertyChanged("ExternalUserIdentifier");
 			}
 		}
 		
@@ -2943,17 +4019,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the marital status of the contact for reference in follow-up phone calls and other communications.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("familystatuscode")]
-		public virtual contact_familystatuscode? FamilyStatusCode
+		public virtual Contact_FamilyStatusCode? FamilyStatusCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_familystatuscode?)(EntityOptionSetEnum.GetEnum(this, "familystatuscode")));
+				return ((Contact_FamilyStatusCode?)(EntityOptionSetEnum.GetEnum(this, "familystatuscode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("FamilyStatusCode");
 				this.SetAttributeValue("familystatuscode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("FamilyStatusCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("familystatuscodename")]
+		public string FamilyStatusCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("familystatuscode"))
+				{
+					return this.FormattedValues["familystatuscode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -2963,15 +4056,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("fax")]
 		public string Fax
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("fax");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Fax");
 				this.SetAttributeValue("fax", value);
-				this.OnPropertyChanged("Fax");
 			}
 		}
 		
@@ -2981,15 +4074,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("firstname")]
 		public string FirstName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("firstname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("FirstName");
 				this.SetAttributeValue("firstname", value);
-				this.OnPropertyChanged("FirstName");
 			}
 		}
 		
@@ -2999,15 +4092,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("followemail")]
 		public System.Nullable<bool> FollowEmail
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("followemail");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("FollowEmail");
 				this.SetAttributeValue("followemail", value);
-				this.OnPropertyChanged("FollowEmail");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("followemailname")]
+		public string FollowEmailName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("followemail"))
+				{
+					return this.FormattedValues["followemail"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3017,15 +4127,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ftpsiteurl")]
 		public string FtpSiteUrl
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("ftpsiteurl");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("FtpSiteUrl");
 				this.SetAttributeValue("ftpsiteurl", value);
-				this.OnPropertyChanged("FtpSiteUrl");
 			}
 		}
 		
@@ -3035,6 +4145,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("fullname")]
 		public string FullName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("fullname");
@@ -3045,17 +4156,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the contact's gender to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("gendercode")]
-		public virtual contact_gendercode? GenderCode
+		public virtual Contact_GenderCode? GenderCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_gendercode?)(EntityOptionSetEnum.GetEnum(this, "gendercode")));
+				return ((Contact_GenderCode?)(EntityOptionSetEnum.GetEnum(this, "gendercode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("GenderCode");
 				this.SetAttributeValue("gendercode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("GenderCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("gendercodename")]
+		public string GenderCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("gendercode"))
+				{
+					return this.FormattedValues["gendercode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3065,15 +4193,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("governmentid")]
 		public string GovernmentId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("governmentid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("GovernmentId");
 				this.SetAttributeValue("governmentid", value);
-				this.OnPropertyChanged("GovernmentId");
 			}
 		}
 		
@@ -3081,17 +4209,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select whether the contact has any children for reference in follow-up phone calls and other communications.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("haschildrencode")]
-		public virtual contact_haschildrencode? HasChildrenCode
+		public virtual Contact_HasChildrenCode? HasChildrenCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_haschildrencode?)(EntityOptionSetEnum.GetEnum(this, "haschildrencode")));
+				return ((Contact_HasChildrenCode?)(EntityOptionSetEnum.GetEnum(this, "haschildrencode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("HasChildrenCode");
 				this.SetAttributeValue("haschildrencode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("HasChildrenCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("haschildrencodename")]
+		public string HasChildrenCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("haschildrencode"))
+				{
+					return this.FormattedValues["haschildrencode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3101,15 +4246,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("home2")]
 		public string Home2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("home2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Home2");
 				this.SetAttributeValue("home2", value);
-				this.OnPropertyChanged("Home2");
 			}
 		}
 		
@@ -3119,15 +4264,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("importsequencenumber")]
 		public System.Nullable<int> ImportSequenceNumber
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("importsequencenumber");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ImportSequenceNumber");
 				this.SetAttributeValue("importsequencenumber", value);
-				this.OnPropertyChanged("ImportSequenceNumber");
 			}
 		}
 		
@@ -3137,15 +4282,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isbackofficecustomer")]
 		public System.Nullable<bool> IsBackofficeCustomer
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("isbackofficecustomer");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("IsBackofficeCustomer");
 				this.SetAttributeValue("isbackofficecustomer", value);
-				this.OnPropertyChanged("IsBackofficeCustomer");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isbackofficecustomername")]
+		public string IsBackofficeCustomerName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("isbackofficecustomer"))
+				{
+					return this.FormattedValues["isbackofficecustomer"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("isprivatename")]
+		public string IsPrivateName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("isprivate"))
+				{
+					return this.FormattedValues["isprivate"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3155,15 +4334,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("jobtitle")]
 		public string JobTitle
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("jobtitle");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("JobTitle");
 				this.SetAttributeValue("jobtitle", value);
-				this.OnPropertyChanged("JobTitle");
 			}
 		}
 		
@@ -3173,15 +4352,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("lastname")]
 		public string LastName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("lastname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("LastName");
 				this.SetAttributeValue("lastname", value);
-				this.OnPropertyChanged("LastName");
 			}
 		}
 		
@@ -3191,15 +4370,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("lastonholdtime")]
 		public System.Nullable<System.DateTime> LastOnHoldTime
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("lastonholdtime");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("LastOnHoldTime");
 				this.SetAttributeValue("lastonholdtime", value);
-				this.OnPropertyChanged("LastOnHoldTime");
 			}
 		}
 		
@@ -3209,15 +4388,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("lastusedincampaign")]
 		public System.Nullable<System.DateTime> LastUsedInCampaign
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("lastusedincampaign");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("LastUsedInCampaign");
 				this.SetAttributeValue("lastusedincampaign", value);
-				this.OnPropertyChanged("LastUsedInCampaign");
 			}
 		}
 		
@@ -3225,17 +4404,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the primary marketing source that directed the contact to your organization.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("leadsourcecode")]
-		public virtual contact_leadsourcecode? LeadSourceCode
+		public virtual Contact_LeadSourceCode? LeadSourceCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_leadsourcecode?)(EntityOptionSetEnum.GetEnum(this, "leadsourcecode")));
+				return ((Contact_LeadSourceCode?)(EntityOptionSetEnum.GetEnum(this, "leadsourcecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("LeadSourceCode");
 				this.SetAttributeValue("leadsourcecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("LeadSourceCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("leadsourcecodename")]
+		public string LeadSourceCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("leadsourcecode"))
+				{
+					return this.FormattedValues["leadsourcecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3245,15 +4441,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("managername")]
 		public string ManagerName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("managername");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ManagerName");
 				this.SetAttributeValue("managername", value);
-				this.OnPropertyChanged("ManagerName");
 			}
 		}
 		
@@ -3263,15 +4459,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("managerphone")]
 		public string ManagerPhone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("managerphone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ManagerPhone");
 				this.SetAttributeValue("managerphone", value);
-				this.OnPropertyChanged("ManagerPhone");
 			}
 		}
 		
@@ -3281,15 +4477,66 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("marketingonly")]
 		public System.Nullable<bool> MarketingOnly
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("marketingonly");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("MarketingOnly");
 				this.SetAttributeValue("marketingonly", value);
-				this.OnPropertyChanged("MarketingOnly");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("marketingonlyname")]
+		public string MarketingOnlyName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("marketingonly"))
+				{
+					return this.FormattedValues["marketingonly"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mastercontactidname")]
+		public string MasterContactIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("masterid"))
+				{
+					return this.FormattedValues["masterid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mastercontactidyominame")]
+		public string MasterContactIdYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("masterid"))
+				{
+					return this.FormattedValues["masterid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3299,6 +4546,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("masterid")]
 		public Microsoft.Xrm.Sdk.EntityReference MasterId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("masterid");
@@ -3311,9 +4559,27 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("merged")]
 		public System.Nullable<bool> Merged
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("merged");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mergedname")]
+		public string MergedName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("merged"))
+				{
+					return this.FormattedValues["merged"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3323,15 +4589,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("middlename")]
 		public string MiddleName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("middlename");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("MiddleName");
 				this.SetAttributeValue("middlename", value);
-				this.OnPropertyChanged("MiddleName");
 			}
 		}
 		
@@ -3341,15 +4607,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mobilephone")]
 		public string MobilePhone
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("mobilephone");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("MobilePhone");
 				this.SetAttributeValue("mobilephone", value);
-				this.OnPropertyChanged("MobilePhone");
 			}
 		}
 		
@@ -3359,6 +4625,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
 		public Microsoft.Xrm.Sdk.EntityReference ModifiedBy
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedby");
@@ -3371,9 +4638,78 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedbyexternalparty")]
 		public Microsoft.Xrm.Sdk.EntityReference ModifiedByExternalParty
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedbyexternalparty");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedbyexternalpartyname")]
+		public string ModifiedByExternalPartyName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("modifiedbyexternalparty"))
+				{
+					return this.FormattedValues["modifiedbyexternalparty"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedbyexternalpartyyominame")]
+		public string ModifiedByExternalPartyYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("modifiedbyexternalparty"))
+				{
+					return this.FormattedValues["modifiedbyexternalparty"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedbyname")]
+		public string ModifiedByName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("modifiedby"))
+				{
+					return this.FormattedValues["modifiedby"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedbyyominame")]
+		public string ModifiedByYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("modifiedby"))
+				{
+					return this.FormattedValues["modifiedby"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3383,6 +4719,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedon")]
 		public System.Nullable<System.DateTime> ModifiedOn
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("modifiedon");
@@ -3395,9 +4732,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
 		public Microsoft.Xrm.Sdk.EntityReference ModifiedOnBehalfBy
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("modifiedonbehalfby");
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetAttributeValue("modifiedonbehalfby", value);
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfbyname")]
+		public string ModifiedOnBehalfByName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("modifiedonbehalfby"))
+				{
+					return this.FormattedValues["modifiedonbehalfby"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfbyyominame")]
+		public string ModifiedOnBehalfByYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("modifiedonbehalfby"))
+				{
+					return this.FormattedValues["modifiedonbehalfby"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3407,15 +4784,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_managingpartnerid")]
 		public Microsoft.Xrm.Sdk.EntityReference msa_managingpartnerid
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("msa_managingpartnerid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("msa_managingpartnerid");
 				this.SetAttributeValue("msa_managingpartnerid", value);
-				this.OnPropertyChanged("msa_managingpartnerid");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_managingpartneridname")]
+		public string msa_managingpartneridName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("msa_managingpartnerid"))
+				{
+					return this.FormattedValues["msa_managingpartnerid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msa_managingpartneridyominame")]
+		public string msa_managingpartneridYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("msa_managingpartnerid"))
+				{
+					return this.FormattedValues["msa_managingpartnerid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3425,15 +4836,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_disablewebtracking")]
 		public System.Nullable<bool> msdyn_disablewebtracking
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("msdyn_disablewebtracking");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("msdyn_disablewebtracking");
 				this.SetAttributeValue("msdyn_disablewebtracking", value);
-				this.OnPropertyChanged("msdyn_disablewebtracking");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_disablewebtrackingname")]
+		public string msdyn_disablewebtrackingName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("msdyn_disablewebtracking"))
+				{
+					return this.FormattedValues["msdyn_disablewebtracking"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3443,15 +4871,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_isminor")]
 		public System.Nullable<bool> msdyn_isminor
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("msdyn_isminor");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("msdyn_isminor");
 				this.SetAttributeValue("msdyn_isminor", value);
-				this.OnPropertyChanged("msdyn_isminor");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_isminorname")]
+		public string msdyn_isminorName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("msdyn_isminor"))
+				{
+					return this.FormattedValues["msdyn_isminor"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3461,15 +4906,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_isminorwithparentalconsent")]
 		public System.Nullable<bool> msdyn_isminorwithparentalconsent
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("msdyn_isminorwithparentalconsent");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("msdyn_isminorwithparentalconsent");
 				this.SetAttributeValue("msdyn_isminorwithparentalconsent", value);
-				this.OnPropertyChanged("msdyn_isminorwithparentalconsent");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_isminorwithparentalconsentname")]
+		public string msdyn_isminorwithparentalconsentName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("msdyn_isminorwithparentalconsent"))
+				{
+					return this.FormattedValues["msdyn_isminorwithparentalconsent"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3479,15 +4941,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("msdyn_portaltermsagreementdate")]
 		public System.Nullable<System.DateTime> msdyn_portaltermsagreementdate
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("msdyn_portaltermsagreementdate");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("msdyn_portaltermsagreementdate");
 				this.SetAttributeValue("msdyn_portaltermsagreementdate", value);
-				this.OnPropertyChanged("msdyn_portaltermsagreementdate");
 			}
 		}
 		
@@ -3497,15 +4959,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mspp_userpreferredlcid")]
 		public virtual powerpagelanguages? mspp_userpreferredlcid
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return ((powerpagelanguages?)(EntityOptionSetEnum.GetEnum(this, "mspp_userpreferredlcid")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("mspp_userpreferredlcid");
 				this.SetAttributeValue("mspp_userpreferredlcid", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("mspp_userpreferredlcid");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("mspp_userpreferredlcidname")]
+		public string mspp_userpreferredlcidName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("mspp_userpreferredlcid"))
+				{
+					return this.FormattedValues["mspp_userpreferredlcid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3515,15 +4994,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("nickname")]
 		public string NickName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("nickname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("NickName");
 				this.SetAttributeValue("nickname", value);
-				this.OnPropertyChanged("NickName");
 			}
 		}
 		
@@ -3533,15 +5012,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("numberofchildren")]
 		public System.Nullable<int> NumberOfChildren
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("numberofchildren");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("NumberOfChildren");
 				this.SetAttributeValue("numberofchildren", value);
-				this.OnPropertyChanged("NumberOfChildren");
 			}
 		}
 		
@@ -3551,6 +5030,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("onholdtime")]
 		public System.Nullable<int> OnHoldTime
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("onholdtime");
@@ -3563,15 +5043,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("overriddencreatedon")]
 		public System.Nullable<System.DateTime> OverriddenCreatedOn
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.DateTime>>("overriddencreatedon");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("OverriddenCreatedOn");
 				this.SetAttributeValue("overriddencreatedon", value);
-				this.OnPropertyChanged("OverriddenCreatedOn");
 			}
 		}
 		
@@ -3581,15 +5061,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("ownerid")]
 		public Microsoft.Xrm.Sdk.EntityReference OwnerId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("ownerid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("OwnerId");
 				this.SetAttributeValue("ownerid", value);
-				this.OnPropertyChanged("OwnerId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owneridname")]
+		public string OwnerIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("ownerid"))
+				{
+					return this.FormattedValues["ownerid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owneridyominame")]
+		public string OwnerIdYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("ownerid"))
+				{
+					return this.FormattedValues["ownerid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3599,9 +5113,27 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningbusinessunit")]
 		public Microsoft.Xrm.Sdk.EntityReference OwningBusinessUnit
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owningbusinessunit");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningbusinessunitname")]
+		public string OwningBusinessUnitName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("owningbusinessunit"))
+				{
+					return this.FormattedValues["owningbusinessunit"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3611,6 +5143,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningteam")]
 		public Microsoft.Xrm.Sdk.EntityReference OwningTeam
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owningteam");
@@ -3623,6 +5156,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
 		public Microsoft.Xrm.Sdk.EntityReference OwningUser
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("owninguser");
@@ -3635,15 +5169,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("pager")]
 		public string Pager
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("pager");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Pager");
 				this.SetAttributeValue("pager", value);
-				this.OnPropertyChanged("Pager");
 			}
 		}
 		
@@ -3653,9 +5187,44 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcontactid")]
 		public Microsoft.Xrm.Sdk.EntityReference ParentContactId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("parentcontactid");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcontactidname")]
+		public string ParentContactIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("parentcontactid"))
+				{
+					return this.FormattedValues["parentcontactid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcontactidyominame")]
+		public string ParentContactIdYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("parentcontactid"))
+				{
+					return this.FormattedValues["parentcontactid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3665,15 +5234,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcustomerid")]
 		public Microsoft.Xrm.Sdk.EntityReference ParentCustomerId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("parentcustomerid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ParentCustomerId");
 				this.SetAttributeValue("parentcustomerid", value);
-				this.OnPropertyChanged("ParentCustomerId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcustomeridname")]
+		public string ParentCustomerIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("parentcustomerid"))
+				{
+					return this.FormattedValues["parentcustomerid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("parentcustomeridyominame")]
+		public string ParentCustomerIdYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("parentcustomerid"))
+				{
+					return this.FormattedValues["parentcustomerid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3683,15 +5286,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("participatesinworkflow")]
 		public System.Nullable<bool> ParticipatesInWorkflow
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<bool>>("participatesinworkflow");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ParticipatesInWorkflow");
 				this.SetAttributeValue("participatesinworkflow", value);
-				this.OnPropertyChanged("ParticipatesInWorkflow");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("participatesinworkflowname")]
+		public string ParticipatesInWorkflowName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("participatesinworkflow"))
+				{
+					return this.FormattedValues["participatesinworkflow"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3699,17 +5319,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the payment terms to indicate when the customer needs to pay the total amount.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("paymenttermscode")]
-		public virtual contact_paymenttermscode? PaymentTermsCode
+		public virtual Contact_PaymentTermsCode? PaymentTermsCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_paymenttermscode?)(EntityOptionSetEnum.GetEnum(this, "paymenttermscode")));
+				return ((Contact_PaymentTermsCode?)(EntityOptionSetEnum.GetEnum(this, "paymenttermscode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("PaymentTermsCode");
 				this.SetAttributeValue("paymenttermscode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("PaymentTermsCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("paymenttermscodename")]
+		public string PaymentTermsCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("paymenttermscode"))
+				{
+					return this.FormattedValues["paymenttermscode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3717,17 +5354,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the preferred day of the week for service appointments.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredappointmentdaycode")]
-		public virtual contact_preferredappointmentdaycode? PreferredAppointmentDayCode
+		public virtual Contact_PreferredAppointmentDayCode? PreferredAppointmentDayCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_preferredappointmentdaycode?)(EntityOptionSetEnum.GetEnum(this, "preferredappointmentdaycode")));
+				return ((Contact_PreferredAppointmentDayCode?)(EntityOptionSetEnum.GetEnum(this, "preferredappointmentdaycode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("PreferredAppointmentDayCode");
 				this.SetAttributeValue("preferredappointmentdaycode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("PreferredAppointmentDayCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredappointmentdaycodename")]
+		public string PreferredAppointmentDayCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("preferredappointmentdaycode"))
+				{
+					return this.FormattedValues["preferredappointmentdaycode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3735,17 +5389,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the preferred time of day for service appointments.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredappointmenttimecode")]
-		public virtual contact_preferredappointmenttimecode? PreferredAppointmentTimeCode
+		public virtual Contact_PreferredAppointmentTimeCode? PreferredAppointmentTimeCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_preferredappointmenttimecode?)(EntityOptionSetEnum.GetEnum(this, "preferredappointmenttimecode")));
+				return ((Contact_PreferredAppointmentTimeCode?)(EntityOptionSetEnum.GetEnum(this, "preferredappointmenttimecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("PreferredAppointmentTimeCode");
 				this.SetAttributeValue("preferredappointmenttimecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("PreferredAppointmentTimeCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredappointmenttimecodename")]
+		public string PreferredAppointmentTimeCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("preferredappointmenttimecode"))
+				{
+					return this.FormattedValues["preferredappointmenttimecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3753,17 +5424,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the preferred method of contact.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredcontactmethodcode")]
-		public virtual contact_preferredcontactmethodcode? PreferredContactMethodCode
+		public virtual Contact_PreferredContactMethodCode? PreferredContactMethodCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_preferredcontactmethodcode?)(EntityOptionSetEnum.GetEnum(this, "preferredcontactmethodcode")));
+				return ((Contact_PreferredContactMethodCode?)(EntityOptionSetEnum.GetEnum(this, "preferredcontactmethodcode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("PreferredContactMethodCode");
 				this.SetAttributeValue("preferredcontactmethodcode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("PreferredContactMethodCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredcontactmethodcodename")]
+		public string PreferredContactMethodCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("preferredcontactmethodcode"))
+				{
+					return this.FormattedValues["preferredcontactmethodcode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3773,15 +5461,49 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredsystemuserid")]
 		public Microsoft.Xrm.Sdk.EntityReference PreferredSystemUserId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("preferredsystemuserid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("PreferredSystemUserId");
 				this.SetAttributeValue("preferredsystemuserid", value);
-				this.OnPropertyChanged("PreferredSystemUserId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredsystemuseridname")]
+		public string PreferredSystemUserIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("preferredsystemuserid"))
+				{
+					return this.FormattedValues["preferredsystemuserid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredsystemuseridyominame")]
+		public string PreferredSystemUserIdYomiName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("preferredsystemuserid"))
+				{
+					return this.FormattedValues["preferredsystemuserid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3791,15 +5513,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("processid")]
 		public System.Nullable<System.Guid> ProcessId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("processid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ProcessId");
 				this.SetAttributeValue("processid", value);
-				this.OnPropertyChanged("ProcessId");
 			}
 		}
 		
@@ -3809,15 +5531,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("salutation")]
 		public string Salutation
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("salutation");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Salutation");
 				this.SetAttributeValue("salutation", value);
-				this.OnPropertyChanged("Salutation");
 			}
 		}
 		
@@ -3825,17 +5547,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select a shipping method for deliveries sent to this address.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("shippingmethodcode")]
-		public virtual contact_shippingmethodcode? ShippingMethodCode
+		public virtual Contact_ShippingMethodCode? ShippingMethodCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_shippingmethodcode?)(EntityOptionSetEnum.GetEnum(this, "shippingmethodcode")));
+				return ((Contact_ShippingMethodCode?)(EntityOptionSetEnum.GetEnum(this, "shippingmethodcode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("ShippingMethodCode");
 				this.SetAttributeValue("shippingmethodcode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("ShippingMethodCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("shippingmethodcodename")]
+		public string ShippingMethodCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("shippingmethodcode"))
+				{
+					return this.FormattedValues["shippingmethodcode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3845,15 +5584,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("slaid")]
 		public Microsoft.Xrm.Sdk.EntityReference SLAId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("slaid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("SLAId");
 				this.SetAttributeValue("slaid", value);
-				this.OnPropertyChanged("SLAId");
 			}
 		}
 		
@@ -3863,9 +5602,44 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("slainvokedid")]
 		public Microsoft.Xrm.Sdk.EntityReference SLAInvokedId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("slainvokedid");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("slainvokedidname")]
+		public string SLAInvokedIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("slainvokedid"))
+				{
+					return this.FormattedValues["slainvokedid"];
+				}
+				else
+				{
+					return default(string);
+				}
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("slaname")]
+		public string SLAName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("slaid"))
+				{
+					return this.FormattedValues["slaid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3875,15 +5649,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("spousesname")]
 		public string SpousesName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("spousesname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("SpousesName");
 				this.SetAttributeValue("spousesname", value);
-				this.OnPropertyChanged("SpousesName");
 			}
 		}
 		
@@ -3891,17 +5665,18 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Shows the ID of the stage.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("stageid")]
+		[System.Obsolete("This attribute is deprecated.")]
 		public System.Nullable<System.Guid> StageId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("stageid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("StageId");
 				this.SetAttributeValue("stageid", value);
-				this.OnPropertyChanged("StageId");
 			}
 		}
 		
@@ -3911,15 +5686,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecode")]
 		public virtual contact_statecode? StateCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return ((contact_statecode?)(EntityOptionSetEnum.GetEnum(this, "statecode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("StateCode");
 				this.SetAttributeValue("statecode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("StateCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statecodename")]
+		public string StateCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("statecode"))
+				{
+					return this.FormattedValues["statecode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3927,17 +5719,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select the contact's status.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscode")]
-		public virtual contact_statuscode? StatusCode
+		public virtual Contact_StatusCode? StatusCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_statuscode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
+				return ((Contact_StatusCode?)(EntityOptionSetEnum.GetEnum(this, "statuscode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("StatusCode");
 				this.SetAttributeValue("statuscode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("StatusCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("statuscodename")]
+		public string StatusCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("statuscode"))
+				{
+					return this.FormattedValues["statuscode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -3947,15 +5756,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("subscriptionid")]
 		public System.Nullable<System.Guid> SubscriptionId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<System.Guid>>("subscriptionid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("SubscriptionId");
 				this.SetAttributeValue("subscriptionid", value);
-				this.OnPropertyChanged("SubscriptionId");
 			}
 		}
 		
@@ -3965,15 +5774,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("suffix")]
 		public string Suffix
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("suffix");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Suffix");
 				this.SetAttributeValue("suffix", value);
-				this.OnPropertyChanged("Suffix");
 			}
 		}
 		
@@ -3983,15 +5792,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("telephone1")]
 		public string Telephone1
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("telephone1");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Telephone1");
 				this.SetAttributeValue("telephone1", value);
-				this.OnPropertyChanged("Telephone1");
 			}
 		}
 		
@@ -4001,15 +5810,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("telephone2")]
 		public string Telephone2
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("telephone2");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Telephone2");
 				this.SetAttributeValue("telephone2", value);
-				this.OnPropertyChanged("Telephone2");
 			}
 		}
 		
@@ -4019,15 +5828,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("telephone3")]
 		public string Telephone3
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("telephone3");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Telephone3");
 				this.SetAttributeValue("telephone3", value);
-				this.OnPropertyChanged("Telephone3");
 			}
 		}
 		
@@ -4035,17 +5844,34 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Select a region or territory for the contact for use in segmentation and analysis.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("territorycode")]
-		public virtual contact_territorycode? TerritoryCode
+		public virtual Contact_TerritoryCode? TerritoryCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return ((contact_territorycode?)(EntityOptionSetEnum.GetEnum(this, "territorycode")));
+				return ((Contact_TerritoryCode?)(EntityOptionSetEnum.GetEnum(this, "territorycode")));
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("TerritoryCode");
 				this.SetAttributeValue("territorycode", value.HasValue ? new Microsoft.Xrm.Sdk.OptionSetValue((int)value) : null);
-				this.OnPropertyChanged("TerritoryCode");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("territorycodename")]
+		public string TerritoryCodeName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("territorycode"))
+				{
+					return this.FormattedValues["territorycode"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -4055,6 +5881,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timespentbymeonemailandmeetings")]
 		public string TimeSpentByMeOnEmailAndMeetings
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("timespentbymeonemailandmeetings");
@@ -4067,15 +5894,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("timezoneruleversionnumber")]
 		public System.Nullable<int> TimeZoneRuleVersionNumber
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("timezoneruleversionnumber");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("TimeZoneRuleVersionNumber");
 				this.SetAttributeValue("timezoneruleversionnumber", value);
-				this.OnPropertyChanged("TimeZoneRuleVersionNumber");
 			}
 		}
 		
@@ -4085,15 +5912,32 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyid")]
 		public Microsoft.Xrm.Sdk.EntityReference TransactionCurrencyId
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<Microsoft.Xrm.Sdk.EntityReference>("transactioncurrencyid");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("TransactionCurrencyId");
 				this.SetAttributeValue("transactioncurrencyid", value);
-				this.OnPropertyChanged("TransactionCurrencyId");
+			}
+		}
+		
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyidname")]
+		public string TransactionCurrencyIdName
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				if (this.FormattedValues.Contains("transactioncurrencyid"))
+				{
+					return this.FormattedValues["transactioncurrencyid"];
+				}
+				else
+				{
+					return default(string);
+				}
 			}
 		}
 		
@@ -4101,17 +5945,18 @@ namespace VoyageVistaSales.Plugins.Models
 		/// For internal use only.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("traversedpath")]
+		[System.Obsolete("This attribute is deprecated.")]
 		public string TraversedPath
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("traversedpath");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("TraversedPath");
 				this.SetAttributeValue("traversedpath", value);
-				this.OnPropertyChanged("TraversedPath");
 			}
 		}
 		
@@ -4121,15 +5966,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("utcconversiontimezonecode")]
 		public System.Nullable<int> UTCConversionTimeZoneCode
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<int>>("utcconversiontimezonecode");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("UTCConversionTimeZoneCode");
 				this.SetAttributeValue("utcconversiontimezonecode", value);
-				this.OnPropertyChanged("UTCConversionTimeZoneCode");
 			}
 		}
 		
@@ -4139,6 +5984,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("versionnumber")]
 		public System.Nullable<long> VersionNumber
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<System.Nullable<long>>("versionnumber");
@@ -4151,15 +5997,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("websiteurl")]
 		public string WebSiteUrl
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("websiteurl");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("WebSiteUrl");
 				this.SetAttributeValue("websiteurl", value);
-				this.OnPropertyChanged("WebSiteUrl");
 			}
 		}
 		
@@ -4169,15 +6015,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomifirstname")]
 		public string YomiFirstName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("yomifirstname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("YomiFirstName");
 				this.SetAttributeValue("yomifirstname", value);
-				this.OnPropertyChanged("YomiFirstName");
 			}
 		}
 		
@@ -4187,6 +6033,7 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomifullname")]
 		public string YomiFullName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("yomifullname");
@@ -4199,15 +6046,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomilastname")]
 		public string YomiLastName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("yomilastname");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("YomiLastName");
 				this.SetAttributeValue("yomilastname", value);
-				this.OnPropertyChanged("YomiLastName");
 			}
 		}
 		
@@ -4217,15 +6064,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("yomimiddlename")]
 		public string YomiMiddleName
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetAttributeValue<string>("yomimiddlename");
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("YomiMiddleName");
 				this.SetAttributeValue("yomimiddlename", value);
-				this.OnPropertyChanged("YomiMiddleName");
 			}
 		}
 		
@@ -4235,15 +6082,51 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("account_primary_contact")]
 		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Account> account_primary_contact
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Account>("account_primary_contact", null);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("account_primary_contact");
 				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Account>("account_primary_contact", null, value);
-				this.OnPropertyChanged("account_primary_contact");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N contact_activity_parties
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_activity_parties")]
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.ActivityParty> contact_activity_parties
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityParty>("contact_activity_parties", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityParty>("contact_activity_parties", null, value);
+			}
+		}
+		
+		/// <summary>
+		/// 1:N Contact_ActivityPointers
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_ActivityPointers")]
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.ActivityPointer> Contact_ActivityPointers
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityPointer>("Contact_ActivityPointers", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityPointer>("Contact_ActivityPointers", null, value);
 			}
 		}
 		
@@ -4253,15 +6136,51 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
 		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Contact> Referencedcontact_customer_contacts
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Referencedcontact_customer_contacts");
 				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
-				this.OnPropertyChanged("Referencedcontact_customer_contacts");
+			}
+		}
+		
+		/// <summary>
+		/// 1:N Contact_Email_EmailSender
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_Email_EmailSender")]
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Email> Contact_Email_EmailSender
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("Contact_Email_EmailSender", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("Contact_Email_EmailSender", null, value);
+			}
+		}
+		
+		/// <summary>
+		/// 1:N Contact_Emails
+		/// </summary>
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_Emails")]
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Email> Contact_Emails
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("Contact_Emails", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("Contact_Emails", null, value);
 			}
 		}
 		
@@ -4271,15 +6190,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced)]
 		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Contact> Referencedcontact_master_contact
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Referencedcontact_master_contact");
 				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referenced, value);
-				this.OnPropertyChanged("Referencedcontact_master_contact");
 			}
 		}
 		
@@ -4289,15 +6208,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("voy_contact_voy_quote_contactid")]
 		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.voy_Quote> voy_contact_voy_quote_contactid
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_Quote>("voy_contact_voy_quote_contactid", null);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("voy_contact_voy_quote_contactid");
 				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_Quote>("voy_contact_voy_quote_contactid", null, value);
-				this.OnPropertyChanged("voy_contact_voy_quote_contactid");
 			}
 		}
 		
@@ -4307,15 +6226,29 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("voy_contact_voy_travelinquiry_contactid")]
 		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.voy_TravelInquiry> voy_contact_voy_travelinquiry_contactid
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_TravelInquiry>("voy_contact_voy_travelinquiry_contactid", null);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("voy_contact_voy_travelinquiry_contactid");
 				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_TravelInquiry>("voy_contact_voy_travelinquiry_contactid", null, value);
-				this.OnPropertyChanged("voy_contact_voy_travelinquiry_contactid");
+			}
+		}
+		
+		/// <summary>
+		/// N:1 business_unit_contacts
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningbusinessunit")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("business_unit_contacts")]
+		public VoyageVistaSales.Plugins.Models.BusinessUnit business_unit_contacts
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.BusinessUnit>("business_unit_contacts", null);
 			}
 		}
 		
@@ -4326,15 +6259,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_customer_accounts")]
 		public VoyageVistaSales.Plugins.Models.Account contact_customer_accounts
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.Account>("contact_customer_accounts", null);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("contact_customer_accounts");
 				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.Account>("contact_customer_accounts", null, value);
-				this.OnPropertyChanged("contact_customer_accounts");
 			}
 		}
 		
@@ -4345,15 +6278,15 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
 		public VoyageVistaSales.Plugins.Models.Contact Referencingcontact_customer_contacts
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("Referencingcontact_customer_contacts");
 				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.Contact>("contact_customer_contacts", Microsoft.Xrm.Sdk.EntityRole.Referencing, value);
-				this.OnPropertyChanged("Referencingcontact_customer_contacts");
 			}
 		}
 		
@@ -4364,9 +6297,90 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referencing)]
 		public VoyageVistaSales.Plugins.Models.Contact Referencingcontact_master_contact
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.Contact>("contact_master_contact", Microsoft.Xrm.Sdk.EntityRole.Referencing);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 contact_owning_user
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("contact_owning_user")]
+		public VoyageVistaSales.Plugins.Models.SystemUser contact_owning_user
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("contact_owning_user", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_contact_createdonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_contact_createdonbehalfby")]
+		public VoyageVistaSales.Plugins.Models.SystemUser lk_contact_createdonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_contact_createdonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_contact_createdonbehalfby", null, value);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_contact_modifiedonbehalfby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_contact_modifiedonbehalfby")]
+		public VoyageVistaSales.Plugins.Models.SystemUser lk_contact_modifiedonbehalfby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_contact_modifiedonbehalfby", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_contact_modifiedonbehalfby", null, value);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_contactbase_createdby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_contactbase_createdby")]
+		public VoyageVistaSales.Plugins.Models.SystemUser lk_contactbase_createdby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_contactbase_createdby", null);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 lk_contactbase_modifiedby
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_contactbase_modifiedby")]
+		public VoyageVistaSales.Plugins.Models.SystemUser lk_contactbase_modifiedby
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_contactbase_modifiedby", null);
 			}
 		}
 		
@@ -4377,16 +6391,96 @@ namespace VoyageVistaSales.Plugins.Models
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("msa_contact_managingpartner")]
 		public VoyageVistaSales.Plugins.Models.Account msa_contact_managingpartner
 		{
+			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
 				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.Account>("msa_contact_managingpartner", null);
 			}
+			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.OnPropertyChanging("msa_contact_managingpartner");
 				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.Account>("msa_contact_managingpartner", null, value);
-				this.OnPropertyChanged("msa_contact_managingpartner");
 			}
+		}
+		
+		/// <summary>
+		/// N:1 system_user_contacts
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("preferredsystemuserid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("system_user_contacts")]
+		public VoyageVistaSales.Plugins.Models.SystemUser system_user_contacts
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("system_user_contacts", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("system_user_contacts", null, value);
+			}
+		}
+		
+		/// <summary>
+		/// N:1 transactioncurrency_contact
+		/// </summary>
+		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyid")]
+		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("transactioncurrency_contact")]
+		public VoyageVistaSales.Plugins.Models.TransactionCurrency transactioncurrency_contact
+		{
+			[System.Diagnostics.DebuggerNonUserCode()]
+			get
+			{
+				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.TransactionCurrency>("transactioncurrency_contact", null);
+			}
+			[System.Diagnostics.DebuggerNonUserCode()]
+			set
+			{
+				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.TransactionCurrency>("transactioncurrency_contact", null, value);
+			}
+		}
+		
+		/// <summary>
+		/// Constructor for populating via LINQ queries given a LINQ anonymous type
+		/// <param name="anonymousType">LINQ anonymous type.</param>
+		/// </summary>
+		[System.Diagnostics.DebuggerNonUserCode()]
+		public Contact(object anonymousType) : 
+				this()
+		{
+            foreach (var p in anonymousType.GetType().GetProperties())
+            {
+                var value = p.GetValue(anonymousType, null);
+                var name = p.Name.ToLower();
+            
+                if (value != null && name.EndsWith("enum") && value.GetType().BaseType == typeof(System.Enum))
+                {
+                    value = new Microsoft.Xrm.Sdk.OptionSetValue((int) value);
+                    name = name.Remove(name.Length - "enum".Length);
+                }
+            
+                switch (name)
+                {
+                    case "id":
+                        base.Id = (System.Guid)value;
+                        Attributes["contactid"] = base.Id;
+                        break;
+                    case "contactid":
+                        var id = (System.Nullable<System.Guid>) value;
+                        if(id == null){ continue; }
+                        base.Id = id.Value;
+                        Attributes[name] = base.Id;
+                        break;
+                    case "formattedvalues":
+                        // Add Support for FormattedValues
+                        FormattedValues.AddRange((Microsoft.Xrm.Sdk.FormattedValueCollection)value);
+                        break;
+                    default:
+                        Attributes[name] = value;
+                        break;
+                }
+            }
 		}
 	}
 }

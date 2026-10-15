@@ -40,6 +40,39 @@ namespace VoyageVistaSales.Plugins.Models
 		}
 		
 		/// <summary>
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.ActivityParty"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.ActivityParty> ActivityPartySet
+		{
+			get
+			{
+				return this.CreateQuery<VoyageVistaSales.Plugins.Models.ActivityParty>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.ActivityPointer"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.ActivityPointer> ActivityPointerSet
+		{
+			get
+			{
+				return this.CreateQuery<VoyageVistaSales.Plugins.Models.ActivityPointer>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.BusinessUnit"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.BusinessUnit> BusinessUnitSet
+		{
+			get
+			{
+				return this.CreateQuery<VoyageVistaSales.Plugins.Models.BusinessUnit>();
+			}
+		}
+		
+		/// <summary>
 		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.Contact"/> entities.
 		/// </summary>
 		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.Contact> ContactSet
@@ -47,6 +80,50 @@ namespace VoyageVistaSales.Plugins.Models
 			get
 			{
 				return this.CreateQuery<VoyageVistaSales.Plugins.Models.Contact>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.Email"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.Email> EmailSet
+		{
+			get
+			{
+				return this.CreateQuery<VoyageVistaSales.Plugins.Models.Email>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.SystemUser"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.SystemUser> SystemUserSet
+		{
+			get
+			{
+				return this.CreateQuery<VoyageVistaSales.Plugins.Models.SystemUser>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.TransactionCurrency"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.TransactionCurrency> TransactionCurrencySet
+		{
+			get
+			{
+				return this.CreateQuery<VoyageVistaSales.Plugins.Models.TransactionCurrency>();
+			}
+		}
+		
+		/// <summary>
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.voy_inquirytoquote"/> entities.
+		/// </summary>
+		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.voy_inquirytoquote> voy_inquirytoquoteSet
+		{
+			get
+			{
+				return this.CreateQuery<VoyageVistaSales.Plugins.Models.voy_inquirytoquote>();
 			}
 		}
 		
@@ -92,6 +169,128 @@ namespace VoyageVistaSales.Plugins.Models
 			{
 				return this.CreateQuery<VoyageVistaSales.Plugins.Models.voy_TravelProduct>();
 			}
+		}
+	}
+	
+	/// <summary>
+	/// Attribute to handle storing the OptionSet's Metadata.
+	/// </summary>
+	[System.AttributeUsageAttribute(System.AttributeTargets.Field)]
+	public sealed class OptionSetMetadataAttribute : System.Attribute
+	{
+		
+		private object[] _nameObjects;
+		
+		private System.Collections.Generic.Dictionary<int, string> _names;
+		
+		/// <summary>
+		/// Color of the OptionSetValue.
+		/// </summary>
+		public string Color { get; set; }
+		
+		/// <summary>
+		/// Description of the OptionSetValue.
+		/// </summary>
+		public string Description { get; set; }
+		
+		/// <summary>
+		/// Display order index of the OptionSetValue.
+		/// </summary>
+		public int DisplayIndex { get; set; }
+		
+		/// <summary>
+		/// External value of the OptionSetValue.
+		/// </summary>
+		public string ExternalValue { get; set; }
+		
+		/// <summary>
+		/// Name of the OptionSetValue.
+		/// </summary>
+		public string Name { get; set; }
+		
+		/// <summary>
+		/// Names of the OptionSetValue.
+		/// </summary>
+		public System.Collections.Generic.Dictionary<int, string> Names
+		{
+			get
+			{
+				return _names ?? (_names = CreateNames());
+			} 
+			set
+			{
+				_names = value;
+				if (value == null)
+				{
+				    _nameObjects = new object[0];
+				}
+				else
+				{
+				    _nameObjects = null;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Initializes a new instance of the <see cref="OptionSetMetadataAttribute"/> class.
+		/// </summary>
+		/// <param name="name">Name of the value.</param>
+		/// <param name="displayIndex">Display order index of the value.</param>
+		/// <param name="color">Color of the value.</param>
+		/// <param name="description">Description of the value.</param>
+		/// <param name="externalValue">External value of the value.</param>
+		/// <param name="names">Names of the value.</param>
+		public OptionSetMetadataAttribute(string name, int displayIndex, string color = null, string description = null, string externalValue = null, params object[] names)
+		{
+			this.Color = color;
+			this.Description = description;
+			this._nameObjects = names;
+			this.ExternalValue = externalValue;
+			this.DisplayIndex = displayIndex;
+			this.Name = name;
+		}
+		
+		private System.Collections.Generic.Dictionary<int, string> CreateNames()
+		{
+			System.Collections.Generic.Dictionary<int, string> names = new System.Collections.Generic.Dictionary<int, string>();
+			for (int i = 0; (i < _nameObjects.Length); i = (i + 2))
+			{
+				names.Add(((int)(_nameObjects[i])), ((string)(_nameObjects[(i + 1)])));
+			}
+			return names;
+		}
+	}
+	
+	/// <summary>
+	/// Extension class to handle retrieving of OptionSetMetadataAttribute.
+	/// </summary>
+	public static class OptionSetExtension
+	{
+		
+		/// <summary>
+		/// Returns the OptionSetMetadataAttribute for the given enum value
+		/// </summary>
+		/// <typeparam name="T">OptionSet Enum Type</typeparam>
+		/// <param name="value">Enum Value with OptionSetMetadataAttribute</param>
+		public static OptionSetMetadataAttribute GetMetadata<T>(this T value)
+			where T :  struct, System.IConvertible
+		{
+			System.Type enumType = typeof(T);
+			if (!enumType.IsEnum)
+			{
+				throw new System.ArgumentException("T must be an enum!");
+			}
+			System.Reflection.MemberInfo[] members = enumType.GetMember(value.ToString());
+			for (int i = 0; (i < members.Length); i++
+			)
+			{
+				System.Attribute attribute = System.Reflection.CustomAttributeExtensions.GetCustomAttribute(members[i], typeof(OptionSetMetadataAttribute));
+				if (attribute != null)
+				{
+					return ((OptionSetMetadataAttribute)(attribute));
+				}
+			}
+			throw new System.ArgumentException("T must be an enum adorned with an OptionSetMetadataAttribute!");
 		}
 	}
 }

@@ -35,6 +35,7 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Returns a collection of integer version's of an Multi-Select OptionSetValue for a given attribute on the passed entity
 		/// </summary>
 		public static System.Collections.Generic.IEnumerable<T> GetMultiEnum<T>(Microsoft.Xrm.Sdk.Entity entity, string attributeLogicalName)
+		
 		{
 			Microsoft.Xrm.Sdk.OptionSetValueCollection value = entity.GetAttributeValue<Microsoft.Xrm.Sdk.OptionSetValueCollection>(attributeLogicalName);
 			System.Collections.Generic.List<T> list = new System.Collections.Generic.List<T>();
@@ -50,6 +51,7 @@ namespace VoyageVistaSales.Plugins.Models
 		/// Returns a OptionSetValueCollection based on a list of Multi-Select OptionSetValues
 		/// </summary>
 		public static Microsoft.Xrm.Sdk.OptionSetValueCollection GetMultiEnum<T>(Microsoft.Xrm.Sdk.Entity entity, string attributeLogicalName, System.Collections.Generic.IEnumerable<T> values)
+		
 		{
 			if (values == null)
 			{

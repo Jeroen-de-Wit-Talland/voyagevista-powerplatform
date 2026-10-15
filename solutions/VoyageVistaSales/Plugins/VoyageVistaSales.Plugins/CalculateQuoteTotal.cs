@@ -39,9 +39,7 @@ namespace VoyageVistaSales.Plugins
                 EntityReference targetEntity = (EntityReference)context.InputParameters["Target"];
                 Guid? quoteId = targetEntity.Id;
 
-                context.OutputParameters[_totalOutputParameter] = new Money();
-
-                Money totalAmount = context.OutputParameters[_totalOutputParameter] as Money;
+                context.OutputParameters[_totalOutputParameter] = new Money(0);
 
                 if (!quoteId.HasValue)
                 {
@@ -57,12 +55,13 @@ namespace VoyageVistaSales.Plugins
 
                     if (quoteLineItems.Count == 0)
                     {
-                        context.OutputParameters[_totalOutputParameter] = new Money(0);
+                        context.OutputParameters[_totalOutputParameter] = new Money(total ?? 0);
                     }
 
                     foreach (var item in quoteLineItems)
                     {
-                        total += item.voy_Amount * item.voy_PricePerUnit - item.voy_DiscountAmount;
+                        var subtotal = item.voy_Amount * item.voy_PricePerUnit;
+                        total += subtotal - (subtotal * (item.voy_DiscountPercentage ?? 0) / 100);
                     }
                     quote.voy_Total = new Money(total ?? 0);
                     xrmSvc.UpdateObject(quote);
