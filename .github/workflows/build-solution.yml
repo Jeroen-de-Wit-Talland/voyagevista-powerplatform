@@ -3,9 +3,9 @@ name: build-solution
 on:
   push:
     branches: [master]
-    paths: ["solutions/**", ".github/workflows/build-solution.yml"]
+    paths: ["solutions/**", "src/**", ".github/workflows/build-solution.yml"]
   pull_request:
-    paths: ["solutions/**", ".github/workflows/build-solution.yml"]
+    paths: ["solutions/**", "src/**", ".github/workflows/build-solution.yml"]
   workflow_dispatch:
 
 permissions:
@@ -14,6 +14,7 @@ permissions:
 env:
   SOLUTION_DIR: solutions/VoyageVistaSales
   SOLUTION_NAME: VoyageVistaSales
+  CODE_DIR: src
 
 jobs:
   webresources:
@@ -25,19 +26,22 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: ${{ env.SOLUTION_DIR }}/WebResources/package-lock.json
+          cache-dependency-path: |
+            ${{ env.CODE_DIR }}/WebResources/package-lock.json
+            ${{ env.CODE_DIR }}/WebResources.Tests/package-lock.json
 
       - name: Build and test web resources
-        working-directory: ${{ env.SOLUTION_DIR }}/WebResources
+        working-directory: ${{ env.CODE_DIR }}/WebResources
         run: |
           npm ci
+          npm --prefix ../WebResources.Tests ci
           npm test
           npm run build
 
       - uses: actions/upload-artifact@v4
         with:
           name: webresources
-          path: ${{ env.SOLUTION_DIR }}/WebResources/bin/voy_library.js
+          path: ${{ env.CODE_DIR }}/WebResources/bin/voy_library.js
           if-no-files-found: error
 
   plugins:
@@ -50,11 +54,11 @@ jobs:
           global-json-file: global.json
 
       - name: Test plug-ins
-        working-directory: ${{ env.SOLUTION_DIR }}/Plugins
+        working-directory: ${{ env.CODE_DIR }}/Plugins
         run: dotnet test VoyageVistaSales.Plugins.Tests/VoyageVistaSales.Plugins.Tests.csproj --logger "trx;LogFileName=plugin-tests.trx" --results-directory ../out/test-results
 
       - name: Build plug-in package
-        working-directory: ${{ env.SOLUTION_DIR }}/Plugins
+        working-directory: ${{ env.CODE_DIR }}/Plugins
         run: |
           dotnet build VoyageVistaSales.Plugins/VoyageVistaSales.Plugins.csproj -c Release -p:DvptDeployBuild=true
           mkdir -p out
@@ -63,14 +67,14 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: plugin-package
-          path: ${{ env.SOLUTION_DIR }}/Plugins/out/voy_VoyageVistaSales_Plugins.nupkg
+          path: ${{ env.CODE_DIR }}/Plugins/out/voy_VoyageVistaSales_Plugins.nupkg
           if-no-files-found: error
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: plugin-test-results
-          path: ${{ env.SOLUTION_DIR }}/Plugins/out/test-results
+          path: ${{ env.CODE_DIR }}/Plugins/out/test-results
           if-no-files-found: ignore
 
   pack:
@@ -89,12 +93,12 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: webresources
-          path: ${{ env.SOLUTION_DIR }}/WebResources/bin
+          path: ${{ env.CODE_DIR }}/WebResources/bin
 
       - uses: actions/download-artifact@v4
         with:
           name: plugin-package
-          path: ${{ env.SOLUTION_DIR }}/Plugins/out
+          path: ${{ env.CODE_DIR }}/Plugins/out
 
       - name: Install pac CLI
         run: dotnet tool install --global Microsoft.PowerApps.CLI.Tool

@@ -14,8 +14,8 @@
 
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Plugin.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Plugin.props')" />
   <ItemGroup>
-  <Compile Include="..\Models\**\*.cs" Link="Models\%(RecursiveDir)%(Filename)%(Extension)" />
-</ItemGroup>
+    <ProjectReference Include="..\..\VoyageVistaSales.Xrm\VoyageVistaSales.Xrm.csproj" />
+  </ItemGroup>
   <!--
     NuGet pack and restore as MSBuild targets reference:
     https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets

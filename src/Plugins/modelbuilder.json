@@ -1,7 +1,7 @@
 {
   "namespace": "VoyageVistaSales.Plugins.Models",
   "serviceContextName": "XrmSvc",
-  "outputDirectory": "Models/",
+  "outputDirectory": "../VoyageVistaSales.Xrm/Models/",
   "emitEntityEtc": false,
   "emitFieldsClasses": false,
   "emitVirtualAttributes": false,

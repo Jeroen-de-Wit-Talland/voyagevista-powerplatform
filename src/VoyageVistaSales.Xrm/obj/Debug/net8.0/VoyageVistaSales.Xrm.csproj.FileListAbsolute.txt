@@ -1,0 +1,13 @@
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\bin\Debug\net8.0\VoyageVistaSales.Xrm.deps.json
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\bin\Debug\net8.0\VoyageVistaSales.Xrm.dll
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\bin\Debug\net8.0\VoyageVistaSales.Xrm.pdb
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.csproj.AssemblyReference.cache
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.AssemblyInfoInputs.cache
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.AssemblyInfo.cs
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.csproj.CoreCompileInputs.cache
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.sourcelink.json
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.dll
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\refint\VoyageVistaSales.Xrm.dll
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\VoyageVistaSales.Xrm.pdb
+C:\dev\powerplatform\voyagevista\src\VoyageVistaSales.Xrm\obj\Debug\net8.0\ref\VoyageVistaSales.Xrm.dll

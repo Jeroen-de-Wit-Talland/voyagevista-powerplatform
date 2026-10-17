@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "test": "jest --passWithNoTests"
+    "test": "npm --prefix ../WebResources.Tests test"
   },
   "dependencies": {
     "typescript": "^5.9.3"

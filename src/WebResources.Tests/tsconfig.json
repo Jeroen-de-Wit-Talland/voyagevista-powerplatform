@@ -1,0 +1,10 @@
+{
+  "extends": "../WebResources/tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "..",
+    "noEmit": true,
+    "typeRoots": ["../WebResources/typings", "./node_modules"],
+    "types": ["jest", "xrm"]
+  },
+  "include": ["src", "../WebResources/webresources_src", "../WebResources/typings"]
+}

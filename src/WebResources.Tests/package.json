@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "jest --passWithNoTests"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/xrm": "^9.0.97",
+    "jest": "^30.5.2",
+    "jest-cli": "^30.5.2",
+    "jest-junit": "^17.0.0",
+    "ts-jest": "^29.4.12",
+    "typescript": "^5.9.3",
+    "xrm-mock": "^3.6.2"
+  }
+}

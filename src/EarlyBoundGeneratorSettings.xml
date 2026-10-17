@@ -93,7 +93,7 @@ reminderset:ReminderSet|
 smartmatching:SmartMatching|
 trackingtoken:TrackingToken|
 xheader:XHeader</OptionNameOverrides>
-    <OutputRelativeDirectory>Plugins\Models\</OutputRelativeDirectory>
+    <OutputRelativeDirectory>..\..\src\Plugins\VoyageVistaSales.Xrm\Models\</OutputRelativeDirectory>
     <ProjectNameForEarlyBoundFiles />
     <PropertyEnumMappings />
     <ReadSerializedMetadata>false</ReadSerializedMetadata>

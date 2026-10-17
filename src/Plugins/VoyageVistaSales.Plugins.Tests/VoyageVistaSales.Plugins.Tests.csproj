@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VoyageVistaSales.Plugins\VoyageVistaSales.Plugins.csproj" />
+    <ProjectReference Include="..\..\VoyageVistaSales.Xrm\VoyageVistaSales.Xrm.csproj" />
   </ItemGroup>
 
   <ItemGroup>
