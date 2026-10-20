@@ -6004,20 +6004,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jeroe\\.nuget\\packages\\": {}
+    "C:\\Users\\WITJE000\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\powerplatform\\voyagevista\\src\\VoyageVistaSales.Xrm\\VoyageVistaSales.Xrm.csproj",
+      "projectUniqueName": "c:\\dev\\powerplatform\\vistavoyage\\src\\VoyageVistaSales.Xrm\\VoyageVistaSales.Xrm.csproj",
       "projectName": "VoyageVistaSales.Xrm",
-      "projectPath": "C:\\dev\\powerplatform\\voyagevista\\src\\VoyageVistaSales.Xrm\\VoyageVistaSales.Xrm.csproj",
-      "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\powerplatform\\voyagevista\\src\\VoyageVistaSales.Xrm\\obj\\",
+      "projectPath": "c:\\dev\\powerplatform\\vistavoyage\\src\\VoyageVistaSales.Xrm\\VoyageVistaSales.Xrm.csproj",
+      "packagesPath": "C:\\Users\\WITJE000\\.nuget\\packages\\",
+      "outputPath": "c:\\dev\\powerplatform\\vistavoyage\\src\\VoyageVistaSales.Xrm\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
-        "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\WITJE000\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net462",
@@ -6092,20 +6092,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.32, 8.0.32]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.32, 8.0.32]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.32, 8.0.32]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
