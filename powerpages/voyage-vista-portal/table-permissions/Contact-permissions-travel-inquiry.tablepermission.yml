@@ -1,0 +1,12 @@
+adx_append: true
+adx_appendto: false
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: contact
+adx_entityname: Contact permissions travel inquiry
+adx_entitypermissionid: 6bea9ae2-b2ce-f111-a05b-7ced8d491312
+adx_parententitypermission: 34cd4c26-fca3-4d3d-9746-3139dd449c16
+adx_parentrelationship: voy_TravelInquiry_Traveler_Contact
+adx_read: true
+adx_scope: 756150003
+adx_write: true

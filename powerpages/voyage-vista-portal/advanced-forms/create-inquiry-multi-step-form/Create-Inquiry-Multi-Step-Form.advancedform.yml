@@ -1,0 +1,11 @@
+adx_authenticationrequired: true
+adx_editexistingrecordpermitted: true
+adx_multiplerecordsperuserpermitted: true
+adx_name: Create Inquiry Multi Step Form
+adx_progressindicatorenabled: true
+adx_progressindicatorposition: 756150000
+adx_progressindicatorprependstepnum: true
+adx_progressindicatortype: 756150000
+adx_startnewsessiononload: true
+adx_startstep: 80833d18-b9f1-47ae-8c8d-71ebda16b5ca
+adx_webformid: bcd8eb40-4ed2-4852-a14e-ec86991d84d3

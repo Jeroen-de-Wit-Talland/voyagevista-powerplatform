@@ -1,0 +1,12 @@
+adx_append: true
+adx_appendto: true
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: voy_inquirytraveler
+adx_entityname: Inquiry Travelers
+adx_entitypermissionid: e5b7d4f6-e6d1-f111-a05b-7ced8d491312
+adx_parententitypermission: 34cd4c26-fca3-4d3d-9746-3139dd449c16
+adx_parentrelationship: voy_InquiryTraveler_voy_TravelInquiry_voy_TravelInquiry
+adx_read: true
+adx_scope: 756150003
+adx_write: true

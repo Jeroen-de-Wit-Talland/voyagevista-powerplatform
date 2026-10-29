@@ -1,0 +1,25 @@
+- adx_name: Grant Change to Content
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolruleid: 3b4b16ee-59e7-4ff3-81ab-e960b7290251
+- adx_name: Restrict Read on My Inquiries
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 5f761e0e-1bf8-4f4e-9843-428da2e6e6d7
+  adx_webpageaccesscontrolruleid: 4ee44a89-6f96-8a8e-bd6f-9c66457a1e37
+  adx_webpageid: 7c93d9b7-75bd-f111-a05c-7ced8d759cbe
+- adx_name: Restrict Read on Create Inquiry
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - 5f761e0e-1bf8-4f4e-9843-428da2e6e6d7
+  adx_webpageaccesscontrolruleid: 660d80ae-62e9-9826-4280-2e9eba9bf0a3
+  adx_webpageid: b31fb732-3a6a-4d62-1bdb-a7cdd5650269
+- adx_name: Grant Change to Administrators
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - a20de7b3-51f7-4dd5-b901-eca3644cd037
+  adx_webpageaccesscontrolruleid: 9ab8a20e-284e-4b85-8cbf-9fad2be07a1d
+  adx_webpageid: 7ec9c927-10e8-4ca0-8e5b-c12effc93f7a
