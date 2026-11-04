@@ -1,0 +1,9 @@
+[
+  {
+    "name": "voy_CalculateQuote",
+    "isFunction": false,
+    "boundEntityLogicalName": "voy_quote",
+    "displayName": "Calculate Quote",
+    "parameterKinds": {}
+  }
+]
