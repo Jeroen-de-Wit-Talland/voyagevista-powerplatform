@@ -1,0 +1,4 @@
+Conversation with 2 prompts:
+1. Create Quote Creator. Display and filter Flights, Stays, and Excursions from the Get Products By Destination custom connector in a modern card gallery; select products and create Quote Line Items for the connected Quote in one Dataverse batch, then invoke CalculateQuote for voy_quote. Use a recordId input parameter for the Quote ID to create line items (voy_quoteid attribute logical name). Use a destination input parameter to call the Get Products By Destination connector which expects a destination string. Add components to the existing Voyage Vista Sales solution.
+
+2. Make the Quote Creator result cards scrollable, display stay ratings as rounded read-only star ratings, and create selected Quote Line Items using the supported dataApi.createRow API before recalculating the quote.

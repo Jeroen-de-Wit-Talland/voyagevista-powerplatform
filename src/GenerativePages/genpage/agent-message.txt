@@ -1,0 +1,1 @@
+Replaced the ignored OData lookup binding with the supported voy_quoteid DataAPI foreign-key value.

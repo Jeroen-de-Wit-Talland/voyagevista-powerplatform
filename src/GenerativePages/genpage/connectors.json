@@ -1,0 +1,12 @@
+[
+  {
+    "logicalName": "voy_quotecreator_LPj7XG.cr.shared_voy-5fget-20p.cf104bbd-f4d0-4530-bb27-d212f32d11d9",
+    "connectorId": "/providers/Microsoft.PowerApps/apis/shared_voy-5fget-20products-20by-20destination-5f6ef52b94ce739058",
+    "dataset": "",
+    "operations": [
+      "GetFlightsForDestination",
+      "GetStaysForDestination",
+      "GetExcursionsForDestination"
+    ]
+  }
+]
