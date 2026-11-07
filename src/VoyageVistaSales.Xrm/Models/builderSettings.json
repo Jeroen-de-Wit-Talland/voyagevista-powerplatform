@@ -65,7 +65,7 @@
       "trackingtoken": "TrackingToken",
       "xheader": "XHeader"
     },
-    "outputRelativeDirectory": "Plugins\\Models\\",
+    "outputRelativeDirectory": "VoyageVistaSales.Xrm\\Models",
     "readSerializedMetadata": false,
     "removeRuntimeVersionComment": true,
     "serializeMetadata": false,
@@ -143,7 +143,7 @@
   "messagesTypesFolder": "Messages",
   "metadataProviderService": "DLaB.ModelBuilderExtensions.MetadataProviderService,DLaB.ModelBuilderExtensions",
   "metadataQueryProviderService": "DLaB.ModelBuilderExtensions.MetadataQueryProviderService,DLaB.ModelBuilderExtensions",
-  "namespace": "VoyageVistaSales.Plugins.Models",
+  "namespace": "VoyageVistaSales.Xrm.Models",
   "namingService": "DLaB.ModelBuilderExtensions.NamingService,DLaB.ModelBuilderExtensions",
   "optionSetsTypesFolder": "OptionSets",
   "serviceContextName": "XrmSvc",

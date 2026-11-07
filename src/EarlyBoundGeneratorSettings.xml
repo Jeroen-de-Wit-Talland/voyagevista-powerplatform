@@ -93,7 +93,7 @@ reminderset:ReminderSet|
 smartmatching:SmartMatching|
 trackingtoken:TrackingToken|
 xheader:XHeader</OptionNameOverrides>
-    <OutputRelativeDirectory>..\..\src\Plugins\VoyageVistaSales.Xrm\Models\</OutputRelativeDirectory>
+    <OutputRelativeDirectory>VoyageVistaSales.Xrm\Models</OutputRelativeDirectory>
     <ProjectNameForEarlyBoundFiles />
     <PropertyEnumMappings />
     <ReadSerializedMetadata>false</ReadSerializedMetadata>
@@ -153,7 +153,7 @@ VoiceMail</TokenCapitalizationOverrides>
   <MetadataQueryProviderService>DLaB.ModelBuilderExtensions.MetadataQueryProviderService,DLaB.ModelBuilderExtensions</MetadataQueryProviderService>
   <NamingService>DLaB.ModelBuilderExtensions.NamingService,DLaB.ModelBuilderExtensions</NamingService>
   <OptionSetsTypesFolder>OptionSets</OptionSetsTypesFolder>
-  <Namespace>VoyageVistaSales.Plugins.Models</Namespace>
+  <Namespace>VoyageVistaSales.Xrm.Models</Namespace>
   <ServiceContextName>XrmSvc</ServiceContextName>
   <SuppressGeneratedCodeAttribute>true</SuppressGeneratedCodeAttribute>
   <SettingsVersion>2.2026.7.28</SettingsVersion>

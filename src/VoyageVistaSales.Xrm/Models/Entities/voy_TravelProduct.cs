@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VoyageVistaSales.Plugins.Models
+namespace VoyageVistaSales.Xrm.Models
 {
 	
 	
@@ -688,12 +688,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningbusinessunit")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("business_unit_voy_travelproduct")]
-		public VoyageVistaSales.Plugins.Models.BusinessUnit business_unit_voy_travelproduct
+		public VoyageVistaSales.Xrm.Models.BusinessUnit business_unit_voy_travelproduct
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.BusinessUnit>("business_unit_voy_travelproduct", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.BusinessUnit>("business_unit_voy_travelproduct", null);
 			}
 		}
 		
@@ -702,12 +702,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_voy_travelproduct_createdby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_voy_travelproduct_createdby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_voy_travelproduct_createdby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_voy_travelproduct_createdby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_voy_travelproduct_createdby", null);
 			}
 		}
 		
@@ -716,17 +716,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_voy_travelproduct_createdonbehalfby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_voy_travelproduct_createdonbehalfby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_voy_travelproduct_createdonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_voy_travelproduct_createdonbehalfby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_voy_travelproduct_createdonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_voy_travelproduct_createdonbehalfby", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_voy_travelproduct_createdonbehalfby", null, value);
 			}
 		}
 		
@@ -735,12 +735,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_voy_travelproduct_modifiedby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_voy_travelproduct_modifiedby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_voy_travelproduct_modifiedby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_voy_travelproduct_modifiedby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_voy_travelproduct_modifiedby", null);
 			}
 		}
 		
@@ -749,17 +749,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_voy_travelproduct_modifiedonbehalfby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_voy_travelproduct_modifiedonbehalfby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_voy_travelproduct_modifiedonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_voy_travelproduct_modifiedonbehalfby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_voy_travelproduct_modifiedonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_voy_travelproduct_modifiedonbehalfby", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_voy_travelproduct_modifiedonbehalfby", null, value);
 			}
 		}
 		
@@ -768,12 +768,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_voy_travelproduct")]
-		public VoyageVistaSales.Plugins.Models.SystemUser user_voy_travelproduct
+		public VoyageVistaSales.Xrm.Models.SystemUser user_voy_travelproduct
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("user_voy_travelproduct", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("user_voy_travelproduct", null);
 			}
 		}
 		

@@ -10,7 +10,7 @@
 
 [assembly: Microsoft.Xrm.Sdk.Client.ProxyTypesAssemblyAttribute()]
 
-namespace VoyageVistaSales.Plugins.Models
+namespace VoyageVistaSales.Xrm.Models
 {
 	
 	
@@ -29,145 +29,145 @@ namespace VoyageVistaSales.Plugins.Models
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.Account"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.Account"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.Account> AccountSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.Account> AccountSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.Account>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.Account>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.ActivityParty"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.ActivityParty"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.ActivityParty> ActivityPartySet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.ActivityParty> ActivityPartySet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.ActivityParty>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.ActivityParty>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.ActivityPointer"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.ActivityPointer"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.ActivityPointer> ActivityPointerSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.ActivityPointer> ActivityPointerSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.ActivityPointer>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.ActivityPointer>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.BusinessUnit"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.BusinessUnit"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.BusinessUnit> BusinessUnitSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.BusinessUnit> BusinessUnitSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.BusinessUnit>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.BusinessUnit>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.Contact"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.Contact"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.Contact> ContactSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.Contact> ContactSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.Contact>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.Contact>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.Email"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.Email"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.Email> EmailSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.Email> EmailSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.Email>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.Email>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.SystemUser"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.SystemUser"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.SystemUser> SystemUserSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.SystemUser> SystemUserSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.SystemUser>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.SystemUser>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.TransactionCurrency"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.TransactionCurrency"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.TransactionCurrency> TransactionCurrencySet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.TransactionCurrency> TransactionCurrencySet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.TransactionCurrency>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.TransactionCurrency>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.voy_inquirytoquote"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.voy_inquirytoquote"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.voy_inquirytoquote> voy_inquirytoquoteSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.voy_inquirytoquote> voy_inquirytoquoteSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.voy_inquirytoquote>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.voy_inquirytoquote>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.voy_Quote"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.voy_Quote"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.voy_Quote> voy_QuoteSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.voy_Quote> voy_QuoteSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.voy_Quote>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.voy_Quote>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.voy_QuoteLineItem"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.voy_QuoteLineItem"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.voy_QuoteLineItem> voy_QuoteLineItemSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.voy_QuoteLineItem> voy_QuoteLineItemSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.voy_QuoteLineItem>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.voy_QuoteLineItem>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.voy_TravelInquiry"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.voy_TravelInquiry"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.voy_TravelInquiry> voy_TravelInquirySet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.voy_TravelInquiry> voy_TravelInquirySet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.voy_TravelInquiry>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.voy_TravelInquiry>();
 			}
 		}
 		
 		/// <summary>
-		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Plugins.Models.voy_TravelProduct"/> entities.
+		/// Gets a binding to the set of all <see cref="VoyageVistaSales.Xrm.Models.voy_TravelProduct"/> entities.
 		/// </summary>
-		public System.Linq.IQueryable<VoyageVistaSales.Plugins.Models.voy_TravelProduct> voy_TravelProductSet
+		public System.Linq.IQueryable<VoyageVistaSales.Xrm.Models.voy_TravelProduct> voy_TravelProductSet
 		{
 			get
 			{
-				return this.CreateQuery<VoyageVistaSales.Plugins.Models.voy_TravelProduct>();
+				return this.CreateQuery<VoyageVistaSales.Xrm.Models.voy_TravelProduct>();
 			}
 		}
 	}

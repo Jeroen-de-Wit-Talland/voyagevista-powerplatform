@@ -1,0 +1,41 @@
+{
+  "uniqueName": "voy_QualifyInquiry",
+  "name": "voy_QualifyInquiry",
+  "displayName": "Qualify Inquiry",
+  "description": "Qualifies an inquiry based on the provided input.",
+  "binding": "Global",
+  "isFunction": false,
+  "isPrivate": false,
+  "enabledForWorkflow": false,
+  "allowedCustomProcessingStepType": "None",
+  "pluginTypeName": "VoyageVistaSales.Plugins.QualifyInquiry",
+  "requestParameters": [
+    {
+      "uniqueName": "CreateQuote",
+      "name": "voy_QualifyInquiry.CreateQuote",
+      "displayName": "Create Quote",
+      "type": "Boolean",
+      "isOptional": false,
+      "description": "Create Quote if true."
+    },
+    {
+      "uniqueName": "Status",
+      "name": "voy_QualifyInquiry.Status",
+      "displayName": "Status",
+      "type": "Picklist",
+      "isOptional": false,
+      "description": "Status of the inquiry."
+    }
+  ],
+  "responseProperties": [
+    {
+      "uniqueName": "CreatedQuote",
+      "name": "voy_QualifyInquiry.CreatedQuote",
+      "displayName": "Created Quote Record",
+      "type": "Entity",
+      "logicalName": "voy_quote",
+      "description": "Created Quote Record.",
+      "isOptional": true
+    }
+  ]
+}
