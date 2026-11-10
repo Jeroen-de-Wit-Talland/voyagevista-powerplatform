@@ -4,6 +4,7 @@ using Microsoft.Xrm.Sdk.PluginTelemetry;
 using System;
 using System.Runtime.CompilerServices;
 using System.ServiceModel;
+using VoyageVistaSales.Xrm.Models;
 
 namespace VoyageVistaSales.Plugins
 {
@@ -120,7 +121,7 @@ namespace VoyageVistaSales.Plugins
         /// <summary>
         /// ILogger for this plugin.
         /// </summary>
-        ILogger Logger { get;  }
+        ILogger Logger { get; }
 
         /// <summary>
         /// Writes a trace message to the trace log.

@@ -21,47 +21,57 @@ namespace VoyageVistaSales.Plugins
             var tracingService = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
             var organizationServiceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
 
-            // TODO: implement the "voy_QualifyInquiry" operation.
-            // Read typed inputs from 'request', set typed outputs on 'response'.
-            using (var XrmSvc = new XrmSvc(organizationServiceFactory.CreateOrganizationService(context.UserId)))
+            if (organizationServiceFactory is IProxyTypesAssemblyProvider proxyProvider)
+            {
+                proxyProvider.ProxyTypesAssembly = typeof(XrmSvc).Assembly;
+            }
+
+            var service = organizationServiceFactory.CreateOrganizationService(context.UserId);
+
+            using (var svc = new XrmSvc(service))
             {
                 try
                 {
-                    if(!context.InputParameters.Contains("CreateQuote") || !(context.InputParameters["CreateQuote"] is bool createQuote))
-                    {
-                        throw new InvalidPluginExecutionException("Missing or invalid CreateQuote parameter.");
-                    }
-                    if (!context.InputParameters.Contains("Target") || !(context.InputParameters["Target"] is EntityReference target))
+                    if (!context.InputParameters.Contains("Target"))
                     {
                         throw new InvalidPluginExecutionException("Missing or invalid Target parameter.");
                     }
-                    else if (!context.InputParameters.Contains("Status") || !(context.InputParameters["Status"] is voy_TravelInquiry_StatusCode status))
+                    else if (!context.InputParameters.Contains("Status"))
                     {
                         throw new InvalidPluginExecutionException("Missing or invalid Status parameter.");
                     }
 
-                    var statusCode = (voy_TravelInquiry_StatusCode)context.InputParameters["Status"];
-                    var inquiry = (EntityReference)context.InputParameters["Target"];                                        
-                    switch (statusCode)
+                    OptionSetValue statusCode = (OptionSetValue)context.InputParameters["Status"];
+                    var target = (EntityReference)context.InputParameters["Target"];
+                    voy_TravelInquiry inquiry = svc.voy_TravelInquirySet.FirstOrDefault(i => i.Id == target.Id);
+
+                    if(inquiry.StatusCode != null && (inquiry.StatusCode.Value == voy_TravelInquiry_StatusCode.Won || inquiry.StatusCode.Value == voy_TravelInquiry_StatusCode.Lost))
                     {
-                        case voy_TravelInquiry_StatusCode.Won:
-                            if(createQuote)
+                        throw new InvalidPluginExecutionException("This inquiry has already been qualified.");
+                    }
+
+                    switch (statusCode.Value)
+                    {
+                        case (int)voy_TravelInquiry_StatusCode.Won:
+                            inquiry.StatusCode = voy_TravelInquiry_StatusCode.Won;
+                            inquiry.StateCode = voy_travelinquiry_statecode.Inactive;
+                            svc.UpdateObject(inquiry);
+                            var quote = new voy_Quote
                             {
-                                var quote = new voy_Quote
-                                {
-                                    voy_TravelInquiryId = inquiry
-                                };
-                                XrmSvc.AddObject(quote);
-                                                                
-                                XrmSvc.SaveChanges();
-                                context.OutputParameters["CreatedQuote"] = quote;
-                            }
-                            else
-                            {
-                                throw new InvalidPluginExecutionException("CreateQuote must be true when Status is Won.");
-                            }
+                                voy_TravelInquiryId = target
+                            };
+                            svc.AddObject(quote);
+
+                            svc.SaveChanges();
+                            
+                            context.OutputParameters["QuoteId"] = quote.Id;
+                            
                             break;
-                        case voy_TravelInquiry_StatusCode.Lost:
+                        case (int)voy_TravelInquiry_StatusCode.Lost:
+                            inquiry.StatusCode = voy_TravelInquiry_StatusCode.Lost;
+                            inquiry.StateCode = voy_travelinquiry_statecode.Inactive;
+                            svc.UpdateObject(inquiry);
+                            svc.SaveChanges();
                             break;
                         default:
                             throw new InvalidPluginExecutionException("Invalid Status parameter.");
@@ -73,10 +83,6 @@ namespace VoyageVistaSales.Plugins
                     tracingService.Trace("QualifyInquiry: {0}", ex.ToString());
                     throw;
                 }
-
-
-
-
             }
         }
     }

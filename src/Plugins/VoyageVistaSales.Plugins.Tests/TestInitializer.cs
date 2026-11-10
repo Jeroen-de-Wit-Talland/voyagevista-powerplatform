@@ -1,6 +1,6 @@
 using System;
 using DataverseUnitTest;
-using VoyageVistaSales.Plugins.Models;
+using VoyageVistaSales.Xrm.Models;
 using VoyageVistaSales.Plugins.Tests.Builders;
 
 namespace VoyageVistaSales.Plugins.Tests;

@@ -3,7 +3,7 @@ using DataverseUnitTest.Builders;
 using DLaB.Xrm;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xrm.Sdk;
-using VoyageVistaSales.Plugins.Models;
+using VoyageVistaSales.Xrm.Models;
 using VoyageVistaSales.Plugins.Tests.Builders;
 
 namespace VoyageVistaSales.Plugins.Tests;

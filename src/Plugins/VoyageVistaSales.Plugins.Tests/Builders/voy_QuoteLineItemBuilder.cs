@@ -1,5 +1,5 @@
 using System;
-using VoyageVistaSales.Plugins.Models;
+using VoyageVistaSales.Xrm.Models;
 using Microsoft.Xrm.Sdk;
 using DataverseUnitTest;
 

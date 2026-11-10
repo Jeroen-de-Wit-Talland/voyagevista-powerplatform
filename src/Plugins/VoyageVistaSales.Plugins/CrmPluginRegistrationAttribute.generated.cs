@@ -1,5 +1,7 @@
 #if !SCRIPTSHARP
 using System;
+using Microsoft.Xrm.Sdk.Client;
+using VoyageVistaSales.Xrm.Models;
 
 [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
 public class CrmPluginRegistrationAttribute : Attribute
