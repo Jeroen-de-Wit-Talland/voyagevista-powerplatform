@@ -1,0 +1,11 @@
+[
+  {
+    "name": "voy_QualifyInquiry",
+    "isFunction": false,
+    "boundEntityLogicalName": "voy_travelinquiry",
+    "displayName": "Qualify Inquiry",
+    "parameterKinds": {
+      "Status": "Picklist"
+    }
+  }
+]
