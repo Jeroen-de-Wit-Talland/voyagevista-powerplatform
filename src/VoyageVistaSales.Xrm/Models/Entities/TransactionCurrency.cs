@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VoyageVistaSales.Plugins.Models
+namespace VoyageVistaSales.Xrm.Models
 {
 	
 	
@@ -739,17 +739,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N transactioncurrency_account
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("transactioncurrency_account")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Account> transactioncurrency_account
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.Account> transactioncurrency_account
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Account>("transactioncurrency_account", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.Account>("transactioncurrency_account", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Account>("transactioncurrency_account", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.Account>("transactioncurrency_account", null, value);
 			}
 		}
 		
@@ -757,17 +757,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N TransactionCurrency_ActivityPointer
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("TransactionCurrency_ActivityPointer")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.ActivityPointer> TransactionCurrency_ActivityPointer
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.ActivityPointer> TransactionCurrency_ActivityPointer
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityPointer>("TransactionCurrency_ActivityPointer", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.ActivityPointer>("TransactionCurrency_ActivityPointer", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityPointer>("TransactionCurrency_ActivityPointer", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.ActivityPointer>("TransactionCurrency_ActivityPointer", null, value);
 			}
 		}
 		
@@ -775,17 +775,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N TransactionCurrency_BusinessUnit
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("TransactionCurrency_BusinessUnit")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.BusinessUnit> TransactionCurrency_BusinessUnit
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.BusinessUnit> TransactionCurrency_BusinessUnit
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.BusinessUnit>("TransactionCurrency_BusinessUnit", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.BusinessUnit>("TransactionCurrency_BusinessUnit", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.BusinessUnit>("TransactionCurrency_BusinessUnit", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.BusinessUnit>("TransactionCurrency_BusinessUnit", null, value);
 			}
 		}
 		
@@ -793,17 +793,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N transactioncurrency_contact
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("transactioncurrency_contact")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Contact> transactioncurrency_contact
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.Contact> transactioncurrency_contact
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Contact>("transactioncurrency_contact", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.Contact>("transactioncurrency_contact", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Contact>("transactioncurrency_contact", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.Contact>("transactioncurrency_contact", null, value);
 			}
 		}
 		
@@ -811,17 +811,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N TransactionCurrency_Email
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("TransactionCurrency_Email")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Email> TransactionCurrency_Email
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.Email> TransactionCurrency_Email
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("TransactionCurrency_Email", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.Email>("TransactionCurrency_Email", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("TransactionCurrency_Email", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.Email>("TransactionCurrency_Email", null, value);
 			}
 		}
 		
@@ -829,17 +829,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N TransactionCurrency_SystemUser
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("TransactionCurrency_SystemUser")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.SystemUser> TransactionCurrency_SystemUser
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.SystemUser> TransactionCurrency_SystemUser
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.SystemUser>("TransactionCurrency_SystemUser", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.SystemUser>("TransactionCurrency_SystemUser", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.SystemUser>("TransactionCurrency_SystemUser", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.SystemUser>("TransactionCurrency_SystemUser", null, value);
 			}
 		}
 		
@@ -847,17 +847,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N TransactionCurrency_voy_Quote
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("TransactionCurrency_voy_Quote")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.voy_Quote> TransactionCurrency_voy_Quote
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.voy_Quote> TransactionCurrency_voy_Quote
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_Quote>("TransactionCurrency_voy_Quote", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.voy_Quote>("TransactionCurrency_voy_Quote", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_Quote>("TransactionCurrency_voy_Quote", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.voy_Quote>("TransactionCurrency_voy_Quote", null, value);
 			}
 		}
 		
@@ -865,17 +865,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N TransactionCurrency_voy_TravelInquiry
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("TransactionCurrency_voy_TravelInquiry")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.voy_TravelInquiry> TransactionCurrency_voy_TravelInquiry
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.voy_TravelInquiry> TransactionCurrency_voy_TravelInquiry
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_TravelInquiry>("TransactionCurrency_voy_TravelInquiry", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.voy_TravelInquiry>("TransactionCurrency_voy_TravelInquiry", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_TravelInquiry>("TransactionCurrency_voy_TravelInquiry", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.voy_TravelInquiry>("TransactionCurrency_voy_TravelInquiry", null, value);
 			}
 		}
 		
@@ -883,17 +883,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N voy_quote_CurrencyId_transactioncurrency
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("voy_quote_CurrencyId_transactioncurrency")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.voy_Quote> voy_quote_CurrencyId_transactioncurrency
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.voy_Quote> voy_quote_CurrencyId_transactioncurrency
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_Quote>("voy_quote_CurrencyId_transactioncurrency", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.voy_Quote>("voy_quote_CurrencyId_transactioncurrency", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.voy_Quote>("voy_quote_CurrencyId_transactioncurrency", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.voy_Quote>("voy_quote_CurrencyId_transactioncurrency", null, value);
 			}
 		}
 		
@@ -902,17 +902,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_transactioncurrency_createdonbehalfby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_transactioncurrency_createdonbehalfby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_transactioncurrency_createdonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_transactioncurrency_createdonbehalfby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_transactioncurrency_createdonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_transactioncurrency_createdonbehalfby", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_transactioncurrency_createdonbehalfby", null, value);
 			}
 		}
 		
@@ -921,17 +921,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_transactioncurrency_modifiedonbehalfby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_transactioncurrency_modifiedonbehalfby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_transactioncurrency_modifiedonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_transactioncurrency_modifiedonbehalfby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_transactioncurrency_modifiedonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_transactioncurrency_modifiedonbehalfby", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_transactioncurrency_modifiedonbehalfby", null, value);
 			}
 		}
 		
@@ -940,12 +940,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_transactioncurrencybase_createdby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_transactioncurrencybase_createdby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_transactioncurrencybase_createdby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_transactioncurrencybase_createdby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_transactioncurrencybase_createdby", null);
 			}
 		}
 		
@@ -954,12 +954,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_transactioncurrencybase_modifiedby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_transactioncurrencybase_modifiedby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_transactioncurrencybase_modifiedby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_transactioncurrencybase_modifiedby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_transactioncurrencybase_modifiedby", null);
 			}
 		}
 		

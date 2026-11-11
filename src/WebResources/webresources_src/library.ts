@@ -2,3 +2,4 @@
 // (Dataverse PowerTools: Create Web Resource Class appends each one).
 export * from "./voy_quote_CommandBar";
 export * from "./voy_quote";
+export * from "./voy_travelinquiry_CommandBar";

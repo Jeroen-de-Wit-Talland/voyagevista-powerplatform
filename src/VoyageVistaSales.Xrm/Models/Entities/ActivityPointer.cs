@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VoyageVistaSales.Plugins.Models
+namespace VoyageVistaSales.Xrm.Models
 {
 	
 	
@@ -410,7 +410,7 @@ namespace VoyageVistaSales.Plugins.Models
 		/// All activity parties associated with this activity.
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("allparties")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.ActivityParty> allparties
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.ActivityParty> allparties
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
@@ -419,7 +419,7 @@ namespace VoyageVistaSales.Plugins.Models
 				if (((collection != null) 
 							&& (collection.Entities != null)))
 				{
-					return System.Linq.Enumerable.Select<Microsoft.Xrm.Sdk.Entity, VoyageVistaSales.Plugins.Models.ActivityParty>(collection.Entities, e => e.ToEntity<VoyageVistaSales.Plugins.Models.ActivityParty>());
+					return System.Linq.Enumerable.Select<Microsoft.Xrm.Sdk.Entity, VoyageVistaSales.Xrm.Models.ActivityParty>(collection.Entities, e => e.ToEntity<VoyageVistaSales.Xrm.Models.ActivityParty>());
 				}
 				else
 				{
@@ -1725,17 +1725,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N activity_pointer_email
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("activity_pointer_email")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.Email> activity_pointer_email
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.Email> activity_pointer_email
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("activity_pointer_email", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.Email>("activity_pointer_email", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.Email>("activity_pointer_email", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.Email>("activity_pointer_email", null, value);
 			}
 		}
 		
@@ -1743,17 +1743,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// 1:N activitypointer_activity_parties
 		/// </summary>
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("activitypointer_activity_parties")]
-		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Plugins.Models.ActivityParty> activitypointer_activity_parties
+		public System.Collections.Generic.IEnumerable<VoyageVistaSales.Xrm.Models.ActivityParty> activitypointer_activity_parties
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityParty>("activitypointer_activity_parties", null);
+				return this.GetRelatedEntities<VoyageVistaSales.Xrm.Models.ActivityParty>("activitypointer_activity_parties", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntities<VoyageVistaSales.Plugins.Models.ActivityParty>("activitypointer_activity_parties", null, value);
+				this.SetRelatedEntities<VoyageVistaSales.Xrm.Models.ActivityParty>("activitypointer_activity_parties", null, value);
 			}
 		}
 		
@@ -1762,17 +1762,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Account_ActivityPointers")]
-		public VoyageVistaSales.Plugins.Models.Account Account_ActivityPointers
+		public VoyageVistaSales.Xrm.Models.Account Account_ActivityPointers
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.Account>("Account_ActivityPointers", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.Account>("Account_ActivityPointers", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.Account>("Account_ActivityPointers", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.Account>("Account_ActivityPointers", null, value);
 			}
 		}
 		
@@ -1781,12 +1781,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owningbusinessunit")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("business_unit_activitypointer")]
-		public VoyageVistaSales.Plugins.Models.BusinessUnit business_unit_activitypointer
+		public VoyageVistaSales.Xrm.Models.BusinessUnit business_unit_activitypointer
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.BusinessUnit>("business_unit_activitypointer", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.BusinessUnit>("business_unit_activitypointer", null);
 			}
 		}
 		
@@ -1795,17 +1795,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("regardingobjectid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("Contact_ActivityPointers")]
-		public VoyageVistaSales.Plugins.Models.Contact Contact_ActivityPointers
+		public VoyageVistaSales.Xrm.Models.Contact Contact_ActivityPointers
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.Contact>("Contact_ActivityPointers", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.Contact>("Contact_ActivityPointers", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.Contact>("Contact_ActivityPointers", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.Contact>("Contact_ActivityPointers", null, value);
 			}
 		}
 		
@@ -1814,12 +1814,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_createdby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_activitypointer_createdby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_activitypointer_createdby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_activitypointer_createdby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_activitypointer_createdby", null);
 			}
 		}
 		
@@ -1828,17 +1828,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("createdonbehalfby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_createdonbehalfby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_activitypointer_createdonbehalfby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_activitypointer_createdonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_activitypointer_createdonbehalfby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_activitypointer_createdonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_activitypointer_createdonbehalfby", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_activitypointer_createdonbehalfby", null, value);
 			}
 		}
 		
@@ -1847,12 +1847,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_modifiedby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_activitypointer_modifiedby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_activitypointer_modifiedby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_activitypointer_modifiedby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_activitypointer_modifiedby", null);
 			}
 		}
 		
@@ -1861,17 +1861,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("modifiedonbehalfby")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("lk_activitypointer_modifiedonbehalfby")]
-		public VoyageVistaSales.Plugins.Models.SystemUser lk_activitypointer_modifiedonbehalfby
+		public VoyageVistaSales.Xrm.Models.SystemUser lk_activitypointer_modifiedonbehalfby
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_activitypointer_modifiedonbehalfby", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_activitypointer_modifiedonbehalfby", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("lk_activitypointer_modifiedonbehalfby", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("lk_activitypointer_modifiedonbehalfby", null, value);
 			}
 		}
 		
@@ -1880,17 +1880,17 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("transactioncurrencyid")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("TransactionCurrency_ActivityPointer")]
-		public VoyageVistaSales.Plugins.Models.TransactionCurrency TransactionCurrency_ActivityPointer
+		public VoyageVistaSales.Xrm.Models.TransactionCurrency TransactionCurrency_ActivityPointer
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.TransactionCurrency>("TransactionCurrency_ActivityPointer", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.TransactionCurrency>("TransactionCurrency_ActivityPointer", null);
 			}
 			[System.Diagnostics.DebuggerNonUserCode()]
 			set
 			{
-				this.SetRelatedEntity<VoyageVistaSales.Plugins.Models.TransactionCurrency>("TransactionCurrency_ActivityPointer", null, value);
+				this.SetRelatedEntity<VoyageVistaSales.Xrm.Models.TransactionCurrency>("TransactionCurrency_ActivityPointer", null, value);
 			}
 		}
 		
@@ -1899,12 +1899,12 @@ namespace VoyageVistaSales.Plugins.Models
 		/// </summary>
 		[Microsoft.Xrm.Sdk.AttributeLogicalNameAttribute("owninguser")]
 		[Microsoft.Xrm.Sdk.RelationshipSchemaNameAttribute("user_activity")]
-		public VoyageVistaSales.Plugins.Models.SystemUser user_activity
+		public VoyageVistaSales.Xrm.Models.SystemUser user_activity
 		{
 			[System.Diagnostics.DebuggerNonUserCode()]
 			get
 			{
-				return this.GetRelatedEntity<VoyageVistaSales.Plugins.Models.SystemUser>("user_activity", null);
+				return this.GetRelatedEntity<VoyageVistaSales.Xrm.Models.SystemUser>("user_activity", null);
 			}
 		}
 		

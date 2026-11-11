@@ -1,0 +1,1 @@
+Validate the QuoteId output type only when qualifying the inquiry as Won.

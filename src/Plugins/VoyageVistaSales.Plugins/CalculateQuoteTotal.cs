@@ -2,7 +2,7 @@ using Microsoft.Xrm.Sdk;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using VoyageVistaSales.Plugins.Models;
+using VoyageVistaSales.Xrm.Models;
 namespace VoyageVistaSales.Plugins
 {
     /// <summary>

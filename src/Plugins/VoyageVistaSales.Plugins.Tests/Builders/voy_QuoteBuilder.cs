@@ -1,6 +1,6 @@
 using System;
 using DataverseUnitTest;
-using VoyageVistaSales.Plugins.Models;
+using VoyageVistaSales.Xrm.Models;
 namespace VoyageVistaSales.Plugins.Tests.Builders;
 
 public class voy_QuoteBuilder : EntityBuilder<voy_Quote, voy_QuoteBuilder>
